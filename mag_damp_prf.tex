@@ -1,0 +1,1664 @@
+%% ****** Start of file apstemplate.tex ****** %
+%%
+%%
+%%   This file is part of the APS files in the REVTeX 4.2 distribution.
+%%   Version 4.2a of REVTeX, January, 2015
+%%
+%%
+%%   Copyright (c) 2015 The American Physical Society.
+%%
+%%   See the REVTeX 4 README file for restrictions and more information.
+%%
+%
+% This is a template for producing manuscripts for use with REVTEX 4.2
+% Copy this file to another name and then work on that file.
+% That way, you always have this original template file to use.
+%
+% Group addresses by affiliation; use superscriptaddress for long
+% author lists, or if there are many overlapping affiliations.
+% For Phys. Rev. appearance, change preprint to twocolumn.
+% Choose pra, prb, prc, prd, pre, prl, prstab, prstper, or rmp for journal
+%  Add 'draft' option to mark overfull boxes with black boxes
+%  Add 'showkeys' option to make keywords appear
+%\documentclass[aps,prfluids,preprint,superscriptaddress]{revtex4-2}
+%\documentclass[aps,prl,preprint,superscriptaddress]{revtex4-2}
+\documentclass[aps,prfluids,reprint,superscriptaddress]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage[hypertexnames=false,
+pdfstartview=FitH,
+breaklinks=true,
+bookmarks=true,
+bookmarksopen=true,
+bookmarksnumbered=true]{hyperref}
+\urlstyle{same}
+\hypersetup{
+	colorlinks = true,
+	linkcolor  = blue,
+	urlcolor   = blue,
+	citecolor  = blue,
+}
+\setlength{\parskip}{0cm plus4mm minus2mm}
+\setlength{\bibsep}{-1.45pt}
+
+
+
+\usepackage{natbib}
+
+%user defined commands
+\newcommand{\h}[1]{\textbf{\textit{#1}}}
+\newcommand{\ii}[1]{\text{#1}}
+\newcommand{\noi}{\noindent}
+\newcommand{\nn}{\nonumber}
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-2mu#1\mkern-2mu}\mkern 1.5mu}
+%for roman numeral
+\newcommand{\RN}[1]{%
+	\textup{\uppercase\expandafter{\romannumeral#1}}%
+}
+\newcommand{\Rn}[1]{%
+	\textup{\expandafter{\romannumeral#1}}%
+}
+\renewcommand{\textrm}{\rm}
+\usepackage{siunitx} % JCBdM: I add this to avoid incompatibility
+\usepackage{bm} % Bold in math mode
+\usepackage{amsmath} %extra math packages
+\usepackage{amssymb} %for math symbols
+\usepackage{physics} %for partial differential equations
+\DeclareDocumentCommand\dpdv{}{\displaystyle\partialderivative}
+\usepackage{multirow}
+\usepackage{cancel}
+\usepackage{scalerel} %change size of subscripts
+\usepackage{soul,color}
+%\usepackage{ulem}
+\usepackage{xcolor}
+
+\newcommand{\Wietze}[1]{\textcolor{teal}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\DeclareRobustCommand{\hly}[1]{{\sethlcolor{yellow}\hl{#1}}}
+\DeclareRobustCommand{\hlr}[1]{{\sethlcolor{pink}\hl{#1}}}
+
+%tikz
+\usepackage{pgfplots, tikz}
+\usetikzlibrary{3d}
+\usepackage{tikz-3dplot}
+\pgfplotsset{compat=newest} 
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{positioning}
+\usepgfplotslibrary{external}
+\tikzexternalize[prefix=cache/]
+
+\pgfplotsset{colormap={bwr}{
+		rgb(0)=(0.0, 0.0, 1.0),
+		rgb(25)=(0.2, 0.2, 1.0),
+		rgb(51)=(0.4, 0.4, 1.0),
+		rgb(76)=(0.6, 0.6, 1.0),
+		rgb(102)=(0.8, 0.8, 1.0),
+		rgb(127)=(1.0, 1.0, 1.0),
+		rgb(153)=(1.0, 0.8, 0.8),
+		rgb(178)=(1.0, 0.6, 0.6),
+		rgb(204)=(1.0, 0.4, 0.4),
+		rgb(230)=(1.0, 0.2, 0.2),
+		rgb(255)=(1.0, 0.0, 0.0),
+}}
+\definecolor{deepskyblue}{rgb}{0.000, 0.749, 1.000}
+\definecolor{orange}{rgb}{1.000, 0.647, 0.000}
+\definecolor{mediumseagreen}{rgb}{0.235, 0.702, 0.443}
+\definecolor{slateblue}{rgb}{0.420, 0.353, 0.804}
+\definecolor{crimson}{rgb}{0.863, 0.078, 0.235}
+\definecolor{skyblue}{rgb}{0.529, 0.808, 0.922}
+\definecolor{tomato}{rgb}{1.000, 0.388, 0.278}
+\definecolor{blueviolet}{rgb}{0.54117647, 0.16862745, 0.88627451}
+
+\usepackage{mdframed}
+\usepackage{hhtensor}
+
+
+\usepackage{cleveref}
+
+\newcommand{\subref}[2]{\ref{#1}\hyperref[#1]{(#2)}}
+
+\begin{document}
+
+% Use the \preprint command to place your local institutional report
+% number in the upper righthand corner of the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+% Use the 'preprintnumbers' class option to override journal defaults
+% to display numbers if necessary
+%\preprint{}
+
+%Title of paper
+\title{Magnetic damping of standing waves in rectangular geometries}
+
+
+\author{Pranav Hegde}
+\affiliation{Helmholtz-Zentrum Dresden-Rossendorf, Bautzner Landstr. 400, 01328 Dresden, Germany}
+\author{Wietze Herreman}
+\affiliation{Universit\'e Paris Saclay, CNRS, FAST, Orsay, F-91405, France}
+\author{Thomas Gundrum}
+\affiliation{Helmholtz-Zentrum Dresden-Rossendorf, Bautzner Landstr. 400, 01328 Dresden, Germany}
+%\author{Qi Fang}
+%\affiliation{Universit\'e Rouen Normandie, CNRS, INSA Rouen Normandie, Normandie Universit\'e, C.O.R.I.A UMR 6614, F-76000 Rouen, France}
+%\author{Jorge C\'esar Br\"andle de Motta}
+%\affiliation{Universit\'e Rouen Normandie, CNRS, INSA Rouen Normandie, Normandie Universit\'e, C.O.R.I.A UMR 6614, F-76000 Rouen, France}
+%\author{Romain Canu}
+%\affiliation{Universit\'e Rouen Normandie, CNRS, INSA Rouen Normandie, Normandie Universit\'e, C.O.R.I.A UMR 6614, F-76000 Rouen, France}
+%\author{Marie-Charlotte Renoult}
+%\affiliation{Universit\'e Rouen Normandie, CNRS, INSA Rouen Normandie, Normandie Universit\'e, C.O.R.I.A UMR 6614, F-76000 Rouen, France}
+\author{Gerrit Maik Horstmann}
+\email{g.horstmann@hzdr.de}
+\affiliation{Helmholtz-Zentrum Dresden-Rossendorf, Bautzner Landstr. 400, 01328 Dresden, Germany}
+
+
+\date{\today}
+
+\begin{abstract}
+	We present a theoretical formulation of the magnetic damping in a two-layer stratified system in the presence of a vertical magnetic field. Motion of the conducting medium coupled with the perpendicular magnetic field leads to the growth of induced eddy currents, which generates heat in the form of Ohmic dissipation. This results in the dissipation of the mechanical energy of an initially excited linear sloshing wave. Cases with perfectly conducting walls have a relatively simple distribution of eddy currents and have a straightforward solution towards the decay rate of waves in the presence of a magnetic field. However, this assumption is not suited for practical applications with non-conducting walls or for a mixed configuration with conducting and non-conducting walls, where the current distribution is confined within the walls leading to a significantly lower magnetic damping value. In the present work, we extend the single-layer magnetic damping theory for shallow conducting liquids enclosed within non-conducting walls to two-layer, non-shallow, and mixed conducting and non-conducting cases. Moreover, we give an analytical description of the Hartmann and Shercliff boundary layers and their influence on dissipation at the different boundaries.  We validate the analytical results using existing analytical and experimental studies including our own setup for non-shallow free-surface waves. 
+\end{abstract}
+
+% insert suggested keywords - APS authors don't need to do this
+%\keywords{}
+
+%\maketitle must follow title, authors, abstract, and keywords
+\maketitle
+
+\section{Introduction}
+\label{sec:intro}
+In recent years, we have seen the emergence of techniques which use electromagnetism for the processing conductive fluids, such as liquid metals, molten salts or semiconductor materials. Electromagnetic processing of materials (EPM) has been extensively used in various metallurgical devices for heating and stirring liquid metals \cite{Galpin1992a,Baake1994}. The electromagnetic fields produced by an alternating current (AC), are used to induce electric currents in the medium. This process, known as induction heating, uses the inherent resistance of the material to melt it. Moreover, the current also interacts with the recently formed fluid medium, producing Lorentz forces; the oscillating part of which are known to generate free surface/interfacial waves. In continuous casting of steel, electromagnetic stirrers make use of a rotating magnetic field to induce a swirling motion in the molten metal to homogenize the temperature distribution, and thereby also the microstructure of the cast \cite{shakhov2019}. In the context of induction heaters, the resultant velocity fluctuations reduce the overall quality of the molten product, mixing debris or atmospheric gases into the liquid. Whereas, in electromagnetic stirrers, the secondary vertical motion (sloshing) at certain resonant AC frequencies causes slag entrainment and surface cracking. Therefore, in these industrial processes, it is necessary to suppress the undesirable effects produced by an AC magnetic field. 
+\\
+\indent It is well established that the magnetic field produced by direct current (DC) has a damping effect on the fluid flow \cite{Fraenkel1960,shercliff1981, Davidson2001}. However, this effect is not isotropic and largely depends on the orientation of the magnetic field with respect to the local velocity vector of the fluid. For example, a vertical magnetic field $\h B_0$ imposed on a conducting liquid in motion results in the generation of an induced current density 
+\begin{equation}
+	\h j = \sigma(-\bm\nabla \varphi + \h U \times \h B_0),
+	\label{eq:intro_ind-current}
+\end{equation} 
+which is orthogonal to the average velocity $\h U$ and the magnetic field. The term $\sigma$ is the electrical conductivity and $\varphi$, the electric potential of the fluid. The internal resistance of the fluid contributes to the Ohmic losses in the system, which decrease the overall kinetic energy of the fluid. According to the inviscid equation of motion \cite[chapter 5]{Davidson2001},
+\begin{equation}
+\dv{}{t}\int_V \frac{1}{2} \rho \h U^2 \mathrm dV 
+= -\frac{1}{\sigma} \int_V \h j^2  \mathrm dV
+\label{eq:intro_ohmic_dissipation}
+\end{equation}
+where $\rho$ is the density of the fluid occupying a volume $V$. The induced currents also interact with the magnetic field producing Lorentz forces: $\textrm{f_L} = \h j \times \h B_0$. At first sight, it appears from this equation that motion normal to the field lines experiences braking due to Lorentz forces whereas motion parallel to the field lines is unopposed due to $\h U \times \h B_0 =0$. This is, however, a gross oversimplification of the phenomenon as the effect of the electric potential is ignored. To conserve the overall charge in the system, the current loops must close either within the fluid or in the walls depending on the electrical boundary conditions. To do so, the current must flow back through other parts of the system, and the redistributed current generates Lorentz forces that oppose the flow even in directions parallel to the field lines. This must be considered when theoretically modeling magnetohydrodynamic (MHD) effects in liquid metals.
+\\
+\indent One of the early theoretical studies that focused on the suppression of isotropic turbulence in a conducting fluid in the presence of a uniformly applied magnetic field was by \citet{Moffatt1967}. The main result was that the turbulence response can be separated into two domains using the Lundquist number $S$, which dictates whether a fluid is highly conducting or resistive. At low Lundquist numbers $S \ll 1$, there is strong anisotropic damping where the dominant contribution to the energy comes from Ohmic dissipation. When the Lundquist number is high $S \gg 1$, the disturbances due to the magnetic field consist of slowly decaying low-amplitude waves, known as Alfv\'en waves. Anisotropic damping was predicted to occur only when the magnetic field lines are parallel to the direction of wave propagation \cite{Shercliff1969}. The damping of gravity waves were also explored in \cite{Rivat1991} with respect to a funnel used in the metal casting process. In a study conducted by \citet{Davidson1995}, magnetic damping in two-dimensional (2D) and  three-dimensional (3D) models was studied, highlighting how the choice of dimensions impacts the end results. A 2D jet can be annihilated due to magnetic braking, whereas a 3D jet cannot. In reality, the Lorentz force cannot destroy the motion, but rather redistributes the angular momentum so as to reduce the overall kinetic energy. While the damping nature of a static field is already known, magnetic damping can also appear as a second-order effect that can suppress wave instabilities generated by an AC magnetic field \cite{fautrelle2005}. There exists a strong balance between magnetic forcing and damping when the field strength is high enough to trigger the parametric instability in a cylindrical geometry. The authors also gave a rough estimate regarding the formation of the Hartmann layer, which occurs at the boundary perpendicular to the magnetic field.    
+\\
+\indent There have been many experiments that have investigated the action of AC and DC magnetic fields on liquid metal free surface waves. \citet{Fautrelle2003} focused on the stabilizing effect of a non-vertical DC magnetic  field. The authors applied a horizontal transverse DC field to a mercury bath in a rectangular steel container. It was observed that the application of the static field suppressed all the free surface fluctuations and instead gave rise to a single traveling wave. \citet{Bojarevics2006a} investigated the influence of a static magnetic field in the vertical, transverse and coplanar orientations on inductively heated melts. The vertical orientation of the field proved to be the most efficient in damping of the flow velocities and surface deformations, whereas the coplanar orientation showed no overall stabilization. An increase in velocity fluctuations in the melt was observed instead. \citet{Fisher2019} showed that transverse magnetic fields perpendicular to wave propagation in shallow cells have no effects on wave damping, with or without the presence of external currents. In addition to the magnetic field orientation, the type of electrical boundary condition at the surrounding walls is an important factor to be considered. This was addressed by \citet{Sreenivasan2005}, who conducted damping experiments in conducting and insulating walls in the presence of a vertical magnetic field. The presence of non-conducting sidewalls was found to reduce the rate of magnetic damping. The stabilizing effect of magnetic damping is of significant importance in the design of laboratory-scale wave experiments, which often make use of high-strength magnetic fields \cite{Pedchenko2009, Pedcenko2017, Grants2021, Hegde2025}. These are relevant for cases where the objective is to excite or destabilize a wave with the use of external currents. To do so, the power injected into the system, whether in the form of input current or external magnetic field should exceed the total dissipation, either viscous or magnetic.  
+\\
+\indent Returning to the aim of the present work: we present a complete theoretical model of magnetic damping in a fluid undergoing linear wave motion in a rectangular domain. Magnetic damping in cylindrical geometries has already been well studied \cite{Herreman2019,Krastins2020}. Similar theoretical models in rectangular geometries only consider simple, unidirectional waves with shallow depths \cite{Sreenivasan2005}. Building on this work, we have expanded their description to derive analytical representations of induced eddy current distributions and magnetic damping rates for arbitrary wave modes in arbitrary rectangular geometries with homogeneous as well as mixed electrical boundary conditions. We also consider boundary effects in the Hartmann and Shercliff layers in a two-layer system. A particular case of our analytical solution for the Ohmic dissipation rate has also been tested experimentally using two different electrical boundary conditions. 
+\\
+\indent The manuscript is organised as follows: In Sec.\,\ref{sec:theory} we present the theoretical formulation, starting with the MHD equations and all the different cases based on the electrical boundary conditions (Sec.\,\ref{sec:gov_eqs}), and highlights the solution for the induced electric potentials (Sec.\,\ref{sec:elec_potential}). In Sec.\,\ref{sec:eddy_current}, we provide a quantitative description of the eddy current distribution in a medium, and in Sec.\,\ref{sec:ohmic_dissipation}, the description for the bulk dissipation due to the vertical magnetic field. In Sec.\,\ref{sec:hartmann_and_shercliff}, we discuss boundary layer effects and the transition of the viscous sub-layer to the Hartmann and Shercliff layers in the presence of a magnetic field. We consolidate all the theoretical results in Sec.\,\ref{sec:mag_damp} and compare it with the theoretical and experimental results of \citet{Sreenivasan2005} in Sec.\,\ref{sec:sreeni_compare}. In Sec.\,\ref{sec:mag_damp_exp}, we give a description of the experimental model and the magnetic damping measurements. We conclude our study and discuss open questions in Sec.\,\ref{sec:conclusion}.
+
+\section{Theoretical Formulation}
+\label{sec:theory}
+
+\subsection{The governing equations}
+\label{sec:gov_eqs}
+
+%%%%%%%%%%%%%%
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{scope}
+		\node (pic1) at (0,0) {\includegraphics[width=0.45\linewidth]{figures/model.pdf}};
+		\node (y) at (0.85,0.2) {$y$};
+		\node [left of=y, xshift=-0.1cm] {$x$};
+		\node at (0.25,0.9) {$z$};
+		\node at (0.26,0) {$\mathcal{O}$};
+		
+		\node (h1) at (-3.9,0.7) {$h_1$};
+		\node [below of=h1, yshift=1mm] {$h_2$};
+		
+		\node (Lx) at (-1.7,-1.85) {$L_y$};
+		\node (Ly) at (2.5,-1.95) {$L_x$};
+		
+		\node (o1) at (-1.5,-0.15) [rotate=-19] 
+		{$\Omega_1 (\rho_1, \nu_1, \sigma_1)$};
+		\node [below of=o1, yshift=1mm, rotate=-19] 
+		{$\Omega_2 (\rho_2, \nu_2, \sigma_2)$};
+		\node at (2,-1) {$\mathcal S$};
+		
+		\node at (-3.5,1.8) {(a)};
+		\end{scope}
+		
+		\begin{scope}[xshift=8.5cm]
+		\node (pic1) at (0,0) {\includegraphics[width=0.42\linewidth]{figures/model_destablize.pdf}};
+		\node (y) at (0.65,0.2) {$y$};
+		\node [left of=y, xshift=-0.15cm] {$x$};
+		\node at (-0.15,0.7) {$z$};
+		\node at (0,0) {$\mathcal{O}$};
+		
+		
+		
+		
+		\draw[-Stealth, very thick] (3.6,-1.6) -- (3.6,1.75) node [above] {$B_z$};
+		\draw[-Stealth, very thick] (3.9,1.75) -- (3.9,-1.6) node [below] {$g$};
+		
+		\draw [-Stealth, very thick] (-2.4,-0.62) node 
+		[below, xshift=9mm, yshift=-3.5mm, rotate=-22] {$\h U \times B_z\h e_z$} -- (-0.4,-1.4) ;
+		\draw [-Stealth, very thick] (2.5,-0.72) node 
+		[below, xshift=-8mm, yshift=-3.5mm, rotate=23] {$\h U$} -- (0.5,-1.5) ;
+		
+		 \node at (-3.5,1.8) {(b)};
+		 
+%		\draw[lightgray,step=0.5] (pic1.south west) grid (pic1.north east);
+%		
+%		% Axes' labels
+%		\foreach \x in {-4,-3.5,...,4} { \node [below] at (\x,0) {\x}; }
+%		\foreach \y in {-2.5,-2,...,2.5} { \node [left] at (0,\y) {\y};}
+%				
+		\end{scope}
+	\end{tikzpicture}
+	\caption{The three-dimensional sketch describing the a) geometrical and material specifications and b) mechanism of magnetic damping due to induced currents ($\propto \h U \times B_z \h e_z$) due to the interfacial wave motion in the presence of a magnetic field, $B_z$ in a stratified two-layer liquid system.}
+	\label{fig:model}
+\end{figure}
+%%%%%%%%%%%%%%
+
+We consider a two-layer, immiscible system consisting of conducting liquids $\Omega_1$ (upper layer) and $\Omega_2$ (lower layer) where the interface is free to move along the vertical axis. The two stratified liquids have densities $\rho_1$ and $\rho_2$ (such that $\rho_2 > \rho_1$), kinematic viscosities $\nu_1$ and $\nu_1$, electrical conductivities $\sigma_1$ and $\sigma_2$, and are bound by a rectangular domain of length $L_x$, width $L_y$ and total height $H = h_1+h_2$, as shown in Fig.\,\subref{fig:model}{a}. The interface $\mathcal{S}$ is threaded by a constant, vertical magnetic field along the positive $z$-axis, as shown in Fig.\,\subref{fig:model}{b}. The average fluid flow $\h U$ due to wave motion coupled with the vertical component of the magnetic field, $B_z \h e_z$ produces induced currents proportional to $\h U \times B_z\h e_z$, a key contributor to Ohmic dissipation. The induced magnetic field due to induced currents are negligible due to higher order effects and as a result, are ignored in this study. 
+\\
+\indent We denote the following quantities $\h u_i$, $p_i$, $\pmb{\mathcal{J}}_i$, and $\Psi_i$ for the local velocity, pressure, induced current density and the electric potential due to induction for both layers $i=1,2$, and write the governing equations as follows:
+\begin{subequations}
+\begin{align}
+\rho_i\partial_t\h u_i + \bm\nabla p_i &= \pmb{\mathcal{J}}_i \times B_z\h e_z + \rho_i\nu_i\nabla^2 \h u_i,
+\label{eq:gov_momentum}
+\\
+\bm \nabla \cdot \h u_i &= 0,
+\label{eq:gov_cont}
+\\
+\pmb{\mathcal{J}}_i &= \sigma_i \bigl( -\bm\nabla\Psi_i + \h u_i \times B_z\h e_z\bigr),
+\label{eq:gov_quasi_mhd}
+\\
+\bm\nabla \cdot \pmb{\mathcal{J}}_i &= 0 .
+\label{eq:gov_charge_cont}
+\end{align}
+\end{subequations}
+The Eqs.\,(\ref{eq:gov_momentum}--\ref{eq:gov_charge_cont}) are the linearized momentum, continuity, generalized Ohm's law and continuity of charge equation in order. The source term $\pmb{\mathcal{J}}_i \times B_z\h e_z$ is the Lorentz force due to the coupling of induced current density. We assume a no slip condition at the wall i.e. velocity tangential and perpendicular ($\h u_i \cdot \h n = 0$) to the wall is zero. The instantaneous velocities between the two layers are equal at the interface. The vertical displacement of the interface at an instataneous time $t$ is   
+\begin{equation}
+	\eta (x,y,t) = \ii i \mathcal{A}_{mn}
+	\cos{\biggl[ \frac{m\pi}{L_x} \biggl(x + \frac{L_x}{2} \biggr) \biggr]}
+	\cos{\biggl[ \frac{n\pi}{L_y} \biggl(y + \frac{L_y}{2} \biggr) \biggr]}
+	\ii{e}^{\ii i\omega t},
+	\label{eq:eta}
+\end{equation}
+where, $\mathcal{A}_{mn}$ is the initial amplitude, $\omega$ the angular frequency of the decaying interfacial wave 
+\begin{equation}
+	\omega = \sqrt{
+		\frac{(\rho_2-\rho_1)gk}
+		{\rho_1\coth{[kh_1]} + \rho_2\coth{[kh_2]} }
+	} \; ,
+	\label{eq:ang_freq}
+\end{equation}
+of mode $m, n \in \mathbb{N}_0$, where $m$ and $n$ refer to the plane waves that propagate in the $x$ and $y$ direction respectively. The term $k = \pi\sqrt{\bigl(m/L_x\bigr)^2 + \bigl(n/L_y\bigr)^2}$ is the angular wave number and $g$, the acceleration due to gravity. In a classical gravity-capillary wave system, we assume the fluid to be incompressible and irrotational with the velocity $\h u_i = \bm\nabla \phi_i$, where $\phi_i$ is the scalar velocity potential for a given fluid layer $i$. Solving the Laplace equation $\bm\nabla^2\phi_i = 0$ gives the following solution:
+\begin{equation}
+\phi_i = \mathcal{A}_{mn} (-1)^{i+1}
+\frac{\omega}{k}
+\frac{\cosh{[k\bigl(z + (-1)^ih_i \bigr)]}}{\sinh{[kh_i]}}
+\cos{\biggl[ \frac{m\pi}{L_x} \biggl(x + \frac{L_x}{2} \biggr) \biggr]}
+\cos{\biggl[ \frac{n\pi}{L_y} \biggl(y + \frac{L_y}{2} \biggr) \biggr]}
+\ii{e}^{\ii i\omega t} ,
+\quad \{i=1,2\}.
+\label{eq:vel_potential}
+\end{equation}
+%%%%%%%%%%%%%%%
+\\
+\indent We make certain assumptions before conducting the theoretical analysis, firstly, the effects of interfacial tension are ignored. Secondly, that only the vertical component of the DC magnetic field is of interest in the current study. Thirdly, we undertake the low magnetic Reynolds number approximation:
+\begin{equation}
+	\ii R_{\ii m} = \mu_0\sigma\omega L^2 \ll 1,
+	\label{eq:mag_Re}
+\end{equation}
+which states that the induced magnetic fields due to the induced currents are negligible compared to the external magnetic field $B_z$. In the above equation, $\mu_0$ is the permeability of free space and $L$ is the characteristic length. Note that the wave velocity is expressed as the product of wave frequency $\omega$ and $L$. The effect of $B_z$ can also be characterized by the Hartmann number,
+\begin{equation}
+	\ii{Ha} = B_z L\sqrt{\frac{\sigma}{\rho\nu}},
+	\label{eq:hartmann_number}
+\end{equation}
+which is the ratio of electromagnetic to viscous forces. The common consensus is to take dimensions parallel to the direction of the vertical magnetic field $B_z$ as the characteristic length $L$. The Hartmann number plays a crucial role in the transition of the viscous boundary into the Hartmann layer, where the circulating electric currents cut the magnetic fields producing an electromotive force suppressing fluid motion which results in a "braking" effect. 
+
+
+\subsection{The electric potential}
+\label{sec:elec_potential}
+
+
+\begin{table}%[H] add [H] placement to break table across pages
+	\caption{The four different cases adopted in the current study and its respective boundary and transmission conditions.}
+	\label{tab:table_sim}
+	\begin{ruledtabular}
+		\begin{tabular}{llll}
+			Case No. &  Case name & \multicolumn{2}{l}{Boundary conditions} 
+			\\  \hline 
+			 &	 &
+			\multirow{5}{*}{
+				\begin{tikzpicture}
+					\node at (0,0) {
+						\includegraphics[width=0.3\textwidth]{figures/BC_case1.pdf}
+					};
+					\node (y) at(-2.1,-0.95) {$y$};
+					\node (x) [above of=y, xshift=-0.2cm, yshift=-0.6cm] {$x$};
+					\node (z) [above of=y, xshift=-0.55cm, yshift=-0.2cm] {$z$};
+				\end{tikzpicture} 
+			}
+			& 
+			\\
+			1 & B.C 1 & & $\Psi\bigl|_{x=\pm 0.5L_x}=\Psi\bigl|_{y=\pm 0.5L_y}=0$,
+			\\
+			& & & $\Psi\bigl|_{z=h_1}=\Psi\bigl|_{z=-h_2}=0$
+			\\
+			& & &
+			\\
+			& & &
+			\\[25pt] \hline
+			
+			 &  &
+			\multirow{5}{*}{
+				\begin{tikzpicture}
+					\node at (0,0) {
+						\includegraphics[width=0.3\textwidth]{figures/BC_case2.pdf}
+					};
+					\node (y) at(-2.1,-0.95) {$y$};
+					\node (x) [above of=y, xshift=-0.2cm, yshift=-0.6cm] {$x$};
+					\node (z) [above of=y, xshift=-0.55cm, yshift=-0.2cm] {$z$};
+				\end{tikzpicture}
+			}
+			& 
+			\\
+			2 & B.C 2 & & $\partial_x \Psi\bigl|_{x=\pm 0.5L_x} = \partial_y\phi_i B_z$, 
+			\\
+			& & & $\partial_y \Psi\bigl|_{y=\pm 0.5L_y}= -\partial_x\phi_i B_z$,
+			\\
+			& & & $ \Psi\bigl|_{z=h_1}=\Psi\bigl|_{z=-h_2}=0$
+			\\
+			& & &
+			\\[22pt] \hline
+			% 		
+			 &	  &
+			\multirow{5}{*}{
+				\begin{tikzpicture}
+					\node at (0,0) {
+						\includegraphics[width=0.3\textwidth]{figures/BC_case3.pdf}
+					};
+					\node (y) at(-2.1,-0.95) {$y$};
+					\node (x) [above of=y, xshift=-0.2cm, yshift=-0.6cm] {$x$};
+					\node (z) [above of=y, xshift=-0.55cm, yshift=-0.2cm] {$z$};
+				\end{tikzpicture}
+			}
+			& 
+			\\
+			3 & B.C 3 & & $\Psi\bigl|_{x=\pm 0.5L_x}=0$, 
+			\\
+			& & & $\partial_y \Psi\bigl|_{y=\pm 0.5L_y}= -\partial_x\phi_i B_z$,
+			\\
+			& & & $\partial_z\Psi\bigl|_{z=h_1}=\partial_z\Psi\bigl|_{z=-h_2}=0$
+			\\
+			& & &
+			\\[22pt] \hline
+			
+			 &  &
+			\multirow{5}{*}{
+				\begin{tikzpicture}
+					\node at (0,0) {
+						\includegraphics[width=0.3\textwidth]{figures/BC_case4.pdf}
+					};
+					\node (y) at(-2.1,-0.95) {$y$};
+					\node (x) [above of=y, xshift=-0.2cm, yshift=-0.6cm] {$x$};
+					\node (z) [above of=y, xshift=-0.55cm, yshift=-0.2cm] {$z$};
+				\end{tikzpicture}
+			}
+			&
+			\\
+			4 & B.C 4 & & $\partial_x \Psi\bigl|_{x=\pm 0.5L_x} = \partial_y\phi_i B_z$, 
+			\\
+			& & & $\partial_y \Psi\bigl|_{y=\pm 0.5L_y}= -\partial_x\phi_i B_z$,
+			\\ 
+			& & & $ \partial_z\Psi\bigl|_{z=h_1}=\partial_z\Psi\bigl|_{z=-h_2}=0$
+			\\
+			& & &
+			\\[22pt]
+		\end{tabular}
+	\end{ruledtabular}
+\end{table}
+
+To determine the Ohmic dissipation, it is necessary to first calculate the induced current density $\pmb{\mathcal{J}}$ in the bulk fluid flow, which has known quantities $\h u_i = \bm\nabla\phi_i$, and unknown quantities like the induced electric potential $\Psi_i$. To this end, we substitute the generalized Ohm's law [Eq.\,\eqref{eq:gov_quasi_mhd}] in the conversation of induced current density [Eq.\,\eqref{eq:gov_charge_cont}]:
+\begin{gather}
+	\bm\nabla \cdot \pmb{\mathcal{J}}_i = 0 \Longrightarrow
+	-\nabla^2\Psi_i + \bm\nabla \cdot \bigl( \h u_i \times B_z\h e_z\bigr) = 0,
+\intertext{to obtain the Laplace equation}
+	\nabla^2\Psi_i = 0.
+	\label{eq:laplacian_psi}
+\end{gather} 
+The solution to the above equation largely depends on the boundary and interfacial transmission conditions, as given in Table\,\ref{tab:table_sim}. We introduce four distinct cases, namely B.C 1: with all six boundaing walls as perfect electrical conductors $\bigl(\Psi_i\bigl|_{\rm wall} = 0$, $\partial{\pmb{\mathcal J}}_i/\partial n\bigl|_{\rm wall}\neq 0 \bigr)$, B.C 2: all walls barring the top and bottom wall as perfect electrical insulators $\bigl({\pmb{\mathcal J}}_i\bigl|_{\rm wall}= 0 \bigr)$, B.C 3: only the side walls perpendicular to the $x$-axis as perfect conductors and lastly B.C 4: all walls as perfect electrical insulators. B.C 1 is the trivial case where $\Psi_i \bigl|_{\Omega_i} = 0$. Similarly, a domain with all perfectly conducring sidewalls and insulating top and bottom walls will also result in the trivial scenario of $\Psi_i|_{\Omega_i}=0$. The current no-outflow conditions in B.C 2, 3 and 4 are crucial for determining the induced electrical potentials. Further details regarding the solution of this pure boundary value problem are provided in Sec.\,\RN{1} of the supplementary material. The final result for each case are provided below. Firstly, for B.C 2:
+\begin{align}
+	\nn
+	\Psi_i (\ii{B.C 2})&= 
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	A^{(i)}_{ab} 
+	\left(
+	\frac{1-(-1)^m}{2\sech{[\xi_x x]}} + \frac{1+(-1)^m}{2\csch{[\xi_x x]}}
+	\right)
+	\cos{\biggl[ \frac{i\pi}{L_y}\biggl(y + \frac{L_y}{2}\biggr)\biggr]}
+	\sin{\biggl[ \frac{j\pi}{h_i}\bigl(z + (-1)^{i} h_i\bigr)\biggr]} 
+	\\
+	&+
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	B^{(i)}_{ab} 
+	\left(
+	\frac{1-(-1)^n}{2\sech{[\xi_y y]}} + \frac{1+(-1)^n}{2\csch{[\xi_y y]}}
+	\right)
+	\cos{\biggl[ \frac{i\pi}{L_x}\biggl(x + \frac{L_x}{2}\biggr)\biggr]}
+	\sin{\biggl[ \frac{j\pi}{h_i}\bigl(z + (-1)^{i}h_i\bigr)\biggr]}
+	,\qquad \{i=1,2\},
+	\label{eq:bc2_potential}
+	\intertext{with coefficients,}
+	A^{(i)}_{ab} &= \mathcal{A}_{mn}
+	\frac{ -\epsilon^*_{a,b}\;
+		\omega B_z n^2 
+		\bigl( -1^{m+1} + (-1)^{a+m+n} \bigr)
+		\;
+		b\pi \bigl(-1^b\coth{[kh_i]} - \csch{[kh_i]} \bigr) 
+	}
+	{(a^2 -n^2)  
+		\left(
+		\dfrac{1-(-1)^m}{2\csch{[0.5\xi_x L_x]}} + \dfrac{1+(-1)^m}{2\sech{[0.5\xi_x L_x]}}
+		\right)
+		\xi_x L_y 
+		\; k(k^2h_i^2 + b^2\pi^2)
+	},
+	\label{eq:bc2_A}
+	\\
+	B^{(i)}_{ab} &= \mathcal{A}_{mn}
+	\frac{ \epsilon^*_{a,b}\;
+		\omega B_z m^2 
+		\bigl( -1^{n+1} + (-1)^{a+m+n} \bigr)
+		\;
+		b\pi \bigl(-1^b\coth{[kh_i]} - \csch{[kh_i]} \bigr) 
+	}
+	{(a^2 -m^2)  
+		\left(
+		\dfrac{1-(-1)^n}{2\csch{[0.5\xi_y L_y]}} + \dfrac{1+(-1)^n}{2\sech{[0.5\xi_y L_y]}}
+		\right)
+		\xi_y L_x 
+		\; k(k^2h_i^2 + b^2\pi^2)
+	},
+	\label{eq:bc2_B}
+	\\
+	\quad \epsilon^*_{a,b} &= \left\{
+	\begin{array}{cc}
+		b = 0, & 0 \\
+		a = 0, & 2 \\
+		a,b \neq 0,  & 4
+	\end{array}
+	\right . .
+\end{align}
+In Eq.\,\eqref{eq:bc2_potential}, the terms containing the coefficients $A_{ab}$ and $B_{ab}$ correspond to the insulating boundary conditions of the sidewalls perpendicular to the $x$- and $y$-axis accordingly. The contribution from the no shallow depth $h_i$ adds an additional sum to the harmonic solution. For B.C 3:
+\begin{align}
+	\Psi_i (\ii{B.C 3})&= 
+	\sum_{b=0}^{\infty}
+	B^{(1)}_{mb} 
+	\left(
+	\frac{1-(-1)^n}{2\sech{[\xi_y y]}} + \frac{1+(-1)^n}{2\csch{[\xi_y y]}}
+	\right)
+	\sin{\biggl[ \frac{m\pi}{L_x}\biggl(x + \frac{L_x}{2}\biggr)\biggr]}
+	\cos{\biggl[ \frac{b\pi}{h_i}\bigl(z + (-1)^ih_i\bigr)\biggr]}
+	,\qquad \{i=1,2\},
+	\label{eq:bc3_potential}
+	\intertext{where,}
+	B^{(i)}_{mb}
+	&= 
+	\frac{\mathcal{A}_{mn}
+	(-1)^{i+1}}
+	{\epsilon_{mb}}
+	\frac{4\omega B_z m \pi (-1)^{n+b}}
+	{\xi_y L_x 
+		\left(
+		\dfrac{1-(-1)^n}{\csch{[0.5\xi_y L_y]}} + \dfrac{1+(-1)^n}{\sech{[0.5\xi_y L_y]}}
+		\right)
+	}
+	\frac{h_i}{(k^2h_i^2 + b^2\pi^2)},
+	\qquad \epsilon_r = \left\{
+	\begin{array}{cc}
+		2, & r=0 \\
+		1, & r\neq 0
+	\end{array}
+	\right . .
+	\label{eq:bc3_B}
+\end{align}
+In this case, only the insulating pair of sidewalls normal to the $y$-axis contribute to the electric potential. The characteristic double sum reduces to a single one as the sum with the variable $a$ is equivalent to zero in all cases except when $a = m$. Lastly, for B.C 4:
+\begin{align}
+	\nn
+	\Psi_i (\ii{B.C 4})&= 
+	A_0^{(i)}x - \frac{A_0^{(i)} \bigl(-1^n + (-1)^{m+n+1} \bigr) }{2L_x}
+	\left(x- \frac{L_x}{2}\right)^2
+	+
+	B_0^{(i)}y - \frac{B_0^{(i)} \bigl(-1^m + (-1)^{m+n+1} \bigr) }{2L_y}
+	\left(y- \frac{L_y}{2}\right)^2
+	\\
+	\nn
+	&+
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	A^{(i)}_{ab} 
+	\left(
+	\frac{1-(-1)^m}{2\sech{[\xi_x x]}} + \frac{1+(-1)^m}{2\csch{[\xi_x x]}}
+	\right)
+	\cos{\biggl[ \frac{a\pi}{L_y}\biggl(y + \frac{L_y}{2}\biggr)\biggr]}
+	\cos{\biggl[ \frac{b\pi}{h_i}\bigl(z + (-1)^i h_i\bigr)\biggr]} 
+	\\
+	&+
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	B^{(i)}_{ab} 
+	\left(
+	\frac{1-(-1)^n}{2\sech{[\xi_y y]}} + \frac{1+(-1)^n}{2\csch{[\xi_y y]}}
+	\right)
+	\cos{\biggl[ \frac{a\pi}{L_x}\biggl(x + \frac{L_x}{2}\biggr)\biggr]}
+	\cos{\biggl[ \frac{b\pi}{h_i}\bigl(z + (-1)^i h_i\bigr)\biggr]}
+	,\qquad \{i=1,2\},
+	\label{eq:bc4_potential}
+\end{align}
+with coefficients,
+\begin{align}
+	A_0^{(i)} &= \mathcal{A}_{mn}
+	(-1)^{i+1} \;
+	\frac{
+		\omega B_z \bigl( -1^{m+1} + (-1)^{m+n} \bigr) }
+	{k^2 L_y h_i}, \qquad
+	B_0^{(i)} = \mathcal{A}_{mn}
+	(-1)^{i} \;
+	\frac{
+		\omega B_z \bigl( -1^{n+1} + (-1)^{m+n} \bigr) }
+	{k^2 L_x h_i}
+	,
+	\label{eq:bc4_constants}
+	\\
+	A^{(i)}_{ab} &= \mathcal{A}_{mn}
+	(-1)^i
+	\frac{\epsilon_{ab} \; \omega B_z h_i n^2 
+		\bigl( -1^{m+b+1} + (-1)^{a+b+m+n} \bigr)}
+	{(a^2 -n^2) (k^2h_i^2 + b^2\pi^2) 
+		\left(
+		\dfrac{1-(-1)^m}{2\csch{[0.5\xi_x L_x]}} + \dfrac{1+(-1)^m}{2\sech{[0.5\xi_x L_x]}}
+		\right)
+		\xi_x L_y },
+		\label{eq:bc4_Acoeff}
+	\\
+	B^{(i)}_{ab} &= \mathcal{A}_{mn}
+	(-1)^{i+1}
+	\frac{\epsilon_{ab} \; \omega B_z h_i m^2 \bigl(-1^{n+b+1} + (-1)^{a+b+m+n} \bigr)}
+	{(a^2 -m^2) (k^2h_i^2 + b^2\pi^2) 
+		\left(
+		\dfrac{1-(-1)^n}{2\csch{[0.5\xi_y L_y]}} + \dfrac{1+(-1)^n}{2\sech{[0.5\xi_y L_y]}}
+		\right)
+		\xi_y L_x } .
+	\label{eq:bc4_Bcoeff}
+\end{align}
+In Eqs.\,(\ref{eq:bc2_potential}--\ref{eq:bc4_Bcoeff}), the terms $\xi_x$ and $\xi_y$ are
+\begin{equation}
+	\xi_x = \pi\sqrt{
+		\frac{a^2}{L_y^2} + \frac{b^2}{h_i^2}
+	}
+	,\quad
+	\xi_y = \pi\sqrt{
+		\frac{a^2}{L_x^2} + \frac{b^2}{h_i^2}
+	}.
+\end{equation}
+%%%%%%%%%%%%%
+The electric potential in an all insulating domain [Eq.\,\eqref{eq:bc4_potential}], is characterized by the presence of constant terms shown in Eq.\,\eqref{eq:bc4_constants}. These terms arise for the special scenario when both the variables $a,b=0$, which causes an undefined value for the first element in the double sum. 
+%%%%%%%%%%%%%
+\begin{figure}
+	\begin{tikzpicture}
+		\node (pic1) at (-5,0) 
+		{\includegraphics[width=0.45\linewidth]{figures/3-wave_1.png} };
+		\node (pic2) at (3.8,0)
+		{\includegraphics[width=0.45\linewidth]{figures/3-wave_0.png} };
+		\node [above of=pic1, xshift=-3.9cm, yshift=0.9cm] {(a)};
+		\node [above of=pic2, xshift=-3.9cm, yshift=0.9cm] {(b)};
+	\end{tikzpicture}
+	\caption{The interfacial wave elevation for a standing wave of mode a) $(1,1)$ and b) $(2,1)$ in a rectangular domain. The horizontal cross-section of the volume is highlighted in red, and is the area of interest for the mapping of wave-induced eddy currents.}
+	\label{fig:wave_modes}
+\end{figure}
+%%%%%%%%%%%%%
+
+\subsection{Eddy current distribution}
+\label{sec:eddy_current}
+%%%%%%%%%%%%%
+\begin{figure}
+	\begin{tikzpicture}
+		\begin{scope}
+			\node (c11) at (-4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C1_streamline_1-1.eps}};
+			\node (c12) at (4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C1_streamline_2-1.eps}};
+			\node (case) [above of=c11, xshift=-3.4cm, yshift=1.5cm] {B.C 1:};
+			\node (a) [below of=case, xshift=-0.7cm, yshift=4mm] {(a)};
+			\node (b) [right of=a, xshift=7.47cm] {(b)};
+			
+			\node [below of=c11, yshift=-1.5cm] {$x$};
+			\node [left of=c11, xshift=-3cm] {$y$};
+			
+			\node [below of=c12, yshift=-1.5cm] {$x$};
+			\node [left of=c12, xshift=-3cm] {$y$};
+		\end{scope}
+		\label{fig:eddy_ab}
+		\begin{scope}[yshift=-5.3cm]
+			\node (c11) at (-4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C2_streamline_1-1.eps}};
+			\node (c12) at (4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C2_streamline_2-1.eps}};
+			\node (case) [above of=c11, xshift=-3.4cm, yshift=1.5cm] {B.C 2:};
+			\node (a) [below of=case, xshift=-0.7cm, yshift=4mm] {(c)};
+			\node (b) [right of=a, xshift=7.47cm] {(d)};
+			
+			\node [below of=c11, yshift=-1.5cm] {$x$};
+			\node [left of=c11, xshift=-3cm] {$y$};
+			
+			\node [below of=c12, yshift=-1.5cm] {$x$};
+			\node [left of=c12, xshift=-3cm] {$y$};
+		\end{scope}
+		\label{fig:eddy_cd}
+		\begin{scope}[yshift=-10.6cm]
+			\node (c11) at (-4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C3_streamline_1-1.eps}};
+			\node (c12) at (4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C3_streamline_2-1.eps}};
+			\node (case) [above of=c11, xshift=-3.4cm, yshift=1.5cm] {B.C 3:};
+			\node (a) [below of=case, xshift=-0.7cm, yshift=4mm] {(e)};
+			\node (b) [right of=a, xshift=7.47cm] {(f)};
+			
+			\node [below of=c11, yshift=-1.5cm] {$x$};
+			\node [left of=c11, xshift=-3cm] {$y$};
+			
+			\node [below of=c12, yshift=-1.5cm] {$x$};
+			\node [left of=c12, xshift=-3cm] {$y$};
+		\end{scope}
+		\label{fig:eddy_ef}
+		\begin{scope}[yshift=-15.9cm]
+			\node (c11) at (-4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C4_streamline_1-1.eps}};
+			\node (c12) at (4.25,0) {
+				\includegraphics[width=0.45\textwidth] {figures/C4_streamline_2-1.eps}};
+			\node (case) [above of=c11, xshift=-3.4cm, yshift=1.5cm] {B.C 4:};
+			\node (a) [below of=case, xshift=-0.7cm, yshift=4mm] {(g)};
+			\node (b) [right of=a, xshift=7.47cm] {(h)};
+			
+			\node [below of=c11, yshift=-1.5cm] {$x$};
+			\node [left of=c11, xshift=-3cm] {$y$};
+			
+			\node [below of=c12, yshift=-1.5cm] {$x$};
+			\node [left of=c12, xshift=-3cm] {$y$};
+		\end{scope}
+
+		\begin{scope}[xshift=-7cm, yshift=-18.4cm]
+			\pgfplotscolorbardrawstandalone[ 
+			colorbar horizontal,
+			colormap={mybwr}{samples of colormap=(25 of bwr)},
+			colormap access=piecewise constant,
+			point meta min=0,
+			point meta max=1,
+			colorbar style={
+				width=14cm,
+				height=2.5mm,
+				xtick={0,0.2,0.4,...,1}
+				}]
+			\node at (7.1,-1.1) {$\left|\pmb{\mathcal{J}}\right|/\left|\pmb{\mathcal{J}}\right|_{\rm max}$};
+		\end{scope}
+		\label{fig:eddy_gh}
+	\end{tikzpicture}
+	\caption{The induced current streamlines superposed on the normalized current density distribution in a horizontal $x-y$ plane located at $z = -h_2/2$, for the four different wall boundary conditions. The normalization is done  Sub-figures a), c), e), g) pertain to the wave mode $(1,1)$ and b), d), f), h) to the wave mode $(2,1)$.}
+	\label{fig:eddy_currents}
+\end{figure}
+%%%%%%%%%%%%%
+
+\begin{figure}
+\begin{tikzpicture}
+	\node (pic1) [draw, black, inner sep=1pt] at (-5,0) 
+	{\includegraphics[width=0.2\textwidth]{figures/10.eps}};
+	\node (pic2) [draw, black, inner sep=1pt, right of=pic1, xshift=3.3cm]
+	{\includegraphics[width=0.2\textwidth]{figures/20.eps}};
+	\node (pic3) [draw, black, inner sep=1pt, right of=pic2, xshift=3.3cm]
+	{\includegraphics[width=0.2\textwidth]{figures/22.eps}};
+	\node (pic4) [draw, black, inner sep=1pt, right of=pic3, xshift=3.3cm]
+	{\includegraphics[width=0.2\textwidth]{figures/23.eps}};
+	
+	\node [left of=pic1,xshift=-1cm] {$y$};
+	\node [below of=pic1,yshift=-1cm] {$x$};
+	\node [left of=pic2,xshift=-1cm] {$y$};
+	\node [below of=pic2,yshift=-1cm] {$x$};
+	\node [left of=pic3,xshift=-1cm] {$y$};
+	\node [below of=pic3,yshift=-1cm] {$x$};
+	\node [left of=pic4,xshift=-1cm] {$y$};
+	\node [below of=pic4,yshift=-1cm] {$x$};	
+	
+	\node [above of=pic1, xshift=-1.15cm, yshift=1.15cm] {(a) $(1,0)$};
+	\node [above of=pic2, xshift=-1.15cm, yshift=1.15cm] {(b) $(2,0)$};
+	\node [above of=pic3, xshift=-1.15cm, yshift=1.15cm] {(c) $(2,2)$};
+	\node [above of=pic4, xshift=-1.15cm, yshift=1.15cm] {(d) $(2,3)$};
+\end{tikzpicture}
+\caption{ More examples of induced eddy current streamlines in the horizontal $x$-$y$ plane for wave modes a) $(1,0)$, b) $(2,0)$, c) $(2,2)$ and d) $(2,3)$. The total number of induced eddy currents for a given wave mode $(m,n)$ is always equal to $(m+1)(n+1)$.}
+\label{fig:eddy_examples}
+\end{figure}
+
+Since the expanded solutions in Eqs.\,(\ref{eq:bc2_potential}, \ref{eq:bc3_potential} and \ref{eq:bc4_potential}) are very intricate and the eddy current patterns induced by interfacial wave motions have not yet been analyzed for non-zero wave modes, we want to dive deeper into the underlying physics and examine the solution of the induced current density  graphically. For this purpose, we consider a pair of non-zero wave modes $(1,1)$ and $(2,1)$ as shown in Fig.\,\ref{fig:wave_modes} and plot the induced current density streamlines formed at a horizontal plane (outlined in red in Fig.\,\ref{fig:wave_modes}) with vertical co-ordinates $z=-h_2/2$. Fig.\,\ref{fig:eddy_currents} shows the different streamlines for both the wave modes occurring in a domain with the four considered boundary conditions. The streamlines have been superimposed on the normalized current density magnitudes, which have been calculated by finding the local maximum value, $\pmb{\mathcal{J}}|_{\rm max}$. The horizontal induced current densities are given by:
+\begin{equation}
+	\begin{bmatrix}
+		{{\mathcal J}}_{2,x}
+		\\[5pt]
+		{{\mathcal J}}_{2,y}
+	\end{bmatrix}
+	=
+	-\sigma_2
+	\begin{bmatrix}
+		\Psi_{2,x}
+		\\[5pt]
+		\Psi_{2,y}
+	\end{bmatrix}
+	+
+	\sigma_2
+	\begin{bmatrix}
+		\phi_{2,y} \,B_z
+		\\[5pt]
+		-\phi_{2,x}\, B_z
+	\end{bmatrix}
+	\label{eq:eddy_current_vector}
+\end{equation}  
+Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(a)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(b)} show the eddy current distribution for waves $(1,1)$ and $(2,1)$, bounded by perfect conductors as sidewalls (B.C 1) respectively. The pure horizontal currents with density ${\pmb{\mathcal{J}}}_2=\sigma_2({\h u}_2\times B_z\h e_z)$, have no boundary corrections and close in the wall. Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_cd]{(c)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_cd]{(d)} refer to the B.C 2 boundary condition and here, the streamlines form a similar eddy pattern to B.C 1, but with the currents closing within the insulating walls. The current density distribution is relatively similar except at the sidewalls. The similarity in the current distribution of cases B.C 1 and B.C 2 with differing sidewall boundary conditions is a key result to note when we discuss the magnetic damping rate in Sec.\,\ref{sec:mag_damp}. In B.C 3, the streamlines close only in the two conducting walls perpendicular to the $x$-axis, as shown in Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ef]{(e)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_ef]{(f)}. The eddies closer to the insulating walls tend to close within itself. Lastly, Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_gh]{(g)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_gh]{(h)} show the same for B.C 4, with the eddies closing within the insulating walls. Both B.C 3 and B.C 4 are characterized by strong current concentrations at the sidewalls, where the currents tend to close. By analyzing the solutions in detail, we can deduce a simple formula for the total number of all the eddies that are formed $n_{\rm eddy}$, as a function of the wave numbers:
+\begin{equation}
+	n_{\rm eddy} = (m+1)\,(n+1).
+	\label{eq:no_of_eddies}
+\end{equation}     
+Further examples of eddy current streamlines are given in Fig.\,\ref{fig:eddy_examples} for both uni- and bidirectional wave modes. It is evident that the wave modes as well as the boundary conditions clearly have an influence in the complex behavior of the eddy patterns, both in their spacial arrangement and the size distribution. 
+ 
+ 
+\subsection{Ohmic dissipation}
+\label{sec:ohmic_dissipation}
+
+\indent Having obtained the solutions of $\Psi_i$ in terms of a series harmonic and hyberbolic functions, we can now solve for ${\pmb{\mathcal J}}_i$ and therefore the damping rate due to Ohmic dissipation, which we denote by $\lambda_{\rm o}$. Neglecting the viscosity and interfacial tension, the mechanical energy balance of a two-layer system is
+\begin{equation}
+	 \dv{}{t}\left( \sum_{i=1,2} \frac{1}{2} 
+	 \int_{V_i} \rho_i \norm{\h u_i}^2 \mathrm dV  \right)
+	 +
+	 \dv{}{t}\left( \int_{\mathcal{S}} 
+	  \frac{1}{2} (\rho_2-\rho_1)g\eta^2  \: \mathrm d\mathcal{S}  
+	  \right)
+	  = -\sum_{i=1,2} \frac{1}{\sigma_i}
+	  \int_{V_i} \pmb{\mathcal{J}}_i^2 \: \mathrm dV ,
+	  \label{eq:balance_ohmic}
+\end{equation}
+which states that the sum of the rate of kinetic energy in the bulk and the rate of potential energy at the interface $\mathcal{S}$ is equal to the total enerdy dissipated. The detailed analytical calculation is provided in Sec.\,\RN{2} of the supplementary material. The expression for $\lambda_{\rm o}$ obtained is:
+\begin{equation}
+	\lambda_{\rm o} = 
+	\dfrac{
+		\mathcal{Q}_{\rm ind}
+		-\mathcal{Q}_{\rm corr}	}{2 K},
+	\label{eq:mag_damping_rate_short}
+\end{equation}
+where $\mathcal{Q}_{\rm ind}$ is the dissipation of energy due to induced currents. The expression for $\mathcal{Q}_{\rm ind}$ for all cases are:
+\begin{equation}
+	\mathcal{Q}_{\rm ind} = 
+	\sum_{i=1,2} \sigma_i\int_{V_i}  \norm{{\h u}_i\times B_z\bm e_z}^2
+	=
+	\sum_{i=1,2}
+	\mathcal{A}^2_{mn}
+	\epsilon_{mn}\frac{ \sigma_i
+		\omega^2B_z^2(\coth[kh_i]+kh_i\csch^2{[kh_i]})}{8k}L_xL_y ,
+		\quad 
+	\epsilon_{r} =
+	\biggl\{ \begin{array}{rc}
+		2,  & r= 0 \\
+		1,  & r\neq 0
+	\end{array}	,
+	\label{eq:qind}
+\end{equation}
+and $\mathcal{Q}_{\rm corr}$ is the correction to the dissipation due to insulating/conducting wall boundary conditions, given by the integral
+\begin{equation}
+	\mathcal{Q}_{\rm corr} =
+	\sum_{i=1,2} \int_{V_i} \bm{\nabla} {\phi}_i\cdot (-\sigma_i \bm{\nabla}{\Psi}_i \times B_z\bm{e}_z ),
+	\label{eq:Qcorr_integral}
+\end{equation}
+which varies depending on the electric potential $\Psi_i$. The term $K$ is proportional to the kinetic/potential energy of the standing wave ($m,n$). It is given by
+\begin{equation}
+	K = 0.25\mathcal{A}^2_{mn}\epsilon_{mn}(\rho_2 - \rho_1)g L_xL_y.
+	\label{eq:K_eq}
+\end{equation}
+The correction term $\mathcal{Q}_{\rm corr}$ mainly originates from insulating sidewalls. In a domain with both insulating and conducting sidewalls, the correction terms from each pair of insulating walls are subtracted from the dissipation term if all walls were conducting. In B.C 1, or in a domain with all four sidewalls as perfect conductors, the correction term $\mathcal{Q}_{\rm corr} = 0$, as the current densities close in the walls (see Fig.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(a)}, \ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(b)}). In B.C 2, the insulating sidewalls give the correction term:
+\begin{align}
+	\nn
+	\mathcal{Q}_{\rm corr} (\ii{B.C 2})&= \sum_{i=1,2}
+	\mathcal{A}_{mn} 
+	\\
+	\nn
+	&\left[ 
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	\frac{ A_{ab}^{(i)}
+		\sigma_i \omega B_z
+		(a^2m^2\pi^2 + \xi_x^2n^2L_x^2) 
+		\bigl( -1^{m+1} - (-1)^m \bigr)
+		\bigl( -1 + (-1)^{a+n} \bigr)
+	}{(a^2-n^2) (m^2\pi^2 + \xi_x^2L_x^2)
+		\left(
+		\dfrac{1-(-1)^m}{2\cosh{[0.5\xi_x L_x]}} + \dfrac{1+(-1)^m}{2\sinh{[0.5\xi_x L_x]}}
+		\right)
+	}  
+	\frac{
+		b\pi h_i 
+		\bigl( -1^b\cosh{[kh_i]} - 1 \bigr)
+	}{k \sinh{[kh_i]} (k^2h_i^2 + b^2\pi^2)}
+	\right.
+	\\
+	&-
+	\left.
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	\frac{ B_{ab}^{(i)}
+		\sigma_i \omega B_z
+		(a^2n^2\pi^2 + \xi_x^2m^2L_y^2) 
+		\bigl( -1^{n+1} - (-1)^n \bigr)
+		\bigl( -1 + (-1)^{a+m} \bigr)
+	}{(a^2-m^2) (n^2\pi^2 + \xi_y^2L_y^2)
+		\left(
+		\dfrac{1-(-1)^n}{2\cosh{[0.5\xi_y L_y]}} + \dfrac{1+(-1)^n}{2\sinh{[0.5\xi_y L_y]}}
+		\right)
+	}
+	\frac{
+		b\pi h_i 
+		\bigl( -1^b\cosh{[kh_i]} - 1 \bigr)
+	}{k \sinh{[kh_i]}(k^2h_i^2 + b^2\pi^2)}
+	\right] .
+	\label{eq:qcorr_bc2}
+\end{align}
+Here, the coefficients $A^{(i)}_{ab}$ and $B^{(i)}_{ab}$ carry over from Eqs.\,\eqref{eq:bc2_A} and \eqref{eq:bc2_B} respectively. In B.C 3, having one pair of insulating sidewalls results in:
+\begin{equation}
+	\mathcal{Q}_{\rm corr} (\ii{B.C 3}) = \sum_{i=1,2} 
+	\mathcal{A}_{mn}  \left[
+	(-1)^{i+1}
+	\sum_{b=0}^{\infty} 
+	B_{mb}^{(i)} \; \sigma_i\omega B_z
+	\frac{h_i^2 \; m\pi (-1)^{n+b}}
+	{
+		(k^2h_1^2 +  b^2\pi^2)
+		\left(
+		\dfrac{1-(-1)^n}{2\cosh{[0.5\xi_y L_y]}} + \dfrac{1+(-1)^n}{2\sinh{[0.5\xi_y L_y]}}
+		\right)
+	}
+	\right] .
+	\label{eq:qcorr_bc3}
+\end{equation}
+In Eq.\,\eqref{eq:qcorr_bc3}, the pair of conducting walls parallel to the $y$-axis do not contribute to the correction term; and the characteristic double sum reduces to a single sum as $\mathcal{Q}_{\rm corr} \neq 0$ when $a = m \in \mathbb{N}_0$. The term $B_{mb}$ is given in Eq.\,\eqref{eq:bc3_B}. Lastly, the correction term in B.C 4 is:
+\begin{align}
+	\nn
+	&\mathcal{Q}_{\rm corr}  (\ii{B.C 4})= \sum_{i=1,2}
+	\mathcal{A}_{mn}  \left[
+	(-1)^{i+1}
+	A_0^{(i)} \sigma_i\omega B_z L_x
+	\dfrac{ \bigl( -1 + (-1)^n \bigr) }{k^2}\; \Delta_{m}
+	+ (-1)^{i}
+	B_0^{(i)}\sigma_i\omega B_z L_y
+	\dfrac{ \bigl( -1 + (-1)^m \bigr) }{k^2}\; \Delta_{n}
+	\right.
+	\\
+	\nn
+	& + (-1)^{i+1}
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	A^{(i)}_{ab} \sigma_i \omega B_z
+	\frac{ h_i^2 (a^2m^2\pi^2 + \xi_x^2n^2L_x^2)
+		\bigl( -1^{m+1} - (-1)^m \bigr)
+		\bigl( -1^{b+1} + (-1)^{a+b+n} \bigr) }
+	{ (a^2-n^2) (m^2\pi^2 + \xi_x^2L_x^2)
+		(k^2h_i^2 + b^2\pi^2)
+		\left(
+		\dfrac{1-(-1)^m}{2\cosh{[0.5\xi_x L_x]}} + \dfrac{1+(-1)^m}{2\sinh{[0.5\xi_x L_x]}}
+		\right)
+	}
+	\\
+	& + 
+	\left.
+	(-1)^{i} 
+	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
+	B^{(i)}_{ab} \sigma_i \omega B_z
+	\frac{ h_i^2(a^2n^2\pi^2 + \xi_y^2m^2L_y^2)
+		\bigl( -1^{n+1} - (-1)^n \bigr)
+		\bigl( -1^{b+1} + (-1)^{a+b+m} \bigr) }
+	{(a^2 - m^2)
+		(n^2\pi^2 + \xi_y^2L_y^2)
+		(k^2h_i^2 + b^2\pi^2)
+		\left(
+		\dfrac{1-(-1)^n}{2\cosh{[0.5\xi_y L_y]}} + \dfrac{1+(-1)^n}{2\sinh{[0.5\xi_y L_y]}}
+		\right)
+	}
+	\right] ,
+	\label{eq:qcorr_bc4}
+\end{align} 
+for layer $i=1,2$ and 
+\begin{equation}
+	\Delta_{m}=
+	\left\{
+	\begin{array}{rl}
+		1, & m=0, n\neq 0 \\
+		\dfrac{-1^n \bigl(1 - (-1)^m \bigr)^2}{m^2\pi^2}, & m, n\neq 0
+	\end{array}
+	\right.
+	,\quad
+	\Delta_{n}=
+	\left\{
+	\begin{array}{rl}
+		1, & n=0, m\neq 0 \\
+		\dfrac{-1^m \bigl(1 - (-1)^n \bigr)^2}{n^2\pi^2}, & m, n\neq 0
+	\end{array}
+	\right. .
+\end{equation}
+From Eqs.\,(\ref{eq:mag_damping_rate_short}--\ref{eq:qcorr_bc4}), we can infer that the damping rate $\lambda_{\ii o}$ will be larger for smaller values of $\mathcal{Q}_{\rm corr}$ owing to the recirculation of the induced current in the sidewalls \cite{Sreenivasan2005}. 
+
+
+\subsection{Hartmann and Shercliff boundary layers}
+\label{sec:hartmann_and_shercliff}
+
+In addition to Ohmic dissipation in the bulk, the effect of the magnetic field on the boundary must be taken into consideration. In an electrically conducting fluid system, the presence of a magnetic field alters the standard hydrodynamic boundary layers depending on the field intensity. The velocity profile at the walls and the interface have two distinct layers, called the Hartmann and Shercliff layers. Hartmann boundary layers are formed at surfaces perpendicular to the direction of the applied magnetic field, whereas Shercliff layers are formed parallel to them. From literature, we know that the thickness of the Hartmann layers scale inversely with Ha $(\delta_{\rm Ha} \sim \textrm{Ha}^{-1})$ \cite{Hartmann, shercliff1981, Muller2001}. This implies that increasing the magnetic field strength reduces the overall thickness while increasing overall dissipation at the wall. Shercliff layers, unlike Hartmann layers do not directly contribute in braking the fluid velocity but redistribute the induced currents and fluid momentum throughout the system. They are usually thicker than the Hartmann layers as they scale inversely to the square root of $\rm Ha$ $(\delta_{\rm Sh} \sim \textrm{Ha}^{-0.5})$ \cite{shercliff1981}. 
+\\
+\indent In the context of our current model, the Hartmann layers form at the the top and bottom walls, as well as the upper and lower sides of the interface. The Shercliff layers form at the four sidewalls of the rectangular domain, which are parallel to the applied magnetic field. In principle, these layers are the result of the Stokes boundary layer transitioning under the influence of the magnetic field. They are a combination of the conventional Hartmann and Shercliff layers with the respective oscillating Stokes boundary layer \cite{Sreenivasan2005}. Therefore we can follow the methodology of \citet{Keulegan1959} in resolving the Stokes boundary layers for free surface waves in a rectangular domain and incorporate Lorentz forces due to induced currents in the Stokes boundary layer equation \cite{Davidson2001}. Assuming no-slip condition at the walls and interface, and the condition of impermeability at all boundaries, we can write the following:
+\begin{subequations}
+	\begin{gather}
+		\h u_{1,\perp}|_{\mathcal S} = \h u_{2,\perp}|_{\mathcal S},
+		\label{eq:interface_tang_vel}
+		\\
+		p_2|_{\mathcal S} - p_1|_{\mathcal S} =
+		(\rho_2-\rho_1)g\eta + 2(\rho_2\nu_2\partial_z u_{2,z} - \rho_1\nu_1\partial_z u_{1,z}),
+		\label{eq:young_laplace_eq}
+		\\
+		\rho_1\nu_1(\partial_z u_{1,x} + \partial_x u_{1,z})|_{\mathcal S}
+		=
+		\rho_2\nu_2(\partial_z u_{2,x} + \partial_x u_{2,z})|_{\mathcal S},
+		\label{eq:tangent_stressX}
+		\\
+		\rho_1\nu_1(\partial_z u_{1,y} + \partial_y u_{1,z})|_{\mathcal S}
+		=
+		\rho_2\nu_2(\partial_z u_{2,y} + \partial_y u_{2,z})|_{\mathcal S}.
+		\label{eq:tangent_stressY}
+	\end{gather}
+\end{subequations}
+Here, Eq.\,\eqref{eq:interface_tang_vel} refers to the continuity of the tangential velocity at the interface $\mathcal{S}$, where the suffix ($\perp$) denotes the tangential component of each fluid layer. Secondly, Eq.\,\eqref{eq:young_laplace_eq} is the modified Young-Laplace equation which captures the hydrostatic balance considering normal stresses at the interface. Lastly, Eqs.\,(\ref{eq:tangent_stressX}--\ref{eq:tangent_stressY}) show the continuity of the tangential stresses at the interface. The inviscid formulation of the velocity $\h u_i=\bm\nabla\phi_i$ already satisfies the condition of impermeability at the boundary. However, in order to enforce the tangential velocity and stress conditions, we need to enforce the following corrections to the potential wave solutions of velocity and pressure:
+\begin{subequations}
+\begin{align}
+	\h u_i &= \bm\nabla\phi_i\ii e^{-\lambda_{\rm b} t}
+	 + {\overbar{\h u}}_i\ii e^{ (\ii{i}\omega -\lambda_{\rm b}) t}
+	 \label{eq:velocity_correction}
+	\\
+	p_i &= -\rho_i(\ii i\omega)\phi_ie^{-\lambda_{\rm b} t} 
+	+ {\overbar{p}}_i \ii e^{ (\ii{i}\omega -\lambda_{\rm b}) t}
+	\label{eq:pressure_correction}
+\end{align}
+\end{subequations}
+with ${\overbar{\h u}}_i$ and ${\overbar{p}}_i$ as the corrections to the potential flow velocity and pressure respectively. The term $\lambda_{\rm b}$ in the exponent is the damping rate of the standing wave solely due to bounday/interfacial layer effects. Considering only the tangential velocities ${\bar{\h u}}_{i,\perp}$ at the respective boundaries and the damping force by virtue of induction, the Navier-Stokes momentum equation [Eq.\,\eqref{eq:gov_momentum}] reduces to
+\begin{equation}
+	\ii{i}\omega {\bar{\h u}}_{i,\perp} = -\frac{1}{\rho_i}\pdv{{\overbar{p}}_i}{\zeta} 
+	+ \nu_i\pdv[2]{{\overbar{\h u}}_{i,\perp}}{\zeta}
+	- \frac{\sigma_i B_z^2}{\rho_i} {{\h u}}_{b} ,
+	\label{eq:gov_stokes_general}
+\end{equation}
+when considering only the leading order terms. In Eq.\,\eqref{eq:gov_stokes_general}, $\zeta$ is the spatial co-ordinate normal to the wall that reduces the boundary layer corrections to zero, away from the wall, and ${{\h u}}_{b}$ is the velocity adjacent to the boundary. In the leading order, the normal part of the mass and momentum balance is zero i.e. $\partial_\zeta {\bar{\h u}}_i \cdot \h n_i = 0$ and $\partial_\zeta {\bar{p}}_i = 0$ respectively. The tangential velocities decay exponentially away from the boundary, ${\bar{\h u}}_{i,\perp} \sim \ii e^{-\zeta/\delta_{\rm tot}}$, where $\delta_{\rm tot}$ is the total thickness of the boundary layer. The inverse of $\delta_{\rm tot}$ signifies the sharpness of the velocity gradient near the boundary. In context to the Hartmann layer, the velocity at the boundary scales as ${{\h u}}_{b} \sim {\bar{\h u}}_{i,\perp}$. We can therefore solve for $\delta_{\rm tot}$ in Eq.\,\eqref{eq:gov_stokes_general} to obtain
+\begin{equation}
+	\delta_{\rm tot} = \frac{\sqrt{2\tau_i\nu}}{\sqrt{1+\sqrt{1+\tau_i^2\omega^2}}}
+	\sim 
+	\left( 
+	\delta_{\rm Ha}^{-2} + \left( \delta_{\rm Ha}^{-4} + 4\delta_{\rm v}^{-4}\right)^{0.5}
+	\right)^{-0.5}
+	,
+	\label{eq:hartmann_layer_thickness}
+\end{equation}
+which is the total boundary layer thickness at the wall/interface normal to the magnetic field. Here $\tau_i$ is denoted as the characteristic damping time for a given liquid layer $i$ is
+\begin{equation}
+	\tau_i  = \frac{\rho_i}{(\sigma_i B_z^2)} .
+	\label{eq:damping_time}
+\end{equation}
+Eq.\,\eqref{eq:hartmann_layer_thickness} is a combination of both the viscous ($\delta_{\rm v} = \sqrt{2\nu_i/\omega}$) and the Hartmann boundary ($\delta_{\rm Ha}=\sqrt{\tau_i\nu_i}$) layers. However, there is no straight forward equation that can be used to calculate the expression for the Shercliff boundary layer. But we can approximate the total thickness using the conservation of induced currents. In a given fluid layer, the currents close as they pass through the horizontal Hartmann layers of thickness $\delta_{\rm Ha}$ and the vertical Shercliff layers over the entire fluid depth $h_i$. Therefore, we write the following relation:
+\begin{equation}
+	\sigma_i{\overbar{u}}_{i,\perp} B_z \delta_{\rm Ha} \sim 
+	\sigma_i
+	{u}_b B_z h_i, 
+	\quad 
+	\Longrightarrow 
+	{u}_b \sim \frac{\delta_{\rm Ha}}{h} 
+	\;{\overbar{u}}_{i,\perp}.
+	\label{eq:shercliff_relation}
+\end{equation} 
+
+
+
+\noindent In the above relation, the current density in the Hartmann layer scales with the current density in the Shercliff layer over the fluid height. Substituting Eq.\,\eqref{eq:shercliff_relation} in \eqref{eq:gov_stokes_general}, we get the total boundary layer thickness at the sidewalls parallel to the magnetic field:
+\begin{equation}
+	\delta_{\rm tot} \approx 
+	\dfrac{\sqrt{2h_i\sqrt{\tau_i\nu_i}}}
+	{
+		\sqrt{1 + \sqrt{1 + \dfrac{\tau_i h_i^2\omega^2}{\nu_i}}}
+	}
+	\sim 
+	\left( 
+	\delta_{\rm Sh}^{-2} + \left( \delta_{\rm Sh}^{-4} + 4\delta_{\rm v}^{-4}\right)^{0.5}
+	\right)^{-0.5}
+	,
+	\label{eq:shercliff_layer_thickness}
+\end{equation}
+where the conventional Shercliff layer scales with the square root of the Hartmann layer thickness, $\delta_{\rm Sh} \sim \sqrt{h\,\delta_{\rm Ha}}$. Therefore, the tangential velocity corrections in the Hartmann and Shercliff layers are
+\begin{equation}
+	{\overbar{\h u}}_{i,\perp} (\ii{Ha})=
+	-\bm\nabla \phi_i 
+	\ii e^{-
+	\frac{\sqrt{1 + \sqrt{1 + \tau_i^2\omega^2}}}{\sqrt{2\tau_i\nu_i}}
+	\zeta
+	- \lambda_{\ii{Ha}}t
+	},
+	\qquad
+	{\overbar{\h u}}_{i,\perp} (\ii{Sh})=
+	-\bm\nabla \phi_i 
+	\ii e^{-
+		\frac{\sqrt{1 + \sqrt{1 + \tau_ih_i^2\omega^2/\nu_i}}}
+		{\sqrt{2\sqrt{\tau_i\nu_i}}}
+		\zeta
+	- \lambda_{\ii{Sh}}t
+	},
+	\label{eq:Ha_Sh_velocities}
+\end{equation}
+where $\lambda_{\ii{Ha}}$ and the $\lambda_{\ii{Sh}}$ are the damping rates of a standing wave solely due to the dissipation of energy in the Hartmann-viscous layer and the Shercliff-viscous layer respectively. To deduce the tangential velocities in the Hartmann layer on either sides of the interface, we make use of the boundary conditions\,(\ref{eq:tangent_stressX} and \ref{eq:tangent_stressY}) to satisfy
+\begin{equation}
+	{\h u}_{1,\perp} +  {\bar{\h u}}_{1,\perp}|_\mathcal{S} 
+	\approx
+	{\h u}_{2,\perp} +  {\bar{\h u}}_{2,\perp}|_\mathcal{S} 
+	\qquad
+	\begin{cases}
+		\rho_1\nu_1\partial_z{\bar{u}}_{1,x}|_\mathcal{S} 
+		\approx
+		\rho_2\nu_2\partial_z{\bar{u}}_{2,x}|_\mathcal{S} \\[5pt]
+		\rho_1\nu_1\partial_z{\bar{u}}_{1,y}|_\mathcal{S} 
+		\approx
+		\rho_2\nu_2\partial_z{\bar{u}}_{2,y}|_\mathcal{S}
+	\end{cases}\hspace{-3mm},
+	\label{eq:interface_jump_condition}
+\end{equation}
+and subsequently obtain
+\begin{align}
+	{\bar{\h u}}_{1,\perp}|_{\mathcal S}
+	&=
+	\frac{\omega\Lambda}{k\sqrt{\rho_1\nu_1\sigma_1}
+		\sqrt{1 + \sqrt{1 + \tau_1^2\omega^2} }
+	}
+	\begin{Bmatrix}
+		\dfrac{m\pi}{L_x}
+		\;\sin{\left[\dfrac{m\pi}{L_x}\left( x + \dfrac{L_x}{2} \right)\right]}
+		\cos{\left[\frac{n\pi}{L_y}\left( y + \dfrac{L_y}{2} \right)\right]}
+		\h e_x 
+		\\[20pt]
+		\dfrac{n\pi}{L_y}
+		\;\cos{\left[\dfrac{m\pi}{L_x}\left( x + \dfrac{L_x}{2} \right)\right]}
+		\sin{\left[\dfrac{n\pi}{L_y}\left( y + \dfrac{L_y}{2} \right)\right]}
+		\h e_y
+	\end{Bmatrix} \ii{e}^{-
+	\frac{\sqrt{1 + \sqrt{1 + \tau_1^2\omega^2}}}
+	{\sqrt{2\tau_1\nu_1}}
+		 z} ,
+	\label{eq:Ha_int_up_velocity}
+\end{align}
+\begin{align}
+	{\bar{\h u}}_{2,\perp}|_{\mathcal S}
+	&=
+	\frac{-\omega\Lambda}{k\sqrt{\rho_2\nu_2\sigma_2}
+		\sqrt{1 + \sqrt{1 + \tau_2^2\omega^2} }
+	}
+	\begin{Bmatrix}
+		\dfrac{m\pi}{L_x}
+		\;\sin{\left[\dfrac{m\pi}{L_x}\left( x + \dfrac{L_x}{2} \right)\right]}
+		\cos{\left[\frac{n\pi}{L_y}\left( y + \dfrac{L_y}{2} \right)\right]}
+		\h e_x 
+		\\[20pt]
+		\dfrac{n\pi}{L_y}
+		\;\cos{\left[\dfrac{m\pi}{L_x}\left( x + \dfrac{L_x}{2} \right)\right]}
+		\sin{\left[\dfrac{n\pi}{L_y}\left( y + \dfrac{L_y}{2} \right)\right]}
+		\h e_y
+	\end{Bmatrix} \ii{e}^{
+		\frac{\sqrt{1 + \sqrt{1 + \tau_2^2\omega^2}}}
+		{\sqrt{2\tau_2\nu_i2}}
+		z} ,
+		\label{eq:Ha_int_dwn_velocity}
+\end{align}
+with $\Lambda$ given by
+\begin{equation}
+\Lambda = \mathcal{A}_{mn}\:\frac{(\text{coth}[kh_1] + \text{coth}[kh_2]) }
+{
+	\dfrac{1}{\sqrt{\rho_1\nu_1\sigma_1}
+		\sqrt{1 + \sqrt{1 + \tau_1^2\omega^2} }  }
+	+
+	\dfrac{1}{\sqrt{\rho_2\nu_2\sigma_2}
+		\sqrt{1 + \sqrt{1 + \tau_2^2\omega^2} }  }
+}.
+\end{equation}
+
+
+To better illustrate the effect of the Hartmann and Shercliff layers and its influence on the Stokes velocity profile, we calculate the velocities in a two-layer system with conducting fluids where the interface is oscillating with mode $(1,0)$. The system is threaded by a constant vertical magnetic field of magnitude $B_z$. We observe the change in velocities from each boundary to the bulk. The properties of the materials are provided in Table\,\ref{tab:table_hypo_2layer}. The velocity profiles from the bottom boundary to the interface at different Hartmann numbers are presented in Fig.\,\subref{fig:stokes_vel}{a}. The velocities are along the line $x=L_x/4$ in the $x$-$z$ plane, with $\ii{Ha} = B_zh_2\sqrt{\sigma_2/(\rho_2\nu_2)}$. A magnified view near the bottom wall and the interface is given in Fig.\,\subref{fig:stokes_vel}{b}. Here, the term $\h u^*_{T} = ({\h u}_{2,x} + {\overbar{\h u}}_{2,x})/{\h u}_{2,x}$ is the non-dimensionalized total to bulk velocity ratio.  In the absence of the magnetic field ($\rm Ha=0$), the boundary reverts to the classical Stokes boundary layer with thickness $\delta_{\rm tot} = \sqrt{2\nu_2/\omega}$, which is highlighted in blue. The boundary layer thickness at $\rm Ha = 500$ (highlighted in red) is minuscule in comparison to the case when $\rm Ha = 0$, as $\delta_{\rm tot}$ varies inversely with $\rm Ha$. At the bottom wall, the velocity ratio follows the Stokes profile where the correction cancels out the free stream velocity at the boundary. This is followed by the characteristic 'velocity overshoot', where the local velocity exceeds the bulk velocity momentarily and then converges to the bulk velocity after. This is due to the no-slip constraint enforced at the wall, which does not cause the corrections to fade monotonically but act like a damped oscillator (emphasized by the presence of a cosine term in the velocity) that approaches equilibrium \cite{Schlichting2016}. As the Hartmann number increases, the overshoots die down and are replaced by sharper velocity gradients and the boundary layer shrinks to Eq.\,\eqref{eq:hartmann_layer_thickness}. We observe the same phenomena at the interface, albeit with the jump condition\,\eqref{eq:interface_jump_condition} satisfied at the boundary. 
+
+%%%%%%%%%%%%%%%
+\begin{table}%[H] add [H] placement to break table across pages
+	\caption{Cell parameters and material properties for a general, electrically conducting, two-layer stratified system.}
+	\label{tab:table_hypo_2layer}
+	\begin{ruledtabular}
+		\begin{tabular}{llll}
+			
+			Length of cell ($L_x$): & \SI{0.15}{\meter}  &
+			Wave mode $(m,n)$: & $(1,0)$
+			\\
+			Breadth of cell ($L_y$): 	& \SI{0.04}{\meter}  &
+			& 
+			\\
+			& & & 
+			\\[5pt]
+			Properties of the lower liquid ($\Omega_1$) &  &  & \\
+			Density ($\rho_1$):
+			& \SI{2130}{\kilogram\per\meter\tothe{3}} & Electrical conductivity ($\sigma_1$):
+			& \SI{1e6}{\siemens\per\meter}
+			\\
+			Kinematic viscosity ($\nu_1$):
+			& \SI{4.4e-7}{\meter\tothe{2}\per\second} & Layer depth ($h_1$): &
+			\SI{0.03}{\meter}
+			\\[5pt]
+			Properties of the lower liquid ($\Omega_2$) &  &  & \\
+			Density ($\rho_2$):
+			& \SI{2330}{\kilogram\per\meter\tothe{3}} & Electrical conductivity ($\sigma_2$):
+			& \SI{3e6}{\siemens\per\meter}
+			\\
+			Kinematic viscosity ($\nu_2$):
+			& \SI{1.15e-7}{\meter\tothe{2}\per\second} & Layer depths ($h_2$): &
+			\SI{0.03}{\meter}
+		\end{tabular}
+	\end{ruledtabular}
+\end{table}
+%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+\begin{figure}
+	\begin{tikzpicture}
+		\begin{scope}[name prefix=scope1]
+			\node (pic1) at (-5,0) 
+			{\includegraphics[width=0.5\linewidth]{figures/stokes_vel.eps} };
+			%		\node [below of=pic1,xshift=5mm, yshift=-2cm] 
+			%		{$(\widehat{\h u}_x + \widehat{\overbar{\h u}}_x)/\widehat{\h u}_x$};
+			
+			
+			\node (pic2) at (3.4,1.45) 
+			{\includegraphics[width=0.4\linewidth]{figures/stokes_vel_zoomT.eps} };
+			\node (pic3) at (3.4,-1) 
+			{\includegraphics[width=0.4\linewidth]{figures/stokes_vel_zoomB.eps} };
+			
+			\node [above of=pic1, xshift=-4.1cm, yshift=2.1cm] {(a)};
+			\node (b) [above of=pic1, xshift=4.8cm, yshift=2.1cm] {(b)};
+%			\node (c) [above of=pic1, xshift=4.8cm, yshift=-0.4cm] {(c)};
+			
+			\node [right of=b, xshift=5mm] {At the interface:};
+			\node [right of=b, xshift=4mm, yshift=-2.5cm] {At the bottom:};
+		\end{scope}
+		
+		
+		\begin{scope}[name prefix=scope2, below of=scope1, yshift=-5.3cm]
+			\node (pic1) at (-5,0) 
+			{\includegraphics[width=0.5\linewidth]{figures/stokes_vel_sher.eps} };
+			\node (pic2) at (3,0.5) 
+			{\includegraphics[width=0.4\linewidth]{figures/stokes_vel_sher_zoom.eps} };
+			
+			\node [above of=pic1, xshift=-4.1cm, yshift=2.1cm] {(c)};
+			\node (d) [above of=pic1, xshift=4.8cm, yshift=2.1cm] {(d)};
+			\node [right of=d, xshift=6mm] {At $x=-0.075$ m:};
+		\end{scope}
+		
+		\begin{scope}[yshift=-9.8cm]
+			\coordinate (x1) at (-8.65,0);
+			\coordinate (x2) at (-7.9,0);
+			
+			\draw [very thick, deepskyblue] (x1) -- (x2) node [right, black] {$\ii{Ha} = 0$};
+			\draw [very thick, orange, transform canvas={xshift=2.3cm}] (x1) -- (x2) node [right, black] {$\ii{Ha} = 20$};
+			\draw [very thick, mediumseagreen, transform canvas={xshift=4.8cm}] (x1) -- (x2) node [right, black] {$\ii{Ha} = 50$};
+			\draw [very thick, slateblue, transform canvas={xshift=7.3cm}] (x1) -- (x2) node [right, black] {$\ii{Ha} = 100$};
+			\draw [very thick, blueviolet, transform canvas={xshift=10cm}] (x1) -- (x2) node [right, black] {$\ii{Ha} = 250$};
+			\draw [very thick, crimson, transform canvas={xshift=12.7cm}] (x1) -- (x2) node [right, black] {$\ii{Ha} = 500$};
+		\end{scope}
+		
+		\begin{scope}[yshift=-10.5cm]
+			\coordinate (x1) at (-3.5,-0.1);
+			\coordinate (x2) at (-2.75,0.1);
+			
+			\path [fill=skyblue] (x1) rectangle (x2) node [right, black, yshift=-1.4mm] {$\delta_{\rm tot}$ ($\ii{Ha}=0$)};
+			\path [fill=tomato, transform canvas={xshift=3.2cm}] (x1) rectangle (x2) node [right, black, yshift=-1.4mm] {$\delta_{\rm tot}$ ($\ii{Ha}=500$)};
+		\end{scope}
+		%		
+		%		\node [above of=pic1] 
+		%		{\includegraphics[width=0.15\linewidth]{figures/stokes_vel_zoomT.eps} };
+		%		
+		%		\node [above of=pic2, yshift=-10mm] {\includegraphics[width=0.2\linewidth]{figures/stokes_vel_sher_zoom.eps} };
+		
+		
+		%		\node (pic3) at (5.45,-0)
+		%		{\includegraphics[width=0.25\linewidth]{figures/stokes_vel_sher_zoom.eps} };
+		%		\node [above of=pic3, yshift=5mm] {Near $x=-0.5L_x$};
+	\end{tikzpicture}
+	\caption{The Stokes velocity profile for different $\rm Ha$ between the a) bottom wall and the lower interface along $x=L_x/4$, and d) the two sidewalls along $z=-h_2/2$ in the $x$-$z$ plane. A quasi-2D unidirectional wave mode $(1,0)$ is considered. The magnified view of b) the Hartmann layers  near the interface and the bottom wall and e) the Shercliff layer at the sidewall, $x=-L_x/2$. The blue shaded region quantifies the viscous layer thickness whereas the red region shows the thickness of the Hartmann and Shercliff layers in a) and d) respectively.}
+	\label{fig:stokes_vel}
+\end{figure}
+%%%%%%%%%%%%
+
+\indent Fig.\,\subref{fig:stokes_vel}{c} shows the velocity profile along the line $z=-h2/2$ in the $x$-$z$ plane and Fig.\,\subref{fig:stokes_vel}{d}, the magnified view near $x=-L_x/2$. When $\rm Ha = 100$, we observe that the Shercliff layer is marginally smaller than the conventional viscous sub layer ($\rm Ha = 0$), and is significantly thicker than the Hartmann layer at the bottom and at the interface. The velocity ratio $\h u^*_{T}=({\h u}_{2,z} + {\overbar{\h u}}_{2,z})/{\h u}_{2,z}$, in this case. The Stokes 'overshoot' is noticeable for all cases of $\rm Ha$ considered; however its impact on the sidewall to sidewall velocity profile is negligible. 
+\\
+\indent From the tangential velocities given in Eqs.\,(\ref{eq:Ha_Sh_velocities}, \ref{eq:Ha_int_up_velocity} and \ref{eq:Ha_int_dwn_velocity}) we can now determine the total dissipation in the respective boundary layers. To do so, we use the following mechanical energy balance:
+\begin{equation}
+	\dv{}{t}\left( \sum_{i=1,2} \frac{1}{2} 
+	\int_{V_i} \rho_i \norm{\h u_i}^2 \mathrm dV  \right)
+	+
+	\dv{}{t}\left( \int_{\mathcal{S}} 
+	\frac{1}{2} (\rho_2-\rho_1)g\eta^2  \: \mathrm d\mathcal{S}  
+	\right)
+	= -\sum_{i=1,2} 2\rho_i\nu_i
+	\int_{V_i} \bm\varepsilon_i \bm\dcdot \bm\varepsilon_i  \: \mathrm dV ,
+	\label{eq:balance_boundary}
+\end{equation}
+which, like Eq.\,\eqref{eq:balance_ohmic} states that the rate of change of kinetic energy of the wave and potential energy of the interface is equal to the total dissipation at the boundary expressed in terms of strain rate tensor $\bm\varepsilon_i = 0.5(\bm\nabla\overbar{\h u}_{i,\perp} + \bm\nabla \overbar{\h u}_{i,\perp}^{\ii T})$. Expanding the right hand side of Eq.\,\eqref{eq:balance_boundary} as per \citet{Lamb1945}, we substitute the tangential velocities given in Eq.\,(\ref{eq:Ha_Sh_velocities}, \ref{eq:Ha_int_up_velocity} and \ref{eq:Ha_int_dwn_velocity}) to determine the damping rate due to the respective Hartmann and Shercliff layers. The calculations pertaining to this are provided in Sec.\,\RN{3} of the supplementary material. We find the damping rate in the Hartmann layer to be 
+%%%%%%%%%%%%
+\begin{equation}
+	\lambda_{\rm Ha}\Bigl|_{z=h_1,-h_2} 
+	= \sum_{i=1,2}
+	\frac{\rho_i\nu_i}{\sqrt{2 \tau_i\nu_i}}
+	\frac{
+		\sqrt{1 + \sqrt{1 + \tau_i^2\omega_i^2} }
+	}
+	{
+		\left( \dfrac{\rho_1}{\tanh{[kh_1]}} + \dfrac{\rho_2}{\tanh{[kh_2]}} \right)
+	}
+	\Biggl(
+	\frac{k}{2 \: \text{sinh}^2[kh_i]}
+	\Biggr),
+	\label{eq:Ha_damp_topbot}
+\end{equation}
+%%%%%%%%%%%%
+at the top and bottom walls, and
+%%%%%%%%%%%%
+\begin{equation}
+	\lambda_{\rm Ha}\bigl|_{\mathcal{S}} =
+	\frac{k}{2\sqrt{2}}
+	\left(
+	\frac{ \dfrac{1}{\xi_1\sigma_1\sqrt{\tau_1\nu_1}}
+		+
+		\dfrac{1}{\xi_2\sigma_2\sqrt{\tau_2\nu_2}} 
+	}{ 
+		\dfrac{\rho_1}{\text{tanh}[kh_1]} + \dfrac{\rho_2}{\text{tanh}[kh_2]} }
+	\right)
+	\left(
+	\frac{
+		\dfrac{1}{\text{tanh}[kh_1]} + \dfrac{1}{\text{tanh}[kh_2]} 
+	}
+	{
+		\dfrac{1}{\sqrt{\rho_1\nu_1\sigma_1}\;\xi_1} + 
+		\dfrac{1}{\sqrt{\rho_2\nu_2\sigma_2}\;\xi_2}
+	}
+	\right)^2,
+	\label{eq:Ha_damp_int}
+\end{equation}
+%%%%%%%%%%%%
+at the interface. The term $\xi_i$ for a given layer $i$ is 
+\begin{equation}
+	\xi_i = \sqrt{1 + \sqrt{1 + \tau_i^2\omega^2} } .
+\end{equation}
+%%%%%%%%%%%%%
+From Figs.\,\subref{fig:stokes_vel}{d} and \subref{fig:stokes_vel}{e}, we can infer that , at the current range of $\rm Ha$, boundary layer dissipation is dominated by the Hartmann layers. The influence of the Shercliff layer in the sidewalls is found to be negligible for the current range of $\rm Ha$. From Eq.\,\eqref{eq:shercliff_layer_thickness}, we can calculate that the Shercliff boundary layer influences the velocity gradients only above extremely high values of $B_z \geq \SI{3}{\tesla}$, which is unrealistic in industrial and experimental applications. This implies that viscous contributions dictate the damping rate and therefore, the resultant expression independent of the $B_z$ is
+\begin{align}
+	\nn
+	\lambda_{\rm Sh}\Bigl|_{x=\pm0.5L_x, y=\pm0.5L_y} &=
+	\sum_{i=1,2}
+	\frac{ \dfrac{1}{\sqrt{2}}
+		\dfrac{\rho_i \sqrt{\omega\nu_i}}{ kL_xL_y }
+	}
+	{ 
+		\left[
+		\dfrac{\rho_1}{\tanh[kh_1]} + \dfrac{\rho_2}{\tanh[kh_2]}
+		\right]
+	}
+	\Biggl( \biggl[
+	\dfrac{ \epsilon_{m} h_i(n^2\pi^2  - k^2L_y^2)}{ 2 L_y\:\sinh^2[kh_i]}
+	+ \dfrac{ \epsilon_m (n^2\pi^2 + k^2L_y^2)}{ 2 L_y \: k\:\tanh[kh_i]}
+	\\[5pt]
+	&+
+	\dfrac{\epsilon_n h_i(m^2\pi^2  - k^2L_x^2)}{ 2 L_x\:\sinh^2[kh_i]}
+	+
+	\dfrac{ \epsilon_n (m^2\pi^2 + k^2L_x^2)}{ 2 L_x \: k\:\tanh[kh_i]}
+	\biggr] \Biggr) .
+	\label{eq:Sh_damp_wall}
+\end{align}   
+%%%%%%%%%%%
+In Eq.\,\eqref{eq:Sh_damp_wall}, the terms with $\epsilon_{m}$ and $\epsilon_{n}$ correspond to the damping contributions from the sidewalls normal to the $x$- and $y$-axis accordingly. At the free-surface limit in the absence of a magnetic field, under shallow water approximation, the Eqs.\,(\ref{eq:Ha_damp_topbot} and \ref{eq:Sh_damp_wall}) reduce to the viscous damping rate formulations presented in the works of \citet{Keulegan1959} and further elaborated by \citet{Faltinsen2009}. 
+
+
+
+\section{Magnetic damping}
+\label{sec:mag_damp}
+
+The total magnetic damping rate due to both the Ohmic dissipation given in Eq.\,\eqref{eq:mag_damping_rate_short} and the boundary layer effects given in Eqs.\,(\ref{eq:Ha_damp_topbot}--\ref{eq:Sh_damp_wall}) is equal to
+\begin{equation}
+	\lambda_{\ii m} = \lambda_{\ii o} + \lambda_{\rm b},
+	\label{eq:mag_damping_rate}
+\end{equation}
+where, $\lambda_{\rm b} = \lambda_{\rm Ha}(\textrm{wall}) + \lambda_{\rm Ha}(\textrm{interface}) + \lambda_{\rm Sh}(\textrm{sidewall})$. For a hypothetical two-layer system, the properties of which are given in Table\,\ref{tab:table_hypo_2layer}, we compare the magnetic damping rate of a uni- and bidirectional interfacial wave considering the four aforementioned boundary conditions. The results are presented it in  Fig.\,\subref{fig:mag_damp_bc}{a} and Fig.\,\subref{fig:mag_damp_bc}{b} for wave modes $(1,0)$ and $(5,1)$ respectively. The initial vertical offset at $B_z=\SI{0}{\milli\tesla}$ is due to the viscous dissipation at the walls and the interface. Three key observations can be made. First, the total dissipation is determined by the liquid layer, which has a higher electrical conductivity. Second, waves with higher wave modes $(m,n)$ dampen faster in an insulating domain and slower in a conducting domain than simpler waves $(m,0)$. Lastly, cases B.C 1 and B.C 2 are synonymous and the same is true for B.C 3 and B.C 4, irrespective of the wave modes. This is noteworthy because both B.C 2 and B.C 3 consist of a single pair of conducting walls, albeit at a different orientation with respect to the magnetic field. However, the impact on the magnetic damping is substantial. To provide a better explanation of this result, we look at a cross-sectional view of the induced current density magnitudes in a fluid system undergoing an interfacial oscillation of mode $(1,0)$ and illustrate the results in Fig.\,\ref{fig:ind_curr_contour}. The cross-section is in the $x$-$z$ plane at $y=L_y/4$.
+\\
+\indent Figs.\,\subref{fig:ind_curr_contour}{a} and \subref{fig:ind_curr_contour}{b} correspond to cases B.C 1 and B.C 2 normalized using the maximum local current density value in B.C 1. The case of B.C 2 is marked by strong current concentrations at the top and bottom walls, as well as on both sides of the interface. Moreover, B.C 1 and B.C 2 have similar magnitudes of the induced currents in the fluid bulk. The trivial case of B.C 1 generates only horizontal currents in the fluid, whereas B.C 2 is characterized by stronger vertical induced currents arising from the electrical boundary corrections at the top and bottom. In cases B.C 3 and B.C 4, the current density ratios are found to be comparable. As shown in Figs.\,\subref{fig:ind_curr_contour}{c} and \subref{fig:ind_curr_contour}{d}, the fluid is marked by a larger magnitudes of eddy currents across a greater fluid volume in B.C 3, in contrast to the localized hotspots near the edges observed in B.C 4. 
+\\
+\indent From the results presented above, it is evident that bidirectional waves $(m>0,n>0)$ induce a much higher number of eddies than unidirectional waves $(m>0,0)$, which affects the energy dissipation due to induced currents in the conducting medium. This in combination with the electrical boundary condition, affects the way in which the electric currents complete their paths within the medium and thus, determines the extent of magnetic damping.  
+
+
+%%%%%%%%%%%%
+\begin{figure}
+	\begin{tikzpicture}
+		\node (pic1) at (-5,0) 
+		{\includegraphics[width=0.5\linewidth]{figures/mag_damp_bc_10.eps} };
+		\node (pic2) at (3.8,0)
+		{\includegraphics[width=0.5\linewidth]{figures/mag_damp_bc_51.eps} };
+		\node [above of=pic1, xshift=-4.1cm, yshift=1.8cm] {(a)};
+		\node [above of=pic2, xshift=-4.1cm, yshift=1.8cm] {(b)};
+	\end{tikzpicture}
+	\caption{The analytical magnetic damping rates at different magnitudes of $B_z$ of an interfacial wave mode a) $(1,0)$ and b) $(5,1)$ in a two-layer, rectangular geometry for the four different cases of boundary conditions. The material properties of the fluids are given in Table\,\ref{tab:table_hypo_2layer}. }
+	\label{fig:mag_damp_bc}
+\end{figure}
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+\begin{figure}
+	\begin{tikzpicture}
+		\begin{scope} [name prefix=pics12]
+			\node (pic1) at (-5,0) 
+			{\includegraphics[width=0.45\linewidth]{figures/C1_BC1_1-0.eps} };
+			\node (pic2) at (3.8,0)
+			{\includegraphics[width=0.45\linewidth]{figures/C2_BC2_1-0.eps} };
+			\node [above of=pic1, xshift=-4.1cm, yshift=1.3cm] {(a)};
+			\node [above of=pic2, xshift=-4.1cm, yshift=1.3cm] {(b)};
+			
+			\node [below of=pic1, yshift=-1.8cm] {$x$};
+			\node [left of=pic1, xshift=-3.1cm] {$z$};
+			
+			\node [below of=pic2, yshift=-1.8cm] {$x$};
+			\node [left of=pic2, xshift=-3.1cm] {$z$};
+			
+		\end{scope}
+		
+		\begin{scope}[name prefix=pics34, below of=pics12, yshift=-5.6cm] 
+			\node (pic1) at (-5,0) 
+			{\includegraphics[width=0.45\linewidth]{figures/C3_BC3_1-0.eps} };
+			\node (pic2) at (3.8,0)
+			{\includegraphics[width=0.45\linewidth]{figures/C4_BC4_1-0.eps} };
+			\node [above of=pic1, xshift=-4.1cm, yshift=1.3cm] {(c)};
+			\node [above of=pic2, xshift=-4.1cm, yshift=1.3cm] {(d)};
+			
+			\node [below of=pic1, yshift=-1.8cm] {$x$};
+			\node [left of=pic1, xshift=-3.1cm] {$z$};
+			
+			\node [below of=pic2, yshift=-1.8cm] {$x$};
+			\node [left of=pic2, xshift=-3.1cm] {$z$};
+			
+		\end{scope}
+		
+		%legend for a) and b)
+		\begin{scope}[below of=pics12, xshift=-7.6cm, yshift=-2cm]
+			\pgfplotscolorbardrawstandalone[ 
+			colorbar horizontal,
+			colormap={mybwr}{samples of colormap=(25 of bwr)},
+			colormap access=piecewise constant,
+			point meta min=0,
+			point meta max=1,
+			colorbar style={
+				width=14cm,
+				height=2.5mm,
+				xtick={0,0.2,0.4,...,1}
+			}]
+			\node at (7.1,0) {$\left|\pmb{\mathcal{J}}\right|/\left|
+				\pmb{\mathcal{J}}_{\rm B.C 1}\right|_{\rm max}$};
+		\end{scope}
+		%legend for c) and d)
+		\begin{scope}[below of=pics34, xshift=-7.6cm, yshift=-8.6cm]
+			\pgfplotscolorbardrawstandalone[ 
+			colorbar horizontal,
+			colormap={mybwr}{samples of colormap=(25 of bwr)},
+			colormap access=piecewise constant,
+			point meta min=0,
+			point meta max=1,
+			colorbar style={
+				width=14cm,
+				height=2.5mm,
+				xtick={0,0.2,0.4,...,1}
+			}]
+			\node at (7.1,0) {$\left|\pmb{\mathcal{J}}\right|/\left|
+				\pmb{\mathcal{J}}_{\rm B.C 4}\right|_{\rm max}$};
+		\end{scope}
+	\end{tikzpicture}
+	\caption{The cross-sectional distribution of the normalized induced current density magnitudes at $x$-$z$ plane, at $y=L_y/4$, for a quasi 1D wave mode $(1,0)$ for the following cases: a) B.C 1, b) B.C 2, c) B.C 3 and d) B.C 4. In sub-figures a) and b), the currents are normalized using the maximum local value of current density in B.C 1 and similarly, B.C 4 in c) and d).}
+	\label{fig:ind_curr_contour}
+\end{figure}
+%%%%%%%%%%%%
+
+
+
+\subsection{Verification with \citet{Sreenivasan2005}}
+\label{sec:sreeni_compare}
+
+We now independently validate our formula for magnetic dissipation with the experimental results and analytical model presented by \citet{Sreenivasan2005}, which pertains to the decay of free-surface waves in shallow rectangular geometries. Table\,\ref{tab:table_sreeni_prop} provides details on the physical parameters and material properties used for the study. \citet{Sreenivasan2005} have dedicated an entire study to the magnetic attenuation of standing gravity waves in rectangular containers and measured the decay rates of surface waves in liquid mercury that were exposed to vertical magnetic fields of up to  $\SI{1300}{\milli\tesla}$. Moreover, the authors provide a theoretical solution for magnetic damping times that takes into account bulk Ohmic dissipation, viscous side wall dissipation and Hartmann layer dissipation (at the bottom). The damping times are given by $\lambda_{\rm m}^{-1} = (\lambda_{\rm o}+\lambda_{\rm b})^{-1}$, also expressed as the inverse of the magnetic damping rate. Their model was the first to properly address the delicate problem of electrically insulating walls (B.C 4), but was only formulated for the first unidirectional standing wave mode $(m=1,n=0)$ using the shallow-water approximation. Fig.\,\ref{fig:sreeni_comp} shows the total damping time as a function of the Hartmann number, which in this context is given by $\ii{Ha} = B_zL_y\sqrt{\sigma_2/(\rho_2\nu_2)}$. In order to compare with the theoretical results of \citet{Sreenivasan2005}, it is first necessary to reduce our general two-layer formulations for magnetic dissipation to a simpler, single-layer one at the shallow water limit ($kh_2\ll1$). Firstly, the damping rate due to the viscous-Hartmann layer given in Eq.\,\eqref{eq:Ha_damp_topbot} transforms to 
+\begin{equation}
+	\lambda_{\rm Ha}
+	= 
+	\frac{\nu_2}{2\sqrt{2}\:h_2}
+	\dfrac{1}{\sqrt{\tau_2\nu_2}}
+	\sqrt{1 + \sqrt{1 + \tau_2^2\omega^2} }.
+	\label{eq:sreeni_ha_damp}
+\end{equation}
+Even though \cite{Sreenivasan2017} does not consider dissipation at the Shercliff layers, we take this opportunity to formulate the damping rate
+\begin{equation}
+	\lambda_{\rm Sh} = \frac{\nu_2}{\sqrt{2} \;L_y}
+	\frac{1}{\sqrt{h_2\sqrt{\tau_2\nu_2}}}
+	\sqrt{ 1 + \sqrt{1 + \frac{\tau_2}{\nu_2}h_2^2\omega^2 }}.
+	\label{eq:sreeni_sh_damp}
+\end{equation}
+Eqs.\,(\ref{eq:qind}, \ref{eq:qcorr_bc4}, \ref{eq:sreeni_ha_damp} and \ref{eq:sreeni_sh_damp}) together concide with the Ohmic dissipation, Hartmann and viscous layer contributions from Eq.\,37 given in \cite{Sreenivasan2005}. This is shown in Figs.\,\subref{fig:sreeni_comp}{a} and \subref{fig:sreeni_comp}{b}, where we find good agreement between both theories and experiments at two different layer depths: \SI{22}{} and \SI{35}{\milli\meter} respectively. 
+
+\begin{table}%[H] add [H] placement to break table across pages
+	\caption{Cell parameters and material properties from \citet{Sreenivasan2005}.}
+	\label{tab:table_sreeni_prop}
+	\begin{ruledtabular}
+		\begin{tabular}{llll}
+			
+			Length of cell ($L_x$): & \SI{0.15}{\meter}  &
+			Wave mode $(m,n)$: & $(1,0)$
+			\\
+			Breadth of cell ($L_y$): 	& \SI{0.04}{\meter}  &
+			Boundary condition: & Perefectly insulating walls. 
+			\\
+			& & & (similar to B.C 4)
+			\\[5pt]
+			Properties of Mercury ($\Omega_2$) &  &  & \\
+			Density ($\rho_2$):
+			& \SI{13546}{\kilogram\per\meter\tothe{3}} & Electrical conductivity ($\sigma_2$):
+			& \SI{1e6}{\siemens\per\meter}
+			\\
+			Kinematic viscosity ($\nu_2$):
+			& \SI{1.15e-7}{\meter\tothe{2}\per\second} & Layer depths ($h_2$): &
+			\SI{0.022}{\meter}, \SI{0.035}{\meter}
+		\end{tabular}
+	\end{ruledtabular}
+\end{table}
+\begin{figure}
+	\begin{tikzpicture}
+		\node (pic1) at (-5,0) 
+		{\includegraphics[width=0.5\linewidth]{figures/sreeni_damp_22mm.eps} };
+		\node (pic2) at (3.8,0)
+		{\includegraphics[width=0.5\linewidth]{figures/sreeni_damp_35mm.eps} };
+		\node [above of=pic1, xshift=-4.1cm, yshift=2cm] {(a)};
+		\node [above of=pic2, xshift=-4.1cm, yshift=2cm] {(b)};
+	\end{tikzpicture}
+	\caption{Comparison of the magnetic damping time which is the inverse of the magnetic damping rate  $\lambda_{\rm m} = \lambda_{\ii o^*} + \lambda_{\ii v^*}$, with experimental measurements and theoretical predictions of \cite{Sreenivasan2005} as a function of the Hartmann number $Ha$ for two different height configurations a) $h_2=\SI{0.022}{\meter}$ and b) $h_2=\SI{0.035}{\meter}$ of the liquid metal. The wave mode of the free-surface wave was $(1,0)$.}
+	\label{fig:sreeni_comp}
+\end{figure}
+
+
+\section{The magnetic damping experiment}
+\label{sec:mag_damp_exp}
+
+We now compare our analytical magnetic damping model from Sec\,\ref{sec:ohmic_dissipation} using a similar experimental setup from \citet{Hegde2025}. Similar to \cite{Sreenivasan2005}, we excited the free surface of a single-layer system and then proceeded to measure the rate of decay of the amplitude. We operated at a significantly lower range of $10 < \rm Ha < 60$, compared to \cite{Sreenivasan2005} to validate our theory within the intended range of applicability. A standing wave of mode $(1,0)$ was magnetohydrodynamically excited using horizontal, externally fed currents. Exciting higher wave modes posed a challenge with the current setup, as these modes rely on the formation of distinct excess current loops within the liquid metal. This can only be achieved by vertically injecting the input current, which is not possible with the current configuration. Of the four different cases covered in the study, only B.C 1 and B.C 4 were realised in the experiment. In B.C 4, the two-layer formula [Eq.\,\eqref{eq:qcorr_bc4}] reduces to a single-layer formula when the free-surface is taken as an insulator \cite{Herreman2019}. The experimental setup and results are given in Sec.\,\ref{sec:exp_setup} and \ref{sec:exp_exp} respectively. 
+
+
+
+\begin{table}
+	\caption{Material properties of the working fluid and system parameters used in the magnetic damping experiment.}
+	\label{tab:table_exp_prop}
+	\begin{ruledtabular}
+		\begin{tabular}{llll}
+			
+			Length of tank ($L_x$): & \SI{0.255}{\meter}  &
+			Wave mode $(m,n)$: & $(1,0)$
+			\\
+			Breadth of tank ($L_y$): 	& \SI{0.255}{\meter}  &
+			Boundary condition: & \Rn{1}) Copper plates on sidewalls (B.C 1). 
+			\\
+			Height of tank ($H$): & \SI{0.1}{\meter}  & & 
+			\Rn{2}) Stainless steel plates on sidewalls (B.C 4)
+			\\[5pt]
+			Properties of GaInSn ($\Omega_2$) &  &  & \\
+			Density ($\rho_2$):
+			& \SI{6345}{\kilogram\per\meter\tothe{3}} & Electrical conductivity ($\sigma_2$):
+			& \SI{3.2e6}{\siemens\per\meter}
+			\\
+			Kinematic viscosity ($\nu_2$):
+			& \SI{3.4e-7}{\meter\tothe{2}\per\second} & Layer depth ($h_2$):
+			& $\SI{0.03}{\meter}$
+			\\[5pt]
+			Properties of copper &  &  & \\
+			Size: & $0.23\times 0.1 \times 0.002\,\SI{}{\meter\tothe{3}}$ &
+			Electrical conductivity: & \SI{58e6}{\siemens\per\meter}
+			\\[5pt]
+			Properties of stainless steel &  &  & \\
+			Size: & $0.23\times 0.1 \times 0.002\,\SI{}{\meter\tothe{3}}$ &
+			Electrical conductivity: & \SI{1.1e6}{\siemens\per\meter}
+		\end{tabular}
+	\end{ruledtabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%
+\begin{figure}
+	\begin{tikzpicture}
+		\node (pic1) at (-5,0) 
+		{\includegraphics[width=0.5\linewidth]{figures/exp_render.pdf} };
+		\node (pic2) at (3.5,0)
+		{\includegraphics[width=0.45\linewidth]{figures/curr_profile.eps} };
+		\node [above of=pic1, xshift=-3.9cm, yshift=2.2cm] {(a)};
+		\node [above of=pic2, xshift=-3.7cm, yshift=2.2cm] {(b)};
+		
+		%labels
+		\node (txt1) at (-7.95,1.2) [left] {metal plates};
+		\node [below of=txt1, yshift=0.65cm] {(copper/steel)};
+		
+		\node at (-7.5,-2.8) [left, yshift=-0.5mm] {connectors};
+		
+		\node at (-6.8,-3.4) [below] {sensor mount};
+		\node (dist) at (-2.7,3.6) [right] {distance};
+		\node [below of=dist, yshift=0.6cm] {sensor};
+		
+		\node at (-0.9,1.7) [above] {$B_z$};
+		\node (curr) at (-1.5,-2.4) [right, xshift=-0.5mm, yshift=-0.6mm] {$-I_y$};
+		
+		
+		
+		\node at (-5,-0.5) {GaInSn};
+		
+		%		% Grid
+		%		\draw[lightgray,step=0.5] (pic1.south west) grid (pic1.north east);
+		%		
+		%		% Axes' labels
+		%		\foreach \x in {-9.5,-9,...,-0.5} { \node [below] at (\x,0) {\x}; }
+		%		\foreach \y in {-4,-3.5,...,4} { \node [left] at (0,\y) {\y};}
+		%		axis
+		
+		%axis
+		\draw [-Stealth, very thick] (-5,3) -- (-5.7,2.8) node [xshift=-1mm]{$x$};
+		\draw [-Stealth, very thick] (-5,3) -- (-4.3,2.8) node [xshift=1mm]{$y$};
+		\draw [-Stealth, very thick] (-5,3) -- (-5, 3.7) node [yshift=1mm]{$z$};
+		
+	\end{tikzpicture}
+	\caption{(a) A 3D rendering of the experimental setup where a standing wave is generated either in the $x$- or $y$-direction by passing current $I_y$ or $I_x$ respectively, through the four metal plates on the sidewalls. (b) depicts the current waveform $I_y$ or $I_x$ for a given time period ($2\pi/\omega$) required to excite a standing wave with resonant frequency $\omega$. The dimensions of the tank are $L_x=\SI{0.255}{\meter}$, $L_y=\SI{0.255}{\meter}$ and total height $H=\SI{0.1}{\meter}$. }
+	\label{fig:exp_model}
+\end{figure}
+%%%%%%%%%%%%%
+
+
+\subsection{The setup}
+\label{sec:exp_setup}
+
+The specifications of the experimental setup are provided in Table\,\ref{tab:table_exp_prop}. The wave tank was made out of polymethyl methacrylate (PMMA) with inner dimensions of $0.255 \times 0.255 \times 0.1\,\SI{}{\meter\tothe{3}}$. The walls were $0.008\,\SI{}{\meter}$ thick. Each of the inner faces of the four sidewalls had a cut to facilitate the insertion of metal plates $0.23 \times 0.1 \times 0.002\,\SI{}{\meter\tothe{3}}$ in size. As shown in Fig.\,\subref{fig:exp_model}{a}, the metal plates did not extend fully along the length of the PMMA wall, but had a small gap of $0.0125\,\SI{}{\meter}$ from either end, to prevent short circuits. The metals in question were copper and stainless steel depending on the required electrical boundary condition, as explained below in Sec.\,\ref{sec:exp_exp}. Each metal plate was welded with 21 uniformly placed shunt resistors, protruding outwards. The combination of thin plates and the shunts ensured a homogeneous current density needed to excite a linear standing wave. The entire tank was vertically placed at the center of a Helmholtz coil generating a quasi-homogeneous vertical magnetic field $B_z$ upto $\SI{50}{\milli\tesla}$ across the wave tank. The tank was filled with GaInSn, a eutectic alloy of Ga, In and Sn which is liquid at room temperature, upto a height of $\SI{0.03}{\meter}$. The rest was filled with Argon gas, to hinder the oxidation of GaInSn due to contact with ambient air. Distance sensors were placed on top of the tank as well as at the bottom, at four locations along the $x$- and $y$-axis, to simultaneously measure the instantaneous wave amplitude. 
+
+
+\subsection{The experiment}
+\label{sec:exp_exp}
+
+\begin{figure}
+	\begin{tikzpicture}
+		\node (pic1) at (-5,0) 
+		{\includegraphics[width=0.5\linewidth]{figures/vlog.eps} };
+		\node (pic2) at (3.8,0)
+		{\includegraphics[width=0.5\linewidth]{figures/tlog.eps} };
+		\node [above of=pic1, xshift=-4.1cm, yshift=1.8cm] {(a)};
+		\node [above of=pic2, xshift=-4.1cm, yshift=1.8cm] {(b)};
+		
+		\node at (4.6,-1) {$\lambda_{\rm m} = \SI{0.0807}{\per\second}$};
+		\node at (-4.2,-1) {$\lambda_{\rm b}
+			 \approx \SI{0.0624}{\per\second}$};
+		
+	\end{tikzpicture}
+	\caption{The amplitude decay profile of wave mode $(1,0)$ in a square wave tank with stainless steel sidewall inserts, a) without the presence of a vertical magnetic field $B_z$ and horizontal current $I_y$ and b) in the presence of a magnetic field $B_z=\SI{20}{\milli\tesla}$ ($\rm Ha = 23$) without horizontal current. At low $\rm Ha$, we can ignore the effects of the Hartmann layer and consider the damping contribution at the boundary to be purely hydrodynamic. The difference between the total damping and the boundary layer contributions yields the  damping rate due to Ohmic dissipation $\lambda_{\ii o}=\SI{0.018}{\per\second}$.}
+	\label{fig:post_process}
+\end{figure}
+
+\begin{figure}
+	\begin{tikzpicture}
+		\node (pic1) at (-5,0) 
+		{\includegraphics[width=0.5\linewidth]{figures/mdamp_h3_cm_copper_time.eps} };
+		\node (pic2) at (3.8,0)
+		{\includegraphics[width=0.5\linewidth]{figures/mdamp_h3_cm_steel_time.eps} };
+		\node [above of=pic1, xshift=-4.1cm, yshift=2cm] {(a)};
+		\node [above of=pic2, xshift=-4.1cm, yshift=2cm] {(b)};
+	\end{tikzpicture}
+	\caption{The comparison of theoretical and experimental damping times $T_{\rm o} = \lambda_{\ii o}^{-1}$ in a wave tank with a) copper sidewalls (B.C 1), and b) stainless steel sidewalls (B.C 4) at different $\rm Ha$. For the theoretical calculation, copper walls are treated as perfect conductors and stainless steel walls as perfect insulators.}
+	\label{fig:exp_results}
+\end{figure}
+
+The free surface of the liquid metal is excited when a horizontal current is supplied to the GaInSn across any two parallel metal plates in the $x$- or $y$-axis, in the presence of a constant vertical magnetic field $B_z$. To generate a quasi-1D standing wave of mode $(1,0)$ with a resonant frequency $\omega$, a proportional current signal as shown in Fig.\,\subref{fig:exp_model}{b}, must be given in the $y$-direction. The time period of the signal $T=2\pi/\omega$ and the size of the wave is proportional to the amplitude of the signal. Because we magnetohydrodynamically excite the wave, we are limited to using electrically conducting materials in the sidewalls. To simulate conducting and insulating sidewalls, we make use of copper (Cu-ETP) and nickel-plated stainless steel. As given in Table\,\ref{tab:table_exp_prop}, GaInSn has significantly less electrical conductivity than copper, around a factor of twenty and three times the conductivity of stainless steel. Therefore, copper walls act as a relative conductor (B.C 1) and stainless steel walls as a relative insulator (B.C 4). 
+\\
+\indent We conduct the experimental measurements between $\rm Ha=10$--$60$ ($B_z=10$--\SI{50}{\milli\tesla}). From Fig.\,\ref{fig:stokes_vel}, we know that at lower values of $\rm Ha$, the effect of the magnetic field on the velocity gradients at the interfacial and wall boundary layer are negligible. This enables the dissipation due to boundary effects to be considered as a purely hydrodynamic phenomenon, thus allowing the damping contribution solely due to Ohmic dissipation (which is one of the main results of the present study) to be isolated from the total damping measured. The following steps were used to achieve this: \Rn{1}) we first excited a wave using an oscillating current signal $I_y$ and magnetic field $B_z$. After a certain amount of time ($t=\SI{60}{\second}$) after the wave was properly developed, both the current and magnetic fields were shut off and the amplitude of the wave was recorded with respect to time. The slope of this decaying signal gives us the viscous damping rate $\lambda_{\rm v}$, as the energy of the wave is dissipated solely due to viscous effects at the boundary. \Rn{2}) Subsequently, a wave was excited again, but only the input current $I_y$ was cut off after a given time to initiate wave decay. The slope of the decaying amplitude signal gives the magnetic damping rate $\lambda_{\rm m}$, which takes into account both the Ohmic dissipation and the boundary layer effects [Eq.\,\eqref{eq:mag_damping_rate}]. We have already established that the boundary layer effects with and without the magnetic field are the same, $\lambda_{\ii b}\approx\lambda_{\ii v}$. The difference $\lambda_{\rm m} - \lambda_{\rm v}$ is the Ohmic damping rate $\lambda_{\ii o}$ and the inverse $T_{\rm o}=\lambda_{\ii o}^{-1}$, the Ohmic damping time for a particular $\rm Ha$. Fig.\,\subref{fig:post_process}{a} and \subref{fig:post_process}{b} provides an example of the extraction of $\lambda_{\rm o}$ from $\lambda_{\ii b}$ and $\lambda_{\rm m}$ respectively at $\rm Ha=23$ ($B_z=\SI{20}{\milli\tesla}$) in a tank with stainless steel sidewalls. The Ohmic damping rate/time is independent of the initial amplitude of the wave.
+\\
+\indent  Fig.\,\ref{fig:exp_results} contains the experimental results and compares $T_{\rm o}$ measurements in a tank with copper and stainless steel sidewalls, at different values of $\rm Ha$ with the theoretical cases B.C 1 and B.C 4. We present the results in terms of damping times in order to remain consistent with the previous literature \cite{Sreenivasan2005}. We saw good agreement in both cases, where the measurements done for the waves in copper and stainless steel sidewalls closely follow the theoretical damping times of B.C 1 and B.C 4 cases respectively. As seen in Fig.\,\subref{fig:exp_results}{a} and Fig.\,\subref{fig:exp_results}{b}, the slight overshoot in the measurements with copper walls and the undershoot with stainless steel walls was expected. The metal inserts have a certain amount of thickness and are neither perfect conductors nor insulators.
+\\
+\indent The damping times at higher depths, i.e. $h_2=0.04, 0.05$ and $\SI{0.06}{\meter}$ were also measured, but revealed no considerable change in the values. It was not possible to achieve greater depths due to the shorter height of the tank, and the risk of GaInSn splashing outward and damaging the top-mounted distance sensors. 
+
+
+\section{Concluding remarks}
+\label{sec:conclusion}
+
+In the present study, we formulate a theory on magnetic damping of liquid metals in non-shallow systems, which has grave significance in the electromagnetic processing of materials. The damping behavior of magnetic fields has been observed in certain industrial devices, such as induction heaters and in specific processes like continuous casting of steel and aluminum. However, this has not yet been fully realized theoretically. Prior studies have taken shallow water approximation and formulated damping theory for simpler wave modes in a system with simpler electrical boundary conditions; creating some gaps in the theory which our work has sought to address.  
+\\
+\indent To calculate the magnetic damping rates, we have taken a electrically conducting liquid-liquid system with four different electrical boundary conditions, ranging from fully conducting walls, to fully insulating walls along with mixed conditions in between. The magnetic damping rate can be classified to have bulk and boundary contributions. The former is due to Ohmic dissipation. To calculate the Ohmic damping rate, we first derived an exact solution for the electric potential of the induced eddy currents and compared the eddy current behavior in all the four cases. The currents close in the perfectly conducting walls and close within the liquid bath near perfect insulators. For an arbitrary bidirectional standing wave of mode $(m,n)$, the number of 2D eddies induced were found to be exactly equal to $(m+1)(n+1)$. The damping formulation consists of a pure induction term $\mathcal{Q}_{\rm ind}$ which is the Ohmic dissipation in the liquid bath when all surrounding walls are perfect conductors and a very intricate correction term $\mathcal{Q}_{\rm corr}$ which originates due to the insulating walls. The difference between the two terms is the net Ohmic dissipation in a system and the ratio between the difference and the energy of the wave is the Ohmic damping rate $\lambda_{\rm o}$. The electrical boundary condition influence the path taken by the eddy currents within the liquids which in turn influence the overall dissipation of energy in the system. Secondly, although of smaller magnitude, the dissipation due to boundary effects is due to the transition of the oscillating Stokes boundary layer at the walls and the interface into an electromagnetic boundary layer. The boundaries perpendicular to the orientation of the magnetic field see the presence of the Hartmann layer, where those parallel, see the Shercliff layer. We have formulated the thickness of the Hartmann and the Shercliff boundary layer as well as the damping rate $\lambda_{\rm b}$. As outlined in the supplementary material, all derivations of the formulae are comprehensively detailed, along with a Python module that incorporates the complete set of equations.    
+\\
+\indent Our formulations find good agreement with the theoretical and experimental results of \citet{Sreenivasan2005}, for the damping of a shallow, quasi-1D wave of mode $(1,0)$ in an electrically insulating rectangular tank. We also validate our model at a non-shallow depth using the experimental setup of \citet{Hegde2025}, where we record the exponential decay of a magnetohydrodynamically excited free-surface wave. Unlike \cite{Sreenivasan2005}, we operated at lower values of $\rm Ha$, which allowed us to isolate the damping contributions solely due to Ohmic dissipation.
+\\
+\indent Furthermore, the analytical formulation of the damping rates/damping times can be used for other problems such as for two-liquid sloshing experiments, and can further serve as an easy benchmark for direct numerical solvers, e.g. to iteratively obtain the electric potential $V$ from the Poisson equation $\bm\nabla^2 V = \bm\nabla \cdot (\h U \times \h B)$, which is often a challenge. 
+\\
+\indent However, a few questions have yet to be resolved. The experimental setup is incapable of exciting waves with higher wave modes, a key feature of our analytical model. The damping behavior of bidirectional wave modes $(m>0,n>0)$ is dictated by complex closing current patterns and therefore much more complicated, making it very rewarding to set up dedicated liquid metal wave damping experiments. The effect of mixed electrical boundary conditions on the damping rate have not be validated due to lack of existing studies and the intricacies involved in constructing an experimental setup with such conditions. Conclusive clarification of this our analytical model requires the construction of a new experiment along with the use of computational fluid dynamics. 
+
+
+% If you have acknowledgments, this puts in the proper section head.
+\begin{acknowledgments}
+	This study was supported by Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) by Award No. 512131026. The authors would like to thank Michael Knobel for the chemical treatment, Klaus Timmel for the mechanical design, Bernd Nowak for the construction of the wave tank and William Nash for proofreading the manuscript.
+\end{acknowledgments}
+
+
+
+
+% Specify following sections are appendices. Use \appendix* if there
+% only one appendix.
+
+
+
+
+
+% Create the reference section using BibTeX:
+
+\bibliography{mag_damp}
+
+\end{document}
+%
+% ****** End of file apstemplate.tex ******
+
