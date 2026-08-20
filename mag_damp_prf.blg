@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+This is BibTeX, Version 0.99e (TeX Live 2026)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: mag_damp_prf.aux
 The style file: apsrev4-2.bst
@@ -13,7 +13,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: mag_damp_prfNotes.bib
 Database file #2: mag_damp.bib
-Repeated entry---line 1260 of file mag_damp.bib
+Repeated entry---line 1284 of file mag_damp.bib
  : @article{Moffatt1967
  :                     ,
 I'm skipping whatever remains of this entry
@@ -31,45 +31,46 @@ Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
 Warning--empty year in Fraenkel1960
-You've used 30 entries,
+Warning--empty year in SMmagdamp_hegde
+You've used 31 entries,
             6079 wiz_defined-function locations,
-            1859 strings with 19847 characters,
-and the built_in function-call counts, 28171 in all, are:
-= -- 2117
-> -- 597
-< -- 165
-+ -- 198
-- -- 144
-* -- 4069
-:= -- 2749
-add.period$ -- 28
-call.type$ -- 30
-change.case$ -- 139
-chr.to.int$ -- 52
-cite$ -- 31
-duplicate$ -- 2701
-empty$ -- 2062
-format.name$ -- 334
-if$ -- 5685
+            1865 strings with 20285 characters,
+and the built_in function-call counts, 29610 in all, are:
+= -- 2162
+> -- 678
+< -- 173
++ -- 222
+- -- 166
+* -- 4359
+:= -- 2868
+add.period$ -- 29
+call.type$ -- 31
+change.case$ -- 144
+chr.to.int$ -- 53
+cite$ -- 33
+duplicate$ -- 2832
+empty$ -- 2157
+format.name$ -- 381
+if$ -- 5964
 int.to.chr$ -- 1
-int.to.str$ -- 37
-missing$ -- 420
-newline$ -- 136
-num.names$ -- 84
-pop$ -- 1103
+int.to.str$ -- 38
+missing$ -- 433
+newline$ -- 139
+num.names$ -- 87
+pop$ -- 1158
 preamble$ -- 1
-purify$ -- 139
+purify$ -- 143
 quote$ -- 0
-skip$ -- 1266
+skip$ -- 1296
 stack$ -- 0
-substring$ -- 610
-swap$ -- 2435
-text.length$ -- 62
+substring$ -- 609
+swap$ -- 2575
+text.length$ -- 73
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 377
-warning$ -- 2
-while$ -- 91
+type$ -- 399
+warning$ -- 3
+while$ -- 92
 width$ -- 0
-write$ -- 296
+write$ -- 301
 (There was 1 error message)

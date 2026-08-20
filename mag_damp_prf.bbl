@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{28}%
+\begin{thebibliography}{29}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -128,14 +128,6 @@
   field},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Eur. J.
   Mech. B Fluids}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {537}
   (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Davidson}(1995)}]{Davidson1995}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
-  {Davidson}},\ }\bibfield  {title} {\bibinfo {title} {Magnetic damping of jets
-  and vortices},\ }\href {https://doi.org/10.1017/S0022112095003466} {\bibfield
-   {journal} {\bibinfo  {journal} {J. Fluid. Mech.}\ }\textbf {\bibinfo
-  {volume} {299}},\ \bibinfo {pages} {153} (\bibinfo {year}
-  {1995})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fautrelle}\ and\ \citenamefont
   {Sneyd}(2005)}]{fautrelle2005}%
   \BibitemOpen
@@ -269,6 +261,32 @@
   }\href {https://doi.org/10.22364/mhd.56.4.9} {\bibfield  {journal} {\bibinfo
   {journal} {Magnetohydrodynamics}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo
   {pages} {451} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hegde}\ \emph {et~al.}(2026)\citenamefont {Hegde},
+  \citenamefont {Herreman}, \citenamefont {{Br\"andle de Motta}}, \citenamefont
+  {Canu}, \citenamefont {Renoult},\ and\ \citenamefont
+  {Horstmann}}]{Hegde2026}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Hegde}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Herreman}},
+  \bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont {{Br\"andle de
+  Motta}}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Canu}},
+  \bibinfo {author} {\bibfnamefont {M.-C.}\ \bibnamefont {Renoult}},\ and\
+  \bibinfo {author} {\bibfnamefont {G.~M.}\ \bibnamefont {Horstmann}},\
+  }\bibfield  {title} {\bibinfo {title} {Metal-pad-roll instability theory for
+  small-scale models of reduction cells},\ }\href
+  {https://doi.org/10.1103/5ynm-wdlr} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Fluids}\ } (\bibinfo {year} {2026})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Hegde}\ \emph {et~al.}()\citenamefont {Hegde},
+  \citenamefont {Herreman}, \citenamefont {Gundrum},\ and\ \citenamefont
+  {Horstmann}}]{SMmagdamp_hegde}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Hegde}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Herreman}},
+  \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Gundrum}},\ and\ \bibinfo
+  {author} {\bibfnamefont {G.~M.}\ \bibnamefont {Horstmann}},\ }\href@noop {}
+  {\bibinfo {title} {Supplementary material for "{Magnetic damping of standing
+  waves in rectangular geometries}"}}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hartmann}(1937)}]{Hartmann}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
@@ -317,14 +335,17 @@
   {Timokha}},\ }\href@noop {} {\emph {\bibinfo {title} {Sloshing}}},\ \bibinfo
   {edition} {1st}\ ed.\ (\bibinfo  {publisher} {Cambridge University Press},\
   \bibinfo {year} {2009})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Sreenivasan}\ and\ \citenamefont
-  {Narasimhan}(2017)}]{Sreenivasan2017}%
+\bibitem [{\citenamefont {Dom{\'\i}nguez-Lozoya}\ \emph
+  {et~al.}(2017)\citenamefont {Dom{\'\i}nguez-Lozoya}, \citenamefont {Cuevas},
+  \citenamefont {Rivero},\ and\ \citenamefont {Ramos}}]{Dominguez2017}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
-  {Sreenivasan}}\ and\ \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
-  {Narasimhan}},\ }\bibfield  {title} {\bibinfo {title} {Damping of
-  magnetohydrodynamic waves in a rotating fluid},\ }\href
-  {https://doi.org/10.1017/jfm.2017.550} {\bibfield  {journal} {\bibinfo
-  {journal} {J Fluid Mech}\ }\textbf {\bibinfo {volume} {828}},\ \bibinfo
-  {pages} {867} (\bibinfo {year} {2017})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Dom{\'\i}nguez-Lozoya}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Cuevas}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Rivero}},\
+  and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Ramos}},\ }\bibfield
+   {title} {\bibinfo {title} {Instabilities in swirling liquid metal flows
+  driven by rotating permanent magnets},\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {Magnetohydrodynamics (0024-998X)}\ }\textbf {\bibinfo
+  {volume} {53}},\ \bibinfo {pages} {79} (\bibinfo {year} {2017})}\BibitemShut
+  {NoStop}%
 \end{thebibliography}%
