@@ -158,7 +158,7 @@ bookmarksnumbered=true]{hyperref}
 \date{\today}
 
 \begin{abstract}
-	We present a theoretical formulation of the magnetic damping in a free surface system in the presence of a vertical magnetic field. Motion of the conducting medium coupled with the perpendicular magnetic field leads to the growth of induced eddy currents, which generates heat in the form of Ohmic dissipation. This results in the dissipation of the mechanical energy of an initially excited linear sloshing wave. Cases with perfectly conducting walls have a relatively simple distribution of eddy currents and have a straightforward solution towards the decay rate of waves in the presence of a magnetic field. However, this assumption is not suited for practical applications with non-conducting walls or for a mixed configuration with conducting and non-conducting walls, where the current distribution is confined within the walls leading to a significantly lower magnetic damping value. In the present work, we extend the magnetic damping theory to account for free-surface waves with arbitrary wave modes at non-shallow depths enclosed in a domain with electrically conducting, insulating and mixed boundary conditions. Moreover, we give an analytical description of the Hartmann and Shercliff boundary layers and their influence on dissipation at the different boundaries.  We validate the analytical results using existing analytical and experimental studies including our own setup for non-shallow free surface waves. 
+We present a theoretical formulation of the magnetic damping of surface gravity waves in rectangular containers filled with an electrically conducting fluid and subjected to a vertical magnetic field. The induced eddy currents dissipate mechanical energy as heat, damping an initially excited linear sloshing wave. For perfectly conducting walls, the resulting current distribution is relatively simple and allows a straightforward determination of the magnetic-field-induced decay rate. However, this assumption is not suited for many practical applications with non-conducting walls or for mixed configurations with conducting and non-conducting walls, where the current distribution is confined within the fluid, leading to significantly lower magnetic damping. In the present work, we generalize existing magnetic-damping theory for rectangular domains, previously limited to one-dimensional shallow-water waves, to arbitrary two-dimensional free-surface wave modes at finite depth and a range of electrical boundary conditions. Moreover, we provide an analytical description of the Hartmann and Shercliff boundary layers and quantify their influence on dissipation at the different boundaries. We validate the analytical results against theoretical predictions and experimental measurements from previous work, as well as measurements from our own setup for non-shallow free-surface waves. 
 \end{abstract}
 
 % insert suggested keywords - APS authors don't need to do this
@@ -169,34 +169,34 @@ bookmarksnumbered=true]{hyperref}
 
 \section{Introduction}
 \label{sec:intro}
-In recent years, we have seen the emergence of techniques which use electromagnetism for the processing conductive fluids, such as liquid metals, molten salts or semiconductor materials. Electromagnetic processing of materials (EPM) has been extensively used in various metallurgical devices for heating and stirring liquid metals \cite{Galpin1992a,Baake1994}. The electromagnetic fields produced by an alternating current (AC), are used to induce electric currents in the medium. This process, known as induction heating, uses the inherent resistance of the material to melt it. Moreover, the current also interacts with the recently formed fluid medium, producing Lorentz forces; the oscillating part of which are known to generate free surface/interfacial waves. In continuous casting of steel, electromagnetic stirrers make use of a rotating magnetic field to induce a swirling motion in the molten metal to homogenize the temperature distribution, and thereby also the microstructure of the cast \cite{shakhov2019}. In the context of induction heaters, the resultant velocity fluctuations reduce the overall quality of the molten product, mixing debris or atmospheric gases into the liquid. Whereas, in electromagnetic stirrers, the secondary vertical motion (sloshing) at certain resonant AC frequencies causes slag entrainment and surface cracking. Therefore, in these industrial processes, it is necessary to suppress the undesirable effects produced by an AC magnetic field. 
+
+Electromagnetic techniques have long been used in the processing of electrically conducting fluids, such as liquid metals, molten salts, and semiconductor melts \cite{Asai1989, Garnier1990}. Electromagnetic processing of materials (EPM) encompasses a wide range of metallurgical applications, including the heating and stirring of liquid metals. One important aspect of EPM is magnetic damping, a physical mechanism that arises when a conducting fluid moves through an imposed static magnetic field. In many metallurgical processes, undesirable sloshing and free-surface fluctuations must be suppressed \cite{Guthrie2004}, and external magnetic fields provide a non-intrusive means of controlling conducting liquids \cite{Davidson1999, Lofgren2000}.
 \\
-\indent It is well established that the magnetic field produced by direct current (DC) has a damping effect on the fluid flow \cite{Fraenkel1960,shercliff1981, Davidson2001}. However, this effect is not isotropic and largely depends on the orientation of the magnetic field with respect to the local velocity vector of the fluid. For example, a vertical magnetic field $\h B_0$ imposed on a conducting liquid in motion results in the generation of an induced current density 
+\indent It is well established that magnetic fields generated by direct currents (DC) can damp fluid motion \cite{Fraenkel1960, Moffatt1967, Davidson1995}. However, this effect is anisotropic and strongly depends on the orientation of the magnetic field relative to the local fluid velocity \cite{Davidson2001}. When a vertical magnetic field is imposed on a moving conducting liquid, induced electric currents are generated. These currents interact with the magnetic field to produce a retarding Lorentz force that opposes the fluid motion, while electrical energy is simultaneously dissipated as heat due to the finite electrical resistance of the fluid. This process, known as Ohmic or Joule dissipation, decreases the overall kinetic energy of the fluid. The corresponding energy balance is given by
 \begin{equation}
-	\h j = \sigma(-\bm\nabla \varphi + \h U \times \h B_0),
-	\label{eq:intro_ind-current}
-\end{equation} 
-which is orthogonal to the average velocity $\h U$ and the magnetic field. The term $\sigma$ is the electrical conductivity and $\varphi$, the electric potential of the fluid. The internal resistance of the fluid contributes to the Ohmic losses in the system, which decrease the overall kinetic energy of the fluid. According to the inviscid equation of motion \cite[chapter 5]{Davidson2001},
-\begin{equation}
-\dv{}{t}\int_V \frac{1}{2} \rho \h U^2 \mathrm dV 
-= -\frac{1}{\sigma} \int_V \h j^2  \mathrm dV
-\label{eq:intro_ohmic_dissipation}
+	\dv{}{t}\int_V \frac{1}{2} \rho \h u^2 \mathrm dV
+	= -\frac{1}{\sigma} \int_V \h J^2 \mathrm dV,
+	\label{eq}
 \end{equation}
-where $\rho$ is the density of the fluid occupying a volume $V$. The induced currents also interact with the magnetic field producing Lorentz forces: $\textrm{f_L} = \h j \times \h B_0$. At first sight, it appears from this equation that motion normal to the field lines experiences braking due to Lorentz forces whereas motion parallel to the field lines is unopposed due to $\h U \times \h B_0 =0$. This is, however, a gross oversimplification of the phenomenon as the effect of the electric potential is ignored. To conserve the overall charge in the system, the current loops must close either within the fluid or in the walls depending on the electrical boundary conditions. To do so, the current must flow back through other parts of the system, and the redistributed current generates Lorentz forces that oppose the flow even in directions parallel to the field lines. This must be considered when theoretically modeling magnetohydrodynamic (MHD) effects in liquid metals.
+where $\rho$ is the density, $\sigma$ the electrical conductivity, $\h u$ the velocity, and $\h J$ the induced current density of a fluid occupying the volume $V$. The left-hand side represents the total rate of change of kinetic energy in the fluid, whereas the right-hand side gives the rate at which mechanical energy is irreversibly converted into heat by Ohmic dissipation.
 \\
-\indent One of the early theoretical studies on magnetic field induced damping was by \citet{Moffatt1967}. The study focused on the suppression of isotropic turbulence in a conducting fluid in the presence of a uniformly applied magnetic field and highlighted the contribution of Ohmic dissipation in damping. \citet{Shercliff1969} showed that the vertical magnetic field acts isotropically, whereas a horizontal magnetic field produces an anisotropic effect on the free surface. The action of the Lorentz force depends on the orientation of the wave relative to the field. The damping of gravity waves due to Ohmic dissipation were also explored by \citet{Rivat1991} with respect to a funnel used in the metal casting process. While the damping nature of a static field is already known, magnetic damping can also appear as a second-order effect that can suppress wave instabilities generated by an AC magnetic field, as shown by \citet{fautrelle2005}. There exists a strong balance between magnetic forcing and damping when the field strength is high enough to trigger the parametric instability in a cylindrical geometry. The authors also gave a rough estimate regarding the formation of the Hartmann layer, which occurs at the boundary perpendicular to the magnetic field.    
+\indent One of the earliest theoretical descriptions of the magnetic damping of surface gravity waves was given by \citet{Fraenkel1960}, who extended the linear and nonlinear shallow-water theory of long gravity waves to an inviscid electrically conducting liquid subject to a vertical magnetic field. For plane and axisymmetric flows, he obtained explicit solutions demonstrating an exponential decay of the wave amplitude due to Joule dissipation. In such unbounded formulations, or equivalently for perfectly conducting vertical walls, the induced currents can close without being constrained by insulating boundaries, so that no correction to the electric potential is required and the problem remains comparatively simple. Subsequent theoretical and experimental studies by \citet{Rivat1991} analyzed the stabilization of gravity waves by a vertical magnetic field in both deep- and shallow-water configurations. \citet{Bojarevics2006a} investigated the influence of a static magnetic field in vertical, transverse, and coplanar orientations on inductively heated melts. The vertical orientation was found to be the most efficient in damping flow velocities and surface deformations. In contrast, the coplanar orientation resulted in increased velocity fluctuations in the melt. \citet{Alcala2015} provided a theoretical description of the effect of a uniform magnetic field on a two-dimensional surface-wave model, with particular emphasis on the orientation of the magnetic field relative to the free surface. In addition to the magnetic-field orientation, the electrical boundary conditions at the surrounding walls play an important role in determining the magnetic damping rate. 
+
+The study most closely related to the present formulation is that of \citet{Sreenivasan2005}, who extended the classical treatment by \citet{Fraenkel1960} to electrically insulating sidewalls. In this intricate case, the induced currents can no longer close through the surrounding walls but must close entirely within the fluid. This requires the calculation of the electric potential to satisfy the no-current boundary condition at the insulating walls, resulting in a substantially modified current distribution and considerably weaker magnetic damping. The authors derived the corresponding damping relation and validated it experimentally for mercury in a rectangular container, finding good agreement between the measured decay times and the theoretical prediction.
 \\
-\indent There have been many experiments that have investigated the action of AC and DC magnetic fields on liquid metal free surface waves. \citet{Fautrelle2003} focused on the stabilizing effect of a non-vertical DC magnetic  field. The authors applied a horizontal transverse DC field to a mercury bath in a rectangular steel container. It was observed that the application of the static field suppressed all the free surface fluctuations and instead gave rise to a single traveling wave. \citet{Bojarevics2006a} investigated the influence of a static magnetic field in the vertical, transverse and coplanar orientations on inductively heated melts. The vertical orientation of the field proved to be the most efficient in damping of the flow velocities and surface deformations, whereas the coplanar orientation showed no overall stabilization. An increase in velocity fluctuations in the melt was observed instead. \citet{Fisher2019} showed that transverse magnetic fields perpendicular to wave propagation in shallow cells have no effects on wave damping, with or without the presence of external currents. In addition to the magnetic field orientation, the type of electrical boundary condition at the surrounding walls is an important factor to be considered. This was addressed by \citet{Sreenivasan2005}, who conducted damping experiments in conducting and insulating walls in the presence of a vertical magnetic field. The presence of non-conducting sidewalls was found to reduce the rate of magnetic damping. The stabilizing effect of magnetic damping is of significant importance in the design of laboratory-scale wave experiments, which often make use of high-strength magnetic fields \cite{Pedchenko2009, Pedcenko2017, Grants2021, Hegde2025}. These are relevant for cases where the objective is to excite or destabilize a wave with the use of external currents. To do so, the power injected into the system, whether in the form of input current or external magnetic field should exceed the total dissipation, either viscous or magnetic.  
+\indent In this study, we present a generalized theoretical framework for the magnetic damping of linear free-surface waves in rectangular domains. Magnetic damping in cylindrical geometries, including the effect of electrically insulating walls, has already been treated analytically \cite{Herreman2019,Krastins2020}.
+In a cylinder, however, the electrical boundary-value problem is considerably simpler because the insulating sidewall involves only a single lateral coordinate. In rectangular geometries, insulating boundary conditions must generally be satisfied independently in both horizontal directions, making the problem substantially more complex. The theoretical model for rectangular cells by \citet{Sreenivasan2005} avoids this additional complexity by considering only shallow one-dimensional waves, for which the electrical problem effectively retains only a single horizontal degree of freedom. Building on this work, we solve the full rectangular damping problem with independent boundary conditions in both horizontal directions and derive analytical representations of the induced eddy-current distributions and magnetic damping rates for arbitrary wave modes and for homogeneous as well as mixed electrical boundary conditions.
+We further account for the magnetic modification of the viscous boundary layers, including the Hartmann layer at the horizontal bottom wall and the Shercliff layers along the vertical sidewalls, and derive their contributions to the total wave damping. Finally, we compare the analytical predictions with experimental measurements for two different electrical boundary conditions.
 \\
-\indent Returning to the aim of the present work: we present a complete theoretical model of magnetic damping in a fluid undergoing linear wave motion in a rectangular domain. Magnetic damping in cylindrical geometries has already been well studied \cite{Herreman2019,Krastins2020}. The theoretical model put forth by \citet{Sreenivasan2005} takes into account only simple, unidirectional waves in rectangular geometries with shallow depths. Building on this work, we have expanded their description to derive analytical representations of induced eddy current distributions and magnetic damping rates for arbitrary wave modes in arbitrary rectangular geometries with homogeneous as well as mixed electrical boundary conditions. We also consider the effect of the Hartmann and Shercliff layers formed at the boundaries. A particular case of our analytical solution for the Ohmic dissipation rate has also been tested experimentally using two different electrical boundary conditions. This study is also significant in finalizing the damping model discussed in \citet{Hegde2026}, which addresses long-wave interfacial instabilities that limit the operation in aluminum reduction cells. Magnetic damping in addition to viscous damping is largely unexplored regarding reduction cells. 
+\indent Magnetic damping as described here is in particular important for understanding and designing laboratory-scale wave experiments employing strong magnetic fields, as well as for predicting instability thresholds in linear MHD wave models \cite{Pedchenko2009, Pedcenko2017, Grants2021, Hegde2025, Hegde2026}. Such models describe instabilities observed in reduction cells, in particular the metal pad roll (MPR) instability \cite{Bojarevics1994,Davidson1998,Hegde2026}, which arises from the electromagnetic destabilization of long-wavelength rotating interfacial waves through the coupling of current perturbations with the background magnetic field. The onset of the MPR instability is determined by the balance between the electromagnetic energy input and the total dissipation due to viscous and magnetic effects. While viscous damping has been studied extensively, the magnetic contribution to this balance has remained largely unexplored.
 \\
-\indent The manuscript is organised as follows: In Sec.\,\ref{sec:theory} we present the theoretical formulation, starting with the MHD equations and all the different cases based on the electrical boundary conditions (Sec.\,\ref{sec:gov_eqs}), and highlight the solution for the induced electric potentials (Sec.\,\ref{sec:elec_potential}). In Sec.\,\ref{sec:eddy_current}, we provide a quantitative description of the eddy current distribution in the fluid medium, and in Sec.\,\ref{sec:ohmic_dissipation}, the description for the bulk dissipation due to the vertical magnetic field. In Sec.\,\ref{sec:hartmann_and_shercliff}, we discuss boundary layer effects and the transition of the viscous sub-layer to the Hartmann and Shercliff layers in the presence of a magnetic field. We consolidate all the theoretical results in Sec.\,\ref{sec:mag_damp} and compare it with the theoretical and experimental results of \citet{Sreenivasan2005} in Sec.\,\ref{sec:sreeni_compare}. In Sec.\,\ref{sec:mag_damp_exp}, we give a description of the experimental model and the magnetic damping measurements. We conclude our study and discuss open questions in Sec.\,\ref{sec:conclusion}.
+\indent The manuscript is organized as follows. In Sec.\,\ref{sec:theory}, we present the theoretical formulation, beginning with the MHD equations and the different cases defined by the electrical boundary conditions (Sec.\,\ref{sec:gov_eqs}), followed by the solutions for the induced electric potentials (Sec.\,\ref{sec:elec_potential}). In Sec.\,\ref{sec:eddy_current}, we provide a quantitative description of the eddy-current distributions in the fluid, while Sec.\,\ref{sec:ohmic_dissipation} presents the bulk dissipation due to the vertical magnetic field. In Sec.\,\ref{sec:hartmann_and_shercliff}, we discuss boundary-layer effects and the transition from oscillating Stokes boundary layers to Hartmann and Shercliff layers in the presence of a magnetic field. We consolidate the theoretical results in Sec.\,\ref{sec:mag_damp} and compare them with the theoretical and experimental results of \citet{Sreenivasan2005} in Sec.\,\ref{sec:sreeni_compare}. In Sec.\,\ref{sec:mag_damp_exp}, we present the experimental validation of the analytical model for conducting and insulating sidewalls. Finally, we conclude the study and discuss open questions in Sec.\,\ref{sec:conclusion}.
+
 
 \section{Theoretical Formulation}
 \label{sec:theory}
 
-\subsection{The governing equations}
-\label{sec:gov_eqs}
+\subsection{Governing equations and gravity-wave formulation} \label{sec:gov_eqs}
 
 %%%%%%%%%%%%%%
 \begin{figure}
@@ -257,66 +257,122 @@ where $\rho$ is the density of the fluid occupying a volume $V$. The induced cur
 	\caption{The three-dimensional sketch describing the a) single-layer system $\Omega$ of depth $h$, with density, kinematic viscosity and electrical conductivity denoted as $\rho$, $\nu$ and $\sigma$ respectively, and b) the mechanism of induction ($\propto \h U \times B_z \h e_z$) due to the motion of the free surface $\mathcal{S}$ in the presence of a vertical magnetic field, $B_z$. The acceleration due to gravity $g$ acts in the downward direction along $z$-axis. }
 	\label{fig:model}
 \end{figure}
-%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% 
+We consider a single layer of electrically conducting liquid $\Omega$ with density $\rho$, kinematic viscosity $\nu$, and electrical conductivity $\sigma$, confined within a rectangular domain of length $L_x$, width $L_y$, and finite depth $h$, as illustrated in Fig.\,\subref{fig:model}{a}. The undisturbed free surface $\mathcal{S}$ is located at $z=0$, while the bottom wall is located at $z=-h$. A uniform and stationary magnetic field 
+\begin{equation}
+	 \h B_0 = B_z \h e_z 
+\end{equation} 
+is applied in the vertical direction. The motion of the electrically conducting liquid in the imposed magnetic field generates the motional electromotive term $\h u\times\h B_0$, a key contributor to Ohmic dissipation. In the simple magnetohydrodynamic case of unbounded geometries or electrically conducting walls, the motional term is sufficient to determine the induced electric currents. However, in many practically relevant configurations with insulating or mixed conducting-insulating boundaries, the electric-potential contribution provides an additional component of the current density and redistributes the induced currents in accordance with charge conservation and the electrical boundary conditions.
+Accordingly, the induced current density is generally given by Ohm's law
+\begin{equation}
+	 \h J = \sigma\left(-\bm\nabla\Psi+\h u\times\h B_0\right), \label{eq:gov_quasi_mhd} 
+ \end{equation} 
+ where $\Psi$ denotes the induced electric potential. Conservation of electric charge further requires
+ \begin{equation} 
+ \bm\nabla\cdot\h J=0. \label{eq:gov_charge_cont}
+ \end{equation}
+Together with the electrical boundary conditions, Eqs.\,\eqref{eq:gov_quasi_mhd} and \eqref{eq:gov_charge_cont} determine the paths along which the induced currents close within the fluid or through electrically conducting boundaries.
+Taking the divergence of Eq.\,\eqref{eq:gov_quasi_mhd} and using Eq.\,\eqref{eq:gov_charge_cont} yields 
+\begin{equation} 
+\nabla^2\Psi = \bm\nabla\cdot \left(\h u\times\h B_0\right) = \h B_0\cdot \left(\bm\nabla\times\h u\right) - \h u\cdot \left(\bm\nabla\times\h B_0\right).
+\end{equation} 
+For our present wave problem, the right-hand side vanishes. The imposed magnetic field $\h B_0=B_z\h e_z$ is spatially uniform, and the leading-order gravity-wave flow is irrotational, $\bm\nabla\times\h u=0$. Consequently, the induced electric potential satisfies Laplace's equation, 
+\begin{equation}
+	\nabla^2\Psi=0. \label{eq:laplacian_psi} 
+\end{equation} 
+Although Eq.\,\eqref{eq:laplacian_psi} contains no volumetric source term, the electric potential is in general non-zero. Its spatial distribution is determined by the electrical boundary conditions and redistributes the induced currents when they cannot close freely through the surrounding walls. The solution of Eq.\,\eqref{eq:laplacian_psi} for the different conducting, insulating, and mixed boundary configurations is presented in Sec.\,\ref{sec:elec_potential}.
 
-We consider a single-layer system consisting of a conducting liquid $\Omega$ where the free surface is permitted to move along the vertical axis. The fluid, which has density $\rho$, kinematic viscosity $\nu$, electrical conductivity $\sigma$, is bound by a rectangular domain of length $L_x$ and width $L_y$, with a non-shallow depth of $h$, as shown in Fig.\,\subref{fig:model}{a}. The free surface $\mathcal{S}$ is threaded by a constant, vertical magnetic field along the positive $z$-axis. The average fluid flow $\h U$ due to wave motion coupled with the vertical component of the magnetic field, $B_z \h e_z$ produces induced currents proportional to $\h U \times B_z\h e_z$, a key contributor to Ohmic dissipation. This is illustrated in Fig.\,\subref{fig:model}{b}. The induced magnetic field due to induced currents are negligible due to higher order effects and as a result, are ignored in this study. 
-\\
-\indent We denote the following quantities $\h u$, $p$, $\h J$, and $\Psi$ for the local velocity, pressure, induced current density and the electric potential due to induction, and write the governing equations as follows:
-\begin{subequations}
-\begin{align}
-\rho\partial_t\h u + \bm\nabla p &= \h J \times B_z\h e_z + \rho\nu\nabla^2 \h u,
-\label{eq:gov_momentum}
-\\
-\bm \nabla \cdot \h u &= 0,
-\label{eq:gov_cont}
-\\
-\h J &= \sigma \bigl( -\bm\nabla\Psi + \h u \times B_z\h e_z\bigr),
-\label{eq:gov_quasi_mhd}
-\\
-\bm\nabla \cdot \h J &= 0 .
-\label{eq:gov_charge_cont}
-\end{align}
-\end{subequations}
-The Eqs.\,(\ref{eq:gov_momentum}--\ref{eq:gov_charge_cont}) are the linearized momentum, continuity, generalized Ohm's law and continuity of charge equation in order. The source term $\h J \times B_z\h e_z$ is the Lorentz force due to the coupling of induced current density. We assume the impermeability  condition at the wall i.e. velocity perpendicular ($\h u \cdot \h n = 0$) to the wall is zero. The vertical displacement of the free surface at an instantaneous time $t$ is   
+We now turn to the hydrodynamic problem that provides the velocity field driving the electromagnetic response. The linearized momentum and continuity equations are \begin{subequations} 
+\begin{align} 
+\rho\partial_t\h u + \bm\nabla p &= \h J\times B_z\h e_z +\rho\nu\nabla^2\h u, \label{eq:gov_momentum} \\ 
+\bm\nabla\cdot\h u &=0. \label{eq:gov_cont} 
+\end{align} 
+\end{subequations} 
+Here, $\h J\times B_z\h e_z$ denotes the Lorentz force associated with the induced currents. In the present formulation, the magnetic damping is treated as a perturbation to the underlying gravity-wave motion. The velocity field required to determine the induced currents can therefore be obtained from the corresponding undamped gravity-wave solution. Viscous effects in the bulk fluid are likewise neglected. For the linear sloshing modes considered here, viscous dissipation is associated predominantly with the oscillatory Stokes boundary layers at the rigid walls. These contributions have been treated in our previous work \citet{Hegde2026} and are not reconsidered in the present analysis. Outside these thin boundary layers, the wave motion is therefore taken to be inviscid and irrotational. Introducing the velocity potential $\phi$, 
+\begin{equation} 
+\h u=\bm\nabla\phi, 
+\end{equation} 
+the continuity equation \eqref{eq:gov_cont} yields, analogous to the electric potential problem, a Laplace equation for the velocity potential,
+\begin{equation} 
+\nabla^2\phi=0. \label{eq:laplacian_phi} 
+\end{equation}
+The velocity potential is subject to the impermeability condition at the rigid boundaries, 
+\begin{equation} 
+\bm\nabla\phi\cdot\h n=0, \label{eq:wave_no_penetration} 
+\end{equation} 
+where $\h n$ denotes the outward normal vector. At the undisturbed free surface $z=0$, the linearized kinematic boundary condition relates the surface displacement $\eta$ to the vertical fluid velocity, 
+\begin{equation} 
+\partial_t\eta = \left.\partial_z\phi\right|_{z=0}. \label{eq:free_surface_kinematic} 
+\end{equation} 
+The corresponding dynamic boundary condition follows from the linearized unsteady Bernoulli equation. With constant atmospheric pressure at the free surface and neglecting surface tension, it becomes 
+\begin{equation} 
+\left.\partial_t\phi\right|_{z=0} + g\eta = 0. \label{eq:free_surface_dynamic} \end{equation} 
+For a standing gravity wave with mode indices $(m,n)$, the classic solution of the Laplace problem together with the rigid-wall and free-surface boundary conditions can be represented as
 \begin{equation}
 	\eta (x,y,t) = \ii i A_{mn}
-	\cos{\biggl[ \frac{m\pi}{L_x} \biggl(x + \frac{L_x}{2} \biggr) \biggr]}
-	\cos{\biggl[ \frac{n\pi}{L_y} \biggl(y + \frac{L_y}{2} \biggr) \biggr]}
+	\cos{\biggl[ \frac{m\pi}{L_x}
+		\biggl(x + \frac{L_x}{2}\biggr) \biggr]}
+	\cos{\biggl[ \frac{n\pi}{L_y}
+		\biggl(y + \frac{L_y}{2}\biggr) \biggr]}
 	\ii{e}^{\ii i\omega t},
 	\label{eq:eta}
 \end{equation}
-where, $A_{mn}$ is the initial amplitude and $m, n \in \mathbb{N}_0 \neq (0,0)$ refer to the mode indices counting half wavelengths of the plane wave in the $x$ and $y$ direction respectively. In eq.\,\eqref{eq:eta}, $\omega$ refers to the angular frequency of the linear wave oscillation
+for the free-surface displacement, and
 \begin{equation}
-	\omega = \sqrt{
-		gk\tanh{[kh]}
-	} \; ,
+	\phi = -A_{mn}
+	\frac{\omega}{k}
+	\frac{\cosh{[k\bigl(z + h \bigr)]}}{\sinh{[kh]}}
+	\cos{\biggl[ \frac{m\pi}{L_x}
+		\biggl(x + \frac{L_x}{2}\biggr) \biggr]}
+	\cos{\biggl[ \frac{n\pi}{L_y}
+		\biggl(y + \frac{L_y}{2}\biggr) \biggr]}
+	\ii{e}^{\ii i\omega t},
+	\label{eq:vel_potential}
+\end{equation}
+for the corresponding velocity potential. Here, $A_{mn}$ denote the mode-dependent wave amplitudes and $m,n\in\mathbb{N}_0$ with $(m,n)\neq(0,0)$ are the mode indices, specifying the number of half wavelengths in the $x$ and $y$ directions, respectively.
+The wavenumber associated with the mode $(m,n)$ must satisfy
+\begin{equation}
+	k = \pi\sqrt{
+		\left(\frac{m}{L_x}\right)^2
+		+
+		\left(\frac{n}{L_y}\right)^2
+	}.
+	\label{eq:wavenumber}
+\end{equation}
+The eigenfrequencies of the wave modes follow from the linear free-surface boundary conditions and satisfies the finite-depth gravity-wave dispersion relation
+\begin{equation}
+	\omega = \pm\sqrt{gk\tanh(kh)}.
 	\label{eq:ang_freq}
 \end{equation}
-Here, $k = \pi\sqrt{\bigl(m/L_x\bigr)^2 + \bigl(n/L_y\bigr)^2}$ is the angular wave number and $g$, the acceleration due to gravity. In a classical gravity wave system, we assume the fluid to be both incompressible and irrotational, with velocity given by $\h u = \bm\nabla \phi$, where $\phi$ is the scalar velocity potential of the fluid. Solving the Laplace equation $\bm\nabla^2\phi = 0$ gives the following solution:
+The resulting velocity field $\h u=\bm\nabla\phi$ constitutes the hydrodynamic basis for the subsequent calculation of the induced electric potential, current distribution, and Ohmic dissipation.
+ 
+The present formulation is restricted to linear, small-amplitude gravity waves. Consistent with the perturbative treatment of the magnetic field, both magnetic induction and Lorentz-force feedback are assumed to remain weak, requiring the magnetic Reynolds number $\ii{Rm}$ and the interaction parameter $N$ (Stuart number) to be small
 \begin{equation}
-\phi = -A_{mn}
-\frac{\omega}{k}
-\frac{\cosh{[k\bigl(z + h \bigr)]}}{\sinh{[kh]}}
-\cos{\biggl[ \frac{m\pi}{L_x} \biggl(x + \frac{L_x}{2} \biggr) \biggr]}
-\cos{\biggl[ \frac{n\pi}{L_y} \biggl(y + \frac{L_y}{2} \biggr) \biggr]}
-\ii{e}^{\ii i\omega t}.
-\label{eq:vel_potential}
+	\ii{Rm}
+	=
+	\mu_0\sigma\omega L^2
+	\ll 1,
+	\qquad
+	N
+	=
+	\frac{\sigma B_z^2}{\rho\omega}
+	< 1,
+	\label{eq:mag_parameters}
 \end{equation}
-%%%%%%%%%%%%%%%
-\indent Certain assumptions must be made before conducting the theoretical analysis. Firstly, the effects of surface tension are ignored. Secondly, that only the vertical component of the DC magnetic field is of interest in the current study. Thirdly, we undertake the low magnetic Reynolds number approximation:
+where $\mu_0$ is the permeability of free space, $L\sim\sqrt{L_x L_y}$ is the characteristic length scale, and the characteristic velocity of the wave motion is taken as $U\sim\omega L$. With these characteristic scales, $\ii{Rm}\ll1$ justifies the quasi-static approximation, such that the magnetic field induced by the wave motion is negligible compared with the imposed field $\h B_0$. The condition $N\ll1$ ensures that the Lorentz-force feedback remains a perturbation to the leading-order gravity-wave dynamics. Consequently, rotational corrections to the potential solutions induced by the Lorentz force are neglected, while its dissipative effect on the wave is retained.
+Finally, we introduce the Hartmann number to quantify the relative importance of electromagnetic and viscous effects,
 \begin{equation}
-	\ii R_{\ii m} = \mu_0\sigma\omega L^2 \ll 1,
-	\label{eq:mag_Re}
-\end{equation}
-which states that the induced magnetic fields due to the induced currents are negligible compared to the magnitude of the external magnetic field $B_z$. In the above equation, $\mu_0$ is the permeability of free space and $L$ is the characteristic length. Note that the wave velocity is expressed as the product of wave frequency $\omega$ and $L$. The effect of $B_z$ can also be characterized by the Hartmann number,
-\begin{equation}
-	\ii{Ha} = B_z L\sqrt{\frac{\sigma}{\rho\nu}},
+	\ii{Ha}
+	=
+	B_z L
+	\sqrt{\frac{\sigma}{\rho\nu}},
 	\label{eq:hartmann_number}
 \end{equation}
-which is the ratio of electromagnetic to viscous forces in a domain of characteristic length $L$. The Hartmann number plays a crucial role in the transition of the viscous boundary into the Hartmann layer, where the circulating electric currents cut the magnetic fields producing an electromotive force suppressing fluid motion which results in a "braking" effect. This is addressed in Sec.\,\ref{sec:hartmann_and_shercliff}. 
+which is particularly relevant to estimate the magnetic modification of the viscous boundary layers, including the formation of Hartmann and Shercliff layers, see Sec.\,\ref{sec:hartmann_and_shercliff}.
+ 
 
 
-\subsection{The electric potential}
+\subsection{Calculation of electric potentials}
 \label{sec:elec_potential}
 
 
@@ -424,18 +480,17 @@ which is the ratio of electromagnetic to viscous forces in a domain of character
 	\end{ruledtabular}
 \end{table}
 
-To determine the Ohmic dissipation, it is necessary to first calculate the induced current density $\h J$ in the bulk fluid flow, which has known quantities $\h u = \bm\nabla\phi$, and unknown quantities like the induced electric potential $\Psi$. To this end, we substitute the generalized Ohm's law [Eq.\,\eqref{eq:gov_quasi_mhd}] in the conservation of induced current density [Eq.\,\eqref{eq:gov_charge_cont}]:
-\begin{gather}
-	\bm\nabla \cdot \h J = 0 \Longrightarrow
-	-\nabla^2\Psi + \bm\nabla \cdot \bigl( \h u \times B_z\h e_z\bigr) = 0,
-\intertext{to obtain the Laplace equation}
-	\nabla^2\Psi = 0,
-	\label{eq:laplacian_psi}
-\end{gather} 
-the solution of which, largely depends on the electrical boundary conditions, which vary depending on the model of the industrial application. To address this. we introduce four distinct cases namely B.C 1, B.C 2, B.C 3 and B.C 4 as shown in Table\,\ref{tab:table_sim}. In B.C 1, all bounding walls are perfect electrical conductors which act as an ideal electrode $(\Psi|_{\rm wall}=0)$. In B.C 2, only a pair of sidewalls perpendicular to the $x$-axis are perfect conductors. The rest of the walls are perfect insulators, which prevents the flow of current into the wall ($\h J\cdot \h n|_{\rm wall}=0$). The case B.C 3 has all sidewalls as perfect insulators barring the bottom wall, which is a perfect conductor. Lastly, B.C 4 
-is a case with all walls as perfect electrical insulators. 
-\\
-\indent B.C 1 is the trivial case where the fluid potential is forced to match the wall potential i.e. $\Psi \bigl|_{\Omega} = 0$ \cite{Davidson2001}. In this particular case, the electrical properties of bottom wall are inconsequential as the currents are purely horizontal and recirculate within the vertical sidewalls. The current no-outflow conditions in B.C 2, B.C 3 and B.C 4 are crucial for determining the induced electric potentials. Further details regarding the solution of this pure boundary value problem are provided in Sec.\,\RN{1} of the supplementary material \cite{SMmagdamp_hegde}. The final result for each case are provided below. 
+The electric potential $\Psi$ entering Ohm's law is obtained from the Laplace equation \eqref{eq:laplacian_psi}, subject to the electrical boundary conditions at the surrounding walls. These boundary conditions determine the spatial distribution of $\Psi$ and, consequently, the redistribution and closure of the induced currents. Since the relevant electrical boundary conditions depend on the particular physical or industrial configuration, we consider four idealized cases, denoted B.C 1--B.C 4 and summarized in Table\,\ref{tab:table_sim}. In B.C 1, all bounding walls are perfect electrical conductors and act as ideal electrodes ($\Psi|_{\rm wall}=0)$.
+In B.C 2, the pair of sidewalls normal to the $x$-axis is perfectly conducting, whereas the remaining walls are perfect electrical insulators. At the insulating boundaries, current penetration is prohibited by the no-outflow condition
+\begin{equation}
+	\h J\cdot\h n|_{\rm wall}=0.
+\end{equation}
+In B.C 3, the bottom wall is perfectly conducting, while all sidewalls are perfect electrical insulators. Finally, B.C 4 corresponds to a fully insulating configuration. B.C 1 constitutes the trivial solution of the electric-potential problem. Since the potential in the fluid is constrained by the conducting boundaries, Eq.\,\eqref{eq:laplacian_psi} gives 
+\begin{align}
+\Psi(\ii{B.C 1})=0
+\end{align}
+throughout $\Omega$ \cite{Sreenivasan2005}. In this case, the electrical properties of the bottom wall are inconsequential because the induced currents are purely horizontal and close through the conducting vertical sidewalls. By contrast, for B.C 2--B.C 4, the no-current-outflow conditions at the insulating boundaries determine the non-trivial electric-potential distributions and thereby the corresponding current-closure paths.
+Details of the solutions to these boundary-value problems are provided in Sec.\,I of the Supplemental Material \cite{SMmagdamp_hegde}. The resulting electric potentials for the four boundary configurations are given below. 
 \\
 \indent First, for B.C 2:
 \begin{gather}
@@ -631,8 +686,6 @@ In Eq.\,\eqref{eq:bc3_potential}, the terms containing the coefficients $\tilde{
 	\right)
 	\cos{\biggl[ \frac{a\pi}{L_x}\biggl(x + \frac{L_x}{2}\biggr)\biggr]}
 	\cos{\biggl[ \frac{b\pi}{h}\bigl(z +  h\bigr)\biggr]}
-	+
-	C
 	,
 	\label{eq:bc4_potential}
 \end{align}
@@ -685,11 +738,11 @@ with coefficients,
 		\right)
 		\ddot\xi_y L_x } 
 		\frac{h}
-		{(k^2h^2 + b^2\pi^2) },
+		{(k^2h^2 + b^2\pi^2) }.
 	\label{eq:bc4_Bcoeff}
 \end{align}
 %%%%%%%%%%%%%
-and gauge $C=0$, where $C$ is the normalization constraint. The terms containing $\ddot{\mathcal A}_0$ and $\ddot{\mathcal B}_0$ are to satisfy the boundary condition when $a,b=0$ in the double sum.
+The terms containing $\ddot{\mathcal A}_0$ and $\ddot{\mathcal B}_0$ are to satisfy the boundary condition when $a,b=0$ in the double sum.
 \\
 \indent Although Eqs.\,(\ref{eq:bc2_potential_new}, \ref{eq:bc3_potential} and \ref{eq:bc4_potential}) represent the induced electric potentials of single-layer conducting fluid systems, they can also be applied to two-layer stratified systems with large conductivity differences (eg., aluminium reduction cells, liquid metal batteries). In these systems, the interface acts like an electrically insulating wall given by the interfacial condition $\partial_z\Psi_i|_{z=0}\approx 0$, where $i=1,2$ is the index of the upper and lower layer \cite{Herreman2019}.  
 %%%%%%%%%%%%%
@@ -894,20 +947,20 @@ Since the expanded solutions of the electric potentials are very intricate and t
 	=
 	-\sigma
 	\begin{bmatrix}
-		\Psi_{x}
+		\partial_x\Psi
 		\\[5pt]
-		\Psi_{y}
+		\partial_y\Psi
 	\end{bmatrix}
 	+
 	\sigma
 	\begin{bmatrix}
-		\phi_{y} \,B_z
+		\partial_y\phi \,B_z
 		\\[5pt]
-		-\phi_{x}\, B_z
+		-\partial_x\phi\, B_z
 	\end{bmatrix}
 	\label{eq:eddy_current_vector}
 \end{equation}  
-Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(a)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(b)} show the eddy current distribution for waves modes $(1,1)$ and $(2,1)$, bounded by perfect conductors as sidewalls (B.C 1) respectively. The solid and dashed lines represent opposite direction of eddy current flow. The pure horizontal currents $\h J=\sigma({\h u}\times B_z\h e_z)$, have no boundary corrections and and therefore, recirculate in the wall. When all sidewalls are conducting, the distribution of current density remain the same, regardless of the electrical boundary condition of the bottom wall. In B.C 2, the streamlines close only in the two conducting walls perpendicular to the $x$-axis, as shown in Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ef]{(c)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_ef]{(d)}. The eddies closer to the insulating walls tend to close within itself. Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_cd]{(e)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_cd]{(f)} refer to the eddy current distribution for the B.C 3 boundary configuration and Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_gh]{(g)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_gh]{(h)} show the same for B.C 4. In both cases, we observe similar eddy current streamlines, but different current density distributions. In B.C 3, the induced currents cannot leave though the sidewalls due to the insulating boundary condition but close through the bottom wall. This can be seen in Figs.\,\subref{fig:eddy_XZ}{a} and \subref{fig:eddy_XZ}{b} which shows the current distribution and current streamlines at a vertical cross-section at $y=L_y/2$ for wave modes $(1,1)$ and $(2,1)$ respectively. Here, we observe a greater concentration of currents at the bottom wall $z=-h$. Figs.\,\subref{fig:eddy_XZ}{c} and \subref{fig:eddy_XZ}{d} show the current distribution at $y=L_y/2$ in the $x$-$z$ plane for B.C 4 respectively, which is characterized by stronger current densities near the free surface and the redirection of the currents near the insulating bottom wall. It is evident that B.C 3 has higher magnitudes of $J_z$ compared to B.C 4 and, naturally, B.C 2. The difference in current distribution between cases B.C. 3 and B.C. 4, which have the same sidewall boundary conditions except for the bottom wall, is a key result to note when discussing the magnetic damping rate in Sec.\,\ref{sec:mag_damp}. 
+Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(a)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(b)} show the eddy current distribution for waves modes $(1,1)$ and $(2,1)$, bounded by perfect conductors as sidewalls (B.C 1) respectively. The solid and dashed lines represent opposite direction of eddy current flow. The pure horizontal currents $\h J=\sigma({\h u}\times B_z\h e_z)$, have no boundary corrections and and therefore, recirculate in the wall. When all sidewalls are conducting, the distribution of current density remain the same, regardless of the electrical boundary condition of the bottom wall. In B.C 2, the streamlines close only in the two conducting walls perpendicular to the $x$-axis, as shown in Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ef]{(c)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_ef]{(d)}. Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_cd]{(e)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_cd]{(f)} refer to the eddy current distribution for the B.C 3 boundary configuration and Figs.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_gh]{(g)} and \ref{fig:eddy_currents}\hyperref[fig:eddy_gh]{(h)} show the same for B.C 4. In both cases, we observe similar eddy current streamlines, but different current density distributions. In B.C 3, the induced currents cannot leave through the sidewalls due to the insulating boundary condition but close through the bottom wall. This can be seen in Figs.\,\subref{fig:eddy_XZ}{a} and \subref{fig:eddy_XZ}{b}, which shows the current distribution and current streamlines at a vertical cross-section at $y=L_y/2$ for wave modes $(1,1)$ and $(2,1)$ respectively. Here, we observe a greater concentration of currents at the bottom wall $z=-h$. Figs.\,\subref{fig:eddy_XZ}{c} and \subref{fig:eddy_XZ}{d} show the current distribution at $y=L_y/2$ in the $x$-$z$ plane for B.C 4 respectively, which is characterized by stronger current densities near the free surface and the redirection of the currents near the insulating bottom wall. It is evident that B.C 3 has higher magnitudes of $J_z$ compared to B.C 4 and, naturally, B.C 2. The difference in current distribution between cases B.C. 3 and B.C. 4, which have the same sidewall boundary conditions except for the bottom wall, is a key result to note when discussing the magnetic damping rate in Sec.\,\ref{sec:mag_damp}. 
 \\
 \indent By analyzing the solutions in detail, we can deduce an observed rule for the total number of all the eddies that are formed $n_{\rm eddy}$, as a function of the wave mode indices:
 \begin{equation}
@@ -942,7 +995,7 @@ which states that the sum of the rate of kinetic energy in the bulk and the pote
 where $\mathcal{Q}_{\rm ind}$ is the dissipation of energy due to induced currents. The expression for $\mathcal{Q}_{\rm ind}$ for all cases are:
 \begin{equation}
 	\mathcal{Q}_{\rm ind} = 
-	\sigma \int_{V}  \norm{{\h u}\times B_z\bm e_z}^2
+	\sigma \int_{V}  \norm{\bm{\nabla} {\phi}\times B_z\bm e_z}^2
 	=
 	A^2_{mn}
 	\epsilon_{m}\epsilon_{n}\frac{ \sigma
@@ -968,7 +1021,7 @@ which varies depending on the electric potential $\Psi$. The term $K$ is proport
 \end{equation}
 The correction term $\mathcal{Q}_{\rm corr}$ mainly originates from insulating sidewalls. In a domain with both insulating and conducting sidewalls, the correction terms from each pair of insulating walls are subtracted from the dissipation term if all walls were conducting. In B.C 1, or in a domain with all four sidewalls as perfect conductors, the correction term ${\mathcal{Q}}_{\rm corr} = 0$, as the current densities close in the walls $\bigl($see Fig.\,\ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(a)} and  \ref{fig:eddy_currents}\hyperref[fig:eddy_ab]{(b)}$\bigr)$. 
 \\
-\indent In B.C 2, having one pair of insulating sidewalls results in:
+\indent In B.C 2, involving one pair of insulating sidewalls, results in:
 \begin{equation}
 	{\mathcal{Q}}_{\rm corr} (\ii{B.C 2}) = 
 	A_{mn}  \left[
@@ -1127,9 +1180,9 @@ In Eq.\,\eqref{eq:qcorr_bc4}, the coefficients $\ddot{\mathcal A}_0$, $\ddot{\ma
 \subsection{Hartmann and Shercliff boundary layers}
 \label{sec:hartmann_and_shercliff}
 
-In addition to Ohmic dissipation in the bulk, the effect of the magnetic field on the boundary must be taken into consideration. In an electrically conducting fluid system, the presence of a magnetic field alters the standard hydrodynamic boundary layers depending on the field intensity. The velocity profile at the walls have two distinct layers, called the Hartmann and Shercliff layers. Hartmann boundary layers are formed at surfaces perpendicular to the direction of the applied magnetic field, whereas Shercliff layers are formed parallel to them. From literature, we know that the thickness of the Hartmann layers scale inversely with Ha $(\delta_{\rm Ha} \sim \textrm{Ha}^{-1})$ \cite{Hartmann, shercliff1981, Muller2001}. This implies that increasing the magnetic field strength reduces the overall thickness while increasing overall dissipation at the wall. Shercliff layers, unlike Hartmann layers do not directly contribute in braking the fluid velocity but redistribute the induced currents and fluid momentum throughout the system. They are usually thicker than the Hartmann layers as they scale inversely to the square root of $\rm Ha$ $(\delta_{\rm Sh} \sim \textrm{Ha}^{-0.5})$ \cite{shercliff1981}. 
+In addition to Ohmic dissipation in the bulk, the effect of the magnetic field on the boundaries must be taken into consideration. In an electrically conducting fluid system, the presence of a magnetic field alters the standard hydrodynamic boundary layers depending on the field intensity. The velocity profile at the walls have two distinct layers, called the Hartmann and Shercliff layers. Hartmann boundary layers are formed at surfaces perpendicular to the direction of the applied magnetic field, whereas Shercliff layers are formed parallel to them. It is well known that the thickness of the Hartmann layers scale inversely with Ha $(\delta_{\rm Ha} \sim \textrm{Ha}^{-1})$ \cite{Hartmann, shercliff1981, Muller2001}. This implies that increasing the magnetic field strength reduces the overall thickness while increasing overall dissipation at the wall. Shercliff layers, unlike Hartmann layers do not directly contribute in braking the fluid velocity but redistribute the induced currents and fluid momentum throughout the system. They are usually thicker than the Hartmann layers as they scale inversely to the square root of $\rm Ha$ $(\delta_{\rm Sh} \sim \textrm{Ha}^{-0.5})$ \cite{shercliff1981}. 
 \\
-\indent In the context of our current model, the Hartmann layer forms only at the bottom wall of the domain. The Shercliff layers form at the four sidewalls of the rectangular domain, which are parallel to the applied magnetic field. In principle, these layers are the result of the Stokes boundary layer transitioning under the influence of the magnetic field. They are a combination of the conventional Hartmann or Shercliff layers with the respective oscillating Stokes boundary layer \cite{Sreenivasan2005}. Therefore we can follow the methodology of \citet{Keulegan1959} in resolving the Stokes boundary layers for free surface waves in a rectangular domain. We can then incorporate the effects of Lorentz forces due to induced currents \cite{Davidson2001}. The inviscid formulation of the velocity $\h u=\bm\nabla\phi$ already satisfies the condition of impermeability at the boundary. However, in order to model the tangential velocity and stress at the boundary, we need to enforce the following corrections to the potential wave solutions of velocity and pressure:
+\indent In our setup, the Hartmann layer forms only at the bottom wall of the domain. The Shercliff layers form at the four sidewalls of the rectangular domain, which are parallel to the applied magnetic field. In principle, these layers are the result of the Stokes boundary layer transitioning under the influence of the magnetic field. They are a combination of the conventional Hartmann or Shercliff layers with the respective oscillating Stokes boundary layer \cite{Sreenivasan2005}. Therefore we can follow the methodology of \citet{Keulegan1959} in resolving the Stokes boundary layers for free surface waves in a rectangular domain. We can then incorporate the effects of Lorentz forces due to induced currents \cite{Davidson2001}. The inviscid formulation of the velocity $\h u=\bm\nabla\phi$ already satisfies the condition of impermeability at the boundary. However, in order to model the tangential velocity and stress at the boundary, we need to enforce the following corrections to the potential wave solutions of velocity and pressure:
 \begin{subequations}
 \begin{align}
 	\h u &= \left[\bm\nabla\phi
@@ -1142,14 +1195,14 @@ In addition to Ohmic dissipation in the bulk, the effect of the magnetic field o
 	\label{eq:pressure_correction}
 \end{align}
 \end{subequations}
-with ${\overbar{\h u}}$ and ${\overbar{p}}$ as the corrections to the potential flow velocity and pressure respectively. The term $\lambda_{\rm b}$ in the exponent is the damping rate of the standing wave solely due to boundary layer effects. Considering only the tangential velocities ${\bar{\h u}}_{\perp}$ at the respective boundaries and the damping force by virtue of induction, the Navier-Stokes momentum equation [Eq.\,\eqref{eq:gov_momentum}] reduces to
+with ${\overbar{\h u}}$ and ${\overbar{p}}$ as the corrections to the potential flow velocity and pressure respectively. The term $\lambda_{\rm b}$ in the exponent is the damping rate of the standing wave solely due to boundary layer effects. Considering only the tangential velocities ${\bar{\h u}}_{\perp}$ at the respective boundaries and the damping force by virtue of induction, the linearized Navier-Stokes momentum equation [Eq.\,\eqref{eq:gov_momentum}] reduces to
 \begin{equation}
 	\ii{i}\omega {\bar{\h u}}_{\perp} = -\frac{1}{\rho}\bm\nabla_{\perp}{\overbar{p}} 
 	+ \nu\pdv[2]{{\overbar{\h u}}_{\perp}}{\zeta}
 	- \frac{\sigma B_z^2}{\rho} {{\h u}}_{b} ,
 	\label{eq:gov_stokes_general}
 \end{equation}
-when considering only the leading order terms. In Eq.\,\eqref{eq:gov_stokes_general}, $\zeta$ is the spatial coordinate normal to the wall that reduces the boundary layer corrections to zero away from the wall:
+in the leading order. In Eq.\,\eqref{eq:gov_stokes_general}, $\zeta$ is the spatial coordinate normal to the wall that reduces the boundary layer corrections to zero away from the wall:
 \begin{equation}
 	\zeta = \begin{cases}
 		z + h, \quad &\text{near } z=-h, \\
@@ -1178,7 +1231,7 @@ which is the total boundary layer thickness at the wall normal to the magnetic f
 	\tau  = \frac{\rho}{\sigma B_z^2} .
 	\label{eq:damping_time}
 \end{equation}
-Eq.\,\eqref{eq:hartmann_layer_thickness} is a combination of both the viscous ($\delta_{\rm v} = \sqrt{2\nu/\omega}$) and the Hartmann boundary ($\delta_{\rm Ha}=\sqrt{\tau\nu}$) layers. However, there is no straight forward equation that can be used to calculate the expression for the Shercliff boundary layer. But we can approximate the total thickness using the conservation of currents. In a given fluid layer, the currents close as they pass through the horizontal Hartmann layers of thickness $\delta_{\rm Ha}$ and the vertical Shercliff layers over the entire fluid depth $h$. Therefore, we write the following relation:
+The boundary layer Eq.\,\eqref{eq:hartmann_layer_thickness} is composed of both the Stokes ($\delta_{\rm v} = \sqrt{2\nu/\omega}$) and the Hartmann boundary ($\delta_{\rm Ha}=\sqrt{\tau\nu}$) layers. However, there is no straight forward equation that can be used to calculate the expression for the Shercliff boundary layer. But we can approximate the total thickness using the conservation of currents. In a given fluid layer, the currents close as they pass through the horizontal Hartmann layers of thickness $\delta_{\rm Ha}$ and the vertical Shercliff layers over the entire fluid depth $h$. Therefore, we write the following relation:
 \begin{equation}
 	\sigma{\overbar{u}}_{\perp} B_z \delta_{\rm Ha} \sim 
 	\sigma
@@ -1306,7 +1359,7 @@ which contribute to the damping rates of a standing wave solely due to the dissi
 \end{figure}
 %%%%%%%%%%%%
 \\
-\indent Fig.\,\subref{fig:stokes_vel}{b} shows the magnified view of velocity profile along the line $z=-h/2$ in the $x$-$z$ plane, near the sidewall at $x=-L_x/2$. When $\rm Ha = 3000$, we observe that the Shercliff layer is identical to the conventional viscous sub layer ($\rm Ha = 0$), and is significantly thicker than the Hartmann layer at the bottom. The velocity ratio $\h u^*_{T}=({\h u}_{z} + {\overbar{\h u}}_{z})/{\h u}_{z}$ in this case. The Stokes 'overshoot' is noticeable for all cases of $\rm Ha$ considered; however its impact on the sidewall to sidewall velocity profile is negligible in the given range. A significant change in the curve would only occur at extremely high and unrealistic values of $\rm Ha$.
+\indent Fig.\,\subref{fig:stokes_vel}{b} shows the magnified view of velocity profile along the line $z=-h/2$ in the $x$-$z$ plane, near the sidewall at $x=-L_x/2$. When $\rm Ha = 3000$, we observe that the Shercliff layer is identical to the conventional viscous sub layer ($\rm Ha = 0$), and is significantly thicker than the Hartmann layer at the bottom. The velocity ratio is $\h u^*_{T}=({\h u}_{z} + {\overbar{\h u}}_{z})/{\h u}_{z}$ in this case. The Stokes overshoot profile remains noticeable for all cases of $\rm Ha$ considered; the magnetic impact on the sidewall velocity profiles is completely negligible for realistic $\rm Ha$ numbers. A significant change in the profile would only occur at extremely high and unrealistic values of $\rm Ha \gtrsim 30000$.
 \\
 \indent From the tangential velocities given in Eq.\,\eqref{eq:Ha_Sh_velocities}, we can now determine the total dissipation in the respective boundary layers. To do so, we use the following mechanical energy balance:
 \begin{equation}
@@ -1361,7 +1414,7 @@ at the sidewalls due to the formation of the Shercliff layer. In Eq.\,\eqref{eq:
 \end{equation}
 \indent From Fig.\,\ref{fig:stokes_vel}, we can infer that, at the current range of $\rm Ha$, boundary layer dissipation is dominated by the Hartmann layers. The influence of the Shercliff layer in the sidewalls is found to be negligible within the range of $\rm Ha$ considered. The Shercliff boundary layer has nearly indistinguishable influence on the velocity gradients even at extremely high values of $\rm Ha = 3000$, with only a slight effect seen at $\rm Ha=30000$ $(B_z=\SI{5}{\tesla})$. Such high value of $\rm Ha$ is unrealistic for the industrial and experimental models specific to this study.  This implies that viscous contributions mainly dictate the damping rate at the sidewalls.
 \\
-\indent At the shallow depths in the absence of a magnetic field, the bottom and sidewall damping contributions given in Eqs.\,(\ref{eq:Ha_damp_topbot} and \ref{eq:Sh_damp_wall}) reduce to the viscous damping rate formulations presented in the works of \citet{Keulegan1959} and further elaborated by \citet{Faltinsen2009}. 
+\indent In the absence of a magnetic field ($\tau \rightarrow \infty$), the bottom and sidewall damping contributions given in Eqs.\,(\ref{eq:Ha_damp_topbot}) and (\ref{eq:Sh_damp_wall}) reduce to the classic viscous damping rates derived by \citet{Keulegan1959}. 
 
 
 
@@ -1418,9 +1471,9 @@ The total magnetic damping rate due to both the Ohmic dissipation given in Eq.\,
 \end{equation}
 
 To show how the electrical boundary conditions affects magnetic induction, we calculate the magnetic damping rate of a system similar to \citet{Bojarevics2006a} (refer to Table\,\ref{tab:table_bojarevics_prop} for material properties). We calculate the magnetic damping rate at different $\rm Ha$ of a uni- and bidirectional free surface wave in four separate domains with the aforementioned boundary conditions. Figs.\,\subref{fig:mag_damp_bc}{a}, \subref{fig:mag_damp_bc}{b}, \subref{fig:mag_damp_bc}{c} and \subref{fig:mag_damp_bc}{d} represent the damping rates of the wave modes $(2,0)$, $(1,1)$, $(2,1)$ and $(1,2)$ within a range $0\leq \rm Ha \leq 300$, accordingly. 
-The initial vertical offset at $B_z=\SI{0}{\milli\tesla}$ is due to the viscous dissipation at the walls. The damping behavior of B.C 1 and 4 is as expected, with current recirculation in the walls aiding and recirculation within the walls reducing Ohmic dissipation. The conducting sidewalls in B.C 1 provides a low-resistance bypass for the electric currents, whereas in B.C 4, the induced currents are forced to go through the highly resistive shear layer near the walls. This is known to reduce the total current flow in the fluid. The mixed boundary cases of B.C 2 and B.C 3 show contrasting behavior depending on the wave mode. In B.C 2, the configuration of the wave with respect to the orientation of the conducting plates plays a big role in determining the damping rate. A larger mode index in the $y$-direction ($n\!>\!m$) results in increased eddy current flow into the conducting plates oriented normal to the $x$-axis, thereby increasing the damping rate. Conversely, the damping rate reduces when $m\!>\!n$. This can be seen in Figs.\subref{fig:mag_damp_bc}{c} and \subref{fig:mag_damp_bc}{d} in relation to B.C 2. In B.C 3, the presence of a conducting bottom wall increases the overall Ohmic and boundary dissipation compared to an insulating bottom wall. This is in conjunction with the experimental observations of \citet{Dominguez2017}, who had a similar boundary configuration for swirling flows. Moreover, we also note that the damping curves of B.C 2, B.C 3 and B.C 4 converge to that of B.C 1 for very large wave modes, for all $B_z$ values.  
+The initial vertical offset at $B_z=\SI{0}{\milli\tesla}$ is due to the viscous dissipation at the walls. The damping behavior of B.C 1 and 4 is as expected, with current recirculation in the walls aiding and recirculation within the walls reducing Ohmic dissipation. The conducting sidewalls in B.C 1 provides a low-resistance bypass for the electric currents, whereas in B.C 4, the induced currents are forced to go through the highly resistive shear layer near the walls. This is known to reduce the total current flow in the fluid. The mixed boundary cases of B.C 2 and B.C 3 show contrasting behavior depending on the wave mode. In B.C 2, the configuration of the wave with respect to the orientation of the conducting plates plays a big role in determining the damping rate. A larger mode index in the $y$-direction ($n\!>\!m$) results in increased eddy current flow into the conducting plates oriented normal to the $x$-axis, thereby increasing the damping rate. Conversely, the damping rate reduces when $m\!>\!n$. This can be seen in Figs.\subref{fig:mag_damp_bc}{c} and \subref{fig:mag_damp_bc}{d} in relation to B.C 2. In B.C 3, the presence of a conducting bottom wall increases the overall Ohmic and boundary dissipation compared to an insulating bottom wall. This is in conformity with the experimental observations of \citet{Dominguez2017}, who considered a similar boundary configuration for swirling flows. Moreover, we also note that the damping curves of B.C 2, B.C 3 and B.C 4 converge to that of B.C 1 for very large wave modes, for all $B_z$ values.  
 \\
-\indent From the results presented above, it is evident that the nature of standing waves, uni- or bidirectional, the electrical boundary condition and its orientation with respect to the wave in some cases, along with the dimensions of the domain, affects the way in which the electric currents complete their paths within the medium and thus, determines the extent of magnetic damping.
+\indent From the results presented above, it is clear that much of the damping is dictated by Ohmic dissipation, with boundary layer dissipation being comparatively small. Furthermore, it is evident that the nature of standing waves, uni- or bidirectional, the electrical boundary condition and its orientation with respect to the wave in some cases, along with the dimensions of the domain, affects the way in which the electric currents complete their paths within the medium and thus, determines the extent of magnetic damping.  
 
 
 
@@ -1612,13 +1665,13 @@ The specifications of the experimental setup are provided in Table\,\ref{tab:tab
 		\node [above of=pic1, xshift=-4.1cm, yshift=2cm] {(a)};
 		\node [above of=pic2, xshift=-4.1cm, yshift=2cm] {(b)};
 	\end{tikzpicture}
-	\caption{The comparison of theoretical and experimental damping times $T_{\rm o} = \lambda_{\ii o}^{-1}$ in a wave tank with a) copper sidewalls (B.C 1), and b) stainless steel sidewalls (B.C 4) at different $\rm Ha$. For the theoretical calculation, copper walls are treated as perfect conductors and stainless steel walls as perfect insulators.}
+	\caption{The comparison of theoretical and experimental damping times $T_{\rm o} = \lambda_{\ii o}^{-1}$ due to Ohmic dissipation in a wave tank with a) copper sidewalls (B.C 1), and b) stainless steel sidewalls (B.C 4) at different $\rm Ha$. For the theoretical calculation, copper walls are treated as perfect conductors and stainless steel walls as perfect insulators.}
 	\label{fig:exp_results}
 \end{figure}
 
 The free surface of the liquid metal is excited when a horizontal current is supplied to the GaInSn across any two parallel metal plates in the $x$- or $y$-axis, in the presence of a constant vertical magnetic field $B_z$. To generate a quasi-1D standing wave of mode $(1,0)$ with a resonant frequency $\omega$, a proportional current signal as shown in Fig.\,\subref{fig:exp_model}{b}, must be given in the $y$-direction. The time period of the signal $T=2\pi/\omega$ and the size of the wave is proportional to the amplitude of the signal. Because we magnetohydrodynamically excite the wave, we are limited to using electrically conducting materials in the sidewalls. To simulate conducting and insulating sidewalls, we make use of copper (Cu-ETP) and nickel-plated stainless steel. As given in Table\,\ref{tab:table_exp_prop}, GaInSn is significantly less conductive than copper, by a factor of about twenty, and has a conductivity that is three times that of stainless steel. Therefore, copper walls act as a relative conductor (B.C 1) and stainless steel walls as a relative insulator (B.C 4). 
 \\
-\indent We conduct the experimental measurements between $\rm Ha=100$--$500$ ($B_z=10$--\SI{50}{\milli\tesla}). From Fig.\,\ref{fig:stokes_vel}, we know that at lower values of $\rm Ha$, the effect of the magnetic field on the velocity gradient at the wall boundary layer is negligible. This means that the dissipation due to boundary effects can be considered as a purely hydrodynamic phenomenon and that any field-induced change is dominated by Ohmic dissipation. This allows us to isolate the contribution of Ohmic dissipation to the total damping measured, which is one of the main results of the present study. The following steps were used to achieve this: \Rn{1}) we first excited a wave using an oscillating current signal $I_y$ and magnetic field $B_z$. After a certain amount of time ($t=\SI{60}{\second}$) after the wave was properly developed, both the current and magnetic fields were shut off and the amplitude of the wave was recorded with respect to time. The slope of this decaying signal gives us the viscous damping rate $\lambda_{\rm v}$, as the energy of the wave is dissipated solely due to viscous effects at the boundary. \Rn{2}) Subsequently, a wave was excited again, but only the input current $I_y$ was cut off after a given time to initiate wave decay. The slope of the decaying amplitude signal gives the magnetic damping rate $\lambda_{\rm m}$, which takes into account both the Ohmic dissipation and the boundary layer effects [Eq.\,\eqref{eq:mag_damping_rate}]. We have already established that the boundary layer effects with and without the magnetic field are the same, $\lambda_{\ii b}\approx\lambda_{\ii v}$. The difference $\lambda_{\rm m} - \lambda_{\rm v}$ is the Ohmic damping rate $\lambda_{\ii o}$ and the inverse $T_{\rm o}=\lambda_{\ii o}^{-1}$, the Ohmic damping time for a particular $\rm Ha$. Fig.\,\subref{fig:post_process}{a} and \subref{fig:post_process}{b} provides an example of the extraction of $\lambda_{\rm o}$ from $\lambda_{\ii b}$ and $\lambda_{\rm m}$ respectively at $\rm Ha=196$ ($B_z=\SI{20}{\milli\tesla}$) in a tank with stainless steel sidewalls. The Ohmic damping rate/time is independent of the initial amplitude of the wave.
+\indent We conduct the experimental measurements between $\rm Ha=100$--$500$ ($B_z=10$--\SI{50}{\milli\tesla}). From Fig.\,\ref{fig:stokes_vel}, we know that at lower values of $\rm Ha$, the effect of the magnetic field on the velocity gradient at the wall boundary layer is negligible. This means that the dissipation due to boundary effects can be considered as a purely hydrodynamic phenomenon and that any field-induced change is dominated by Ohmic dissipation. This allows us to isolate the contribution of Ohmic dissipation to the total damping measured, which is one of the main results of the present study. The following steps were used to achieve this: \Rn{1}) we first excited a wave using an oscillating current signal $I_y$ and magnetic field $B_z$. After a certain amount of time ($t=\SI{60}{\second}$) after the wave was properly developed, both the current and magnetic fields were switched off and the amplitude of the wave was recorded with respect to time. The slope of this decaying signal gives us the viscous damping rate $\lambda_{\rm v}$, as the energy of the wave is dissipated solely due to viscous effects at the boundary. \Rn{2}) Subsequently, a wave was excited again, but only the input current $I_y$ was cut off after a given time to initiate wave decay. The slope of the decaying amplitude signal gives the magnetic damping rate $\lambda_{\rm m}$, which takes into account both the Ohmic dissipation and the boundary layer effects [Eq.\,\eqref{eq:mag_damping_rate}]. We have already established that the boundary layer effects with and without the magnetic field are the same, $\lambda_{\ii b}\approx\lambda_{\ii v}$. The difference $\lambda_{\rm m} - \lambda_{\rm v}$ is the Ohmic damping rate $\lambda_{\ii o}$ and the inverse $T_{\rm o}=\lambda_{\ii o}^{-1}$, the Ohmic damping time for a particular $\rm Ha$. Fig.\,\subref{fig:post_process}{a} and \subref{fig:post_process}{b} provides an example of the extraction of $\lambda_{\rm o}$ from $\lambda_{\ii b}$ and $\lambda_{\rm m}$ respectively at $\rm Ha=196$ ($B_z=\SI{20}{\milli\tesla}$) in a tank with stainless steel sidewalls. The Ohmic damping rate/time is independent of the initial amplitude of the wave.
 \\
 \indent  Fig.\,\ref{fig:exp_results} contains the experimental results and compares $T_{\rm o}$ measurements in a tank with copper and stainless steel sidewalls, at different values of $\rm Ha$ with the theoretical cases B.C 1 and B.C 4. We present the results in terms of damping times in order to remain consistent with the previous literature \cite{Sreenivasan2005}. We saw good agreement in both cases, where the measurements done for the waves in copper and stainless steel sidewalls closely follow the theoretical damping times of B.C 1 and B.C 4 cases respectively. As seen in Fig.\,\subref{fig:exp_results}{a} and Fig.\,\subref{fig:exp_results}{b}, the slight overshoot in the measurements with copper walls and the undershoot with stainless steel walls was expected. The metal inserts have a certain amount of thickness ($d=\SI{2}{\milli\meter}$) and are neither perfect conductors nor insulators.
 \\
@@ -1627,17 +1680,15 @@ The free surface of the liquid metal is excited when a horizontal current is sup
 
 \section{Concluding remarks}
 \label{sec:conclusion}
+In this work, we have developed a theoretical description of the magnetic damping of standing free-surface waves in rectangular containers. The formulation extends previous approaches for shallow, one-dimensional waves to arbitrary one- and two-dimensional standing-wave modes at finite depth, and to a range of homogeneous and mixed electrical boundary conditions. We derived analytical solutions for the induced electric potential and current distributions, and used them to determine the Ohmic dissipation and the corresponding magnetic damping rates. In addition, we formulated the modification of the oscillating boundary layers by the magnetic field, including both Hartmann and Shercliff layers.
 
-In the present study, we formulate a theory on magnetic damping of liquid metals in non-shallow systems, which has grave significance in the electromagnetic processing of materials. The damping behavior of magnetic fields has been observed in certain industrial devices, such as induction heaters and in specific processes like continuous casting of steel and aluminum. However, this has not yet been fully realized theoretically. Prior studies have taken shallow water approximation and formulated damping theory for simpler wave modes in a system with simpler electrical boundary conditions; creating some gaps in the theory which our work has sought to address.  
-\\
-\indent To calculate the magnetic damping rates, we have taken a electrically conducting liquid system with four different electrical boundary conditions, ranging from fully conducting walls, to fully insulating walls along with mixed conditions in between. The magnetic damping rate can be classified to have bulk and boundary contributions. The former is due to Ohmic dissipation. To calculate the Ohmic damping rate, we first derived an exact solution for the electric potential of the induced eddy currents and compared the eddy current behavior in all the four cases. The currents close in the perfectly conducting walls and close within the liquid bath near perfect insulators. For an arbitrary bidirectional standing wave of mode $(m,n)$, the number of 2D eddies induced were found to be exactly equal to $(m+1)(n+1)$. The damping formulation consists of a pure induction term $\mathcal{Q}_{\rm ind}$ which is the Ohmic dissipation in the liquid bath when all surrounding walls are perfect conductors and a very intricate correction term $\mathcal{Q}_{\rm corr}$ which originates due to the insulating walls. The difference between the two terms is the net Ohmic dissipation in a system and the ratio between the difference and the energy of the wave is the Ohmic damping rate $\lambda_{\rm o}$. The electrical boundary condition influences the path taken by the eddy currents within the liquids which in turn influences the overall dissipation of energy in the system. Secondly, although smaller in magnitude, the dissipation due to boundary effects is due to the transition of the oscillating Stokes boundary layer at the walls into an electromagnetic boundary layer. The boundaries perpendicular to the orientation of the magnetic field see the presence of the Hartmann layer, where those parallel, see the Shercliff layer. We have formulated the thickness of the Hartmann and the Shercliff boundary layer as well as the damping rate $\lambda_{\rm b}$. As outlined in the supplementary material, all derivations of the formulae are comprehensively detailed, along with a Python module that incorporates the complete set of equations.    
-\\
-\indent Our formulations found good agreement with the theoretical and experimental results of \citet{Sreenivasan2005}, for the damping of a shallow, quasi-1D wave of mode $(1,0)$ in an electrically insulating rectangular tank. We also validated our model at a non-shallow depth using the experimental setup of \citet{Hegde2025}, where we recorded the exponential decay of a magnetohydrodynamically excited free surface wave. Unlike \cite{Sreenivasan2005}, we operated at lower values of $\rm Ha$, which allowed us to isolate the damping contributions solely due to Ohmic dissipation.
-\\
-\indent Although, the analytical formulation of the damping rates/damping times is presented in a single-layer form, it can also be applicable to two-layer systems with large conductivity differences. Here, only the liquid with the larger electrical conductivity contributes to Ohmic dissipation. The Hartmann layer also forms at the interface (on the side of the better electric conductor), where the viscous stresses balance the Lorentz stresses. This is modeled in the Appendix\,\ref{app}. Together, this can further serve as an easy benchmark for direct numerical solvers. For example, it can be used to iteratively obtain the electric potential $V$ from the Poisson equation $\nabla^2 V = \bm\nabla \cdot (\h U \times \h B)$, which is often challenging. 
-\\
-\indent However, certain questions have yet to be resolved. First, the experimental setup is incapable of exciting waves with higher wave modes, a key feature of our analytical model. The damping behavior of bidirectional wave modes $(m>0,n>0)$ is dictated by complex closing current patterns and therefore much more complicated, making it very rewarding to set up dedicated liquid metal wave damping experiments. Second, the effect of mixed electrical boundary conditions on the damping rate have not be validated due to lack of existing studies and the intricacies involved in constructing an experimental setup with such conditions. Conclusive clarification of this requires the construction of a new experiment along with the use of computational fluid dynamics.
+A central result is the strong influence of the electrical boundary conditions on the induced current paths and, consequently, on the magnetic damping rate. For conducting walls, the induced currents can close through the walls, whereas insulating boundaries force them to recirculate within the liquid, thereby reducing the total current and Ohmic dissipation. For mixed electrical boundary conditions, the damping additionally depends on the orientation of the conducting boundaries relative to the wave mode. This becomes particularly relevant for two-dimensional standing-wave modes, for which increasingly complex current patterns develop. For an arbitrary mode $(m,n)$, the induced horizontal current distribution consists of $(m+1)(n+1)$ eddies. The total magnetic damping further contains a contribution from the magnetically modified boundary layers. Within the range of parameters considered here, this contribution is mainly affected by the Hartmann layer, while the influence of the Shercliff layer on the sidewall dissipation remains negligible.
 
+The analytical formulation agrees well with the shallow-water theory and experiments of \citet{Sreenivasan2005}. We further validated the predicted Ohmic damping experimentally for non-shallow waves using conducting and insulating sidewalls. By performing the measurements at comparatively low Hartmann numbers, the magnetic modification of the boundary-layer damping remained small, allowing the Ohmic contribution to be isolated directly from the measured decay rates.
+
+Accurate damping rates are particularly important for the prediction of magnetohydrodynamic wave instabilities such as the metal pad roll instability. Their onset is governed by the competition between electromagnetic excitation and the dissipation of the interacting wave modes. A reliable stability prediction therefore requires the damping rates of these modes to be known with comparable accuracy. In our recent MPR theory for small-scale models \cite{Hegde2026}, viscous damping rates were derived together with analytical expressions for the resulting growth rates and instability thresholds. The present formulation provides the corresponding magnetic damping contribution and thereby completes the damping description required for the linear prediction of MPR instability.
+
+Future work should particularly address the experimental validation of two-dimensional standing-wave modes and mixed electrical boundary conditions. Such measurements would provide a direct test of the more complex current distributions predicted by the present model and further establish its applicability to coupled-wave instability problems.
 
 % If you have acknowledgments, this puts in the proper section head.
 \begin{acknowledgments}

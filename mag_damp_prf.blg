@@ -13,7 +13,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: mag_damp_prfNotes.bib
 Database file #2: mag_damp.bib
-Repeated entry---line 1284 of file mag_damp.bib
+Repeated entry---line 1366 of file mag_damp.bib
  : @article{Moffatt1967
  :                     ,
 I'm skipping whatever remains of this entry
@@ -30,47 +30,48 @@ Control: production of article title (0) allowed
 Control: page (0) single
 Control: year (1) truncated
 Control: production of eprint (0) enabled
+Warning--empty year in Davidson1999
 Warning--empty year in Fraenkel1960
 Warning--empty year in SMmagdamp_hegde
 You've used 31 entries,
             6079 wiz_defined-function locations,
-            1865 strings with 20285 characters,
-and the built_in function-call counts, 29610 in all, are:
-= -- 2162
-> -- 678
-< -- 173
-+ -- 222
-- -- 166
-* -- 4359
-:= -- 2868
+            1876 strings with 20425 characters,
+and the built_in function-call counts, 29062 in all, are:
+= -- 2144
+> -- 635
+< -- 170
++ -- 212
+- -- 156
+* -- 4231
+:= -- 2842
 add.period$ -- 29
 call.type$ -- 31
 change.case$ -- 144
 chr.to.int$ -- 53
-cite$ -- 33
-duplicate$ -- 2832
-empty$ -- 2157
-format.name$ -- 381
-if$ -- 5964
+cite$ -- 34
+duplicate$ -- 2782
+empty$ -- 2128
+format.name$ -- 347
+if$ -- 5854
 int.to.chr$ -- 1
 int.to.str$ -- 38
-missing$ -- 433
+missing$ -- 430
 newline$ -- 139
 num.names$ -- 87
-pop$ -- 1158
+pop$ -- 1131
 preamble$ -- 1
-purify$ -- 143
+purify$ -- 142
 quote$ -- 0
-skip$ -- 1296
+skip$ -- 1292
 stack$ -- 0
-substring$ -- 609
-swap$ -- 2575
-text.length$ -- 73
+substring$ -- 624
+swap$ -- 2515
+text.length$ -- 68
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 399
-warning$ -- 3
-while$ -- 92
+type$ -- 394
+warning$ -- 4
+while$ -- 93
 width$ -- 0
 write$ -- 301
 (There was 1 error message)

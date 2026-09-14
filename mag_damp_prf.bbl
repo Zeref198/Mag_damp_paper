@@ -50,35 +50,48 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
-\bibitem [{\citenamefont {Galpin}\ and\ \citenamefont
-  {Fautrelle}(1992)}]{Galpin1992a}%
+\bibitem [{\citenamefont {Asai}(1989)}]{Asai1989}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~M.}\ \bibnamefont
-  {Galpin}}\ and\ \bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Fautrelle}},\ }\bibfield  {title} {\bibinfo {title} {Liquid-metal flows
-  induced by low-frequency alternating magnetic fields},\ }\href
-  {https://doi.org/10.1017/S0022112092004452} {\bibfield  {journal} {\bibinfo
-  {journal} {J. Fluid. Mech.}\ }\textbf {\bibinfo {volume} {239}},\ \bibinfo
-  {pages} {383} (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Baake}\ and\ \citenamefont
-  {Muhlbauer}(1994)}]{Baake1994}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Asai}},\ }\bibfield  {title} {\bibinfo {title} {Birth and recent activities
+  of electromagnetic processing of materials},\ }\href
+  {https://doi.org/10.2355/isijinternational.29.981} {\bibfield  {journal}
+  {\bibinfo  {journal} {ISIJ Int.}\ }\textbf {\bibinfo {volume} {29}},\
+  \bibinfo {pages} {981} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Garnier}(1990)}]{Garnier1990}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
-  {Baake}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Muhlbauer}},\ }\bibfield  {title} {\bibinfo {title} {Power limits and
-  carburization behavior of induction crucible furnaces},\ }\href@noop {}
-  {\bibfield  {journal} {\bibinfo  {journal} {Magnetohydrodynamics}\ }\textbf
-  {\bibinfo {volume} {30}},\ \bibinfo {pages} {264} (\bibinfo {year}
-  {1994})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Shakhov}\ and\ \citenamefont
-  {Vdovin}(2019)}]{shakhov2019}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Garnier}},\ }\bibfield  {title} {\bibinfo {title} {Electromagnetic
+  processing of liquid materials in europe},\ }\href
+  {https://doi.org/10.2355/isijinternational.30.1} {\bibfield  {journal}
+  {\bibinfo  {journal} {ISIJ Int.}\ }\textbf {\bibinfo {volume} {30}},\
+  \bibinfo {pages} {1} (\bibinfo {year} {1990})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Guthrie}(2004)}]{Guthrie2004}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~I.}\ \bibnamefont
-  {Shakhov}}\ and\ \bibinfo {author} {\bibfnamefont {K.~N.}\ \bibnamefont
-  {Vdovin}},\ }\bibfield  {title} {\bibinfo {title} {Electromagnetic stirring
-  in continuous-casting machines},\ }\href@noop {} {\bibfield  {journal}
-  {\bibinfo  {journal} {Steel Transl.}\ }\textbf {\bibinfo {volume} {49}},\
-  \bibinfo {pages} {261} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~I.~L.}\
+  \bibnamefont {Guthrie}},\ }\bibfield  {title} {\bibinfo {title} {Fluid flows
+  in metallurgy---{{Friend}} or foe?},\ }\href
+  {https://doi.org/10.1007/s11663-004-0044-2} {\bibfield  {journal} {\bibinfo
+  {journal} {Metall. Mater. Trans. B}\ }\textbf {\bibinfo {volume} {35}},\
+  \bibinfo {pages} {417} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Davidson}()}]{Davidson1999}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
+  {Davidson}},\ }\bibfield  {title} {\bibinfo {title} {Magnetohydrodynamics in
+  {{Materials Processing}}},\ }\href
+  {https://doi.org/10.1146/annurev.fluid.31.1.273} {\bibfield  {journal}
+  {\bibinfo  {journal} {Annu. Rev. Fluid Mech.}\ }\textbf {\bibinfo {volume}
+  {31}},\ \bibinfo {pages} {273}}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {L{\"o}fgren}\ and\ \citenamefont
+  {{\AA}kerstedt}(2000)}]{Lofgren2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~B.}\ \bibnamefont
+  {L{\"o}fgren}}\ and\ \bibinfo {author} {\bibfnamefont {H.~O.}\ \bibnamefont
+  {{\AA}kerstedt}},\ }\bibfield  {title} {\bibinfo {title} {Damping mechanisms
+  of perturbations in electromagnetically braked horizontal film flows},\
+  }\href {https://doi.org/10.1016/S0169-5983(99)00011-8} {\bibfield  {journal}
+  {\bibinfo  {journal} {Fluid Dyn. Res.}\ }\textbf {\bibinfo {volume} {26}},\
+  \bibinfo {pages} {53} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Fraenkel}()}]{Fraenkel1960}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~E.}\ \bibnamefont
@@ -86,22 +99,6 @@
   in magnetohydrodynamics},\ }\href {https://doi.org/10.1017/S0022112060000050}
   {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid. Mech.}\ }\textbf
   {\bibinfo {volume} {7}},\ \bibinfo {pages} {81}}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Shercliff}(1981)}]{shercliff1981}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont
-  {Shercliff}},\ }\bibfield  {title} {\bibinfo {title} {The boundary layer on a
-  wall nearly parallel to a magnetic field},\ }\href
-  {https://doi.org/10.1007/BF00947020} {\bibfield  {journal} {\bibinfo
-  {journal} {Z. angew. Math. Phys.}\ }\textbf {\bibinfo {volume} {32}},\
-  \bibinfo {pages} {546} (\bibinfo {year} {1981})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Davidson}(2001)}]{Davidson2001}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
-  {Davidson}},\ }\href {https://doi.org/10.1017/CBO9780511626333} {\emph
-  {\bibinfo {title} {An {{Introduction}} to {{Magnetohydrodynamics}}}}},\
-  Cambridge {{Texts}} in {{Applied Mathematics}}\ (\bibinfo  {publisher}
-  {Cambridge University Press},\ \bibinfo {address} {Cambridge},\ \bibinfo
-  {year} {2001})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Moffatt}(1967)}]{Moffatt1967}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~K.}\ \bibnamefont
@@ -110,14 +107,22 @@
   {https://doi.org/10.1017/S0022112067002307} {\bibfield  {journal} {\bibinfo
   {journal} {J. Fluid. Mech.}\ }\textbf {\bibinfo {volume} {28}},\ \bibinfo
   {pages} {571} (\bibinfo {year} {1967})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Shercliff}(1969)}]{Shercliff1969}%
+\bibitem [{\citenamefont {Davidson}(1995)}]{Davidson1995}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont
-  {Shercliff}},\ }\bibfield  {title} {\bibinfo {title} {Anisotropic surface
-  waves under a vertical magnetic force},\ }\href
-  {https://doi.org/10.1017/S0022112069000218} {\bibfield  {journal} {\bibinfo
-  {journal} {J. Fluid. Mech.}\ }\textbf {\bibinfo {volume} {38}},\ \bibinfo
-  {pages} {353} (\bibinfo {year} {1969})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
+  {Davidson}},\ }\bibfield  {title} {\bibinfo {title} {Magnetic damping of jets
+  and vortices},\ }\href {https://doi.org/10.1017/S0022112095003466} {\bibfield
+   {journal} {\bibinfo  {journal} {J. Fluid. Mech.}\ }\textbf {\bibinfo
+  {volume} {299}},\ \bibinfo {pages} {153} (\bibinfo {year}
+  {1995})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Davidson}(2001)}]{Davidson2001}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
+  {Davidson}},\ }\href {https://doi.org/10.1017/CBO9780511626333} {\emph
+  {\bibinfo {title} {An {{Introduction}} to {{Magnetohydrodynamics}}}}},\
+  Cambridge {{Texts}} in {{Applied Mathematics}}\ (\bibinfo  {publisher}
+  {Cambridge University Press},\ \bibinfo {address} {Cambridge},\ \bibinfo
+  {year} {2001})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Rivat}\ \emph {et~al.}(1991)\citenamefont {Rivat},
   \citenamefont {Etay},\ and\ \citenamefont {Garnier}}]{Rivat1991}%
   \BibitemOpen
@@ -128,28 +133,6 @@
   field},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Eur. J.
   Mech. B Fluids}\ }\textbf {\bibinfo {volume} {10}},\ \bibinfo {pages} {537}
   (\bibinfo {year} {1991})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fautrelle}\ and\ \citenamefont
-  {Sneyd}(2005)}]{fautrelle2005}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Fautrelle}}\ and\ \bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
-  {Sneyd}},\ }\bibfield  {title} {\bibinfo {title} {Surface waves created by
-  low-frequency magnetic fields},\ }\href
-  {https://doi.org/10.1016/j.euromechflu.2004.05.005} {\bibfield  {journal}
-  {\bibinfo  {journal} {European Journal of Mechanics - B/Fluids}\ }\textbf
-  {\bibinfo {volume} {24}},\ \bibinfo {pages} {91} (\bibinfo {year}
-  {2005})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fautrelle}\ \emph {et~al.}(2003)\citenamefont
-  {Fautrelle}, \citenamefont {Perrier},\ and\ \citenamefont
-  {Etay}}]{Fautrelle2003}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
-  {Fautrelle}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Perrier}},\
-  and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Etay}},\ }\bibfield
-  {title} {\bibinfo {title} {Free {{Surface Controlled}} by {{Magnetic
-  Fields}}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {ISIJ
-  Int.}\ }\textbf {\bibinfo {volume} {43}},\ \bibinfo {pages} {801} (\bibinfo
-  {year} {2003})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Bojarevi{\v c}s}\ \emph {et~al.}(2006)\citenamefont
   {Bojarevi{\v c}s}, \citenamefont {Cramer}, \citenamefont {Gelfgat},\ and\
   \citenamefont {Gerbeth}}]{Bojarevics2006a}%
@@ -163,17 +146,19 @@
   {https://doi.org/10.1007/s00348-005-0065-x} {\bibfield  {journal} {\bibinfo
   {journal} {Exp. Fluids}\ }\textbf {\bibinfo {volume} {40}},\ \bibinfo {pages}
   {257} (\bibinfo {year} {2006})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fisher}\ \emph {et~al.}(2019)\citenamefont {Fisher},
-  \citenamefont {Hvasta},\ and\ \citenamefont {Kolemen}}]{Fisher2019}%
+\bibitem [{\citenamefont {Alcal{\'a}}\ \emph {et~al.}(2015)\citenamefont
+  {Alcal{\'a}}, \citenamefont {Rivero},\ and\ \citenamefont
+  {Cuevas}}]{Alcala2015}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~E.}\ \bibnamefont
-  {Fisher}}, \bibinfo {author} {\bibfnamefont {M.~G.}\ \bibnamefont {Hvasta}},\
-  and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Kolemen}},\
-  }\bibfield  {title} {\bibinfo {title} {Study of liquid metal surface wave
-  damping in the presence of magnetic fields and electrical currents},\ }\href
-  {https://doi.org/10.1016/j.nme.2019.02.014} {\bibfield  {journal} {\bibinfo
-  {journal} {Nucl. Mater. Energy}\ }\textbf {\bibinfo {volume} {19}},\ \bibinfo
-  {pages} {101} (\bibinfo {year} {2019})}\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  {Alcal{\'a}}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Rivero}},\
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Cuevas}},\
+  }\bibfield  {title} {\bibinfo {title} {Effect of the magnetic field
+  orientation on the damping of liquid metal free surface waves in the
+  processing of materials},\ }\href
+  {https://doi.org/10.1016/j.applthermaleng.2014.09.015} {\bibfield  {journal}
+  {\bibinfo  {journal} {Appl. Therm. Eng.}\ }\textbf {\bibinfo {volume} {75}},\
+  \bibinfo {pages} {1296} (\bibinfo {year} {2015})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Sreenivasan}\ \emph {et~al.}(2005)\citenamefont
   {Sreenivasan}, \citenamefont {Davidson},\ and\ \citenamefont
   {Etay}}]{Sreenivasan2005}%
@@ -186,6 +171,32 @@
   {https://doi.org/10.1063/1.2118708} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Fluids}\ }\textbf {\bibinfo {volume} {17}},\ \bibinfo
   {pages} {117101} (\bibinfo {year} {2005})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Herreman}\ \emph {et~al.}(2019)\citenamefont
+  {Herreman}, \citenamefont {Nore}, \citenamefont {Guermond}, \citenamefont
+  {Cappanera}, \citenamefont {Weber},\ and\ \citenamefont
+  {Horstmann}}]{Herreman2019}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Herreman}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Nore}},
+  \bibinfo {author} {\bibfnamefont {J.-L.}\ \bibnamefont {Guermond}}, \bibinfo
+  {author} {\bibfnamefont {L.}~\bibnamefont {Cappanera}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Weber}},\ and\ \bibinfo {author}
+  {\bibfnamefont {G.~M.}\ \bibnamefont {Horstmann}},\ }\bibfield  {title}
+  {\bibinfo {title} {Perturbation theory for metal pad roll instability in
+  cylindrical reduction cells},\ }\href {https://doi.org/10.1017/jfm.2019.642}
+  {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid. Mech.}\ }\textbf
+  {\bibinfo {volume} {878}},\ \bibinfo {pages} {598} (\bibinfo {year}
+  {2019})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Krastins}\ and\ \citenamefont
+  {Bojarevics}(2020)}]{Krastins2020}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Krastins}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Bojarevics}},\ }\bibfield  {title} {\bibinfo {title} {Metal pad roll
+  instability threshold with magnetic damping in shallow cylindrical cells},\
+  }\href {https://doi.org/10.22364/mhd.56.4.9} {\bibfield  {journal} {\bibinfo
+  {journal} {Magnetohydrodynamics}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo
+  {pages} {451} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Pedchenko}\ \emph {et~al.}(2009)\citenamefont
   {Pedchenko}, \citenamefont {Molokov}, \citenamefont {Priede}, \citenamefont
   {Lukyanov},\ and\ \citenamefont {Thomas}}]{Pedchenko2009}%
@@ -235,32 +246,6 @@
   {https://doi.org/10.1007/s00348-025-03973-7} {\bibfield  {journal} {\bibinfo
   {journal} {Exp. Fluids}\ }\textbf {\bibinfo {volume} {66}},\ \bibinfo {pages}
   {76} (\bibinfo {year} {2025})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Herreman}\ \emph {et~al.}(2019)\citenamefont
-  {Herreman}, \citenamefont {Nore}, \citenamefont {Guermond}, \citenamefont
-  {Cappanera}, \citenamefont {Weber},\ and\ \citenamefont
-  {Horstmann}}]{Herreman2019}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
-  {Herreman}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Nore}},
-  \bibinfo {author} {\bibfnamefont {J.-L.}\ \bibnamefont {Guermond}}, \bibinfo
-  {author} {\bibfnamefont {L.}~\bibnamefont {Cappanera}}, \bibinfo {author}
-  {\bibfnamefont {N.}~\bibnamefont {Weber}},\ and\ \bibinfo {author}
-  {\bibfnamefont {G.~M.}\ \bibnamefont {Horstmann}},\ }\bibfield  {title}
-  {\bibinfo {title} {Perturbation theory for metal pad roll instability in
-  cylindrical reduction cells},\ }\href {https://doi.org/10.1017/jfm.2019.642}
-  {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid. Mech.}\ }\textbf
-  {\bibinfo {volume} {878}},\ \bibinfo {pages} {598} (\bibinfo {year}
-  {2019})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Krastins}\ and\ \citenamefont
-  {Bojarevics}(2020)}]{Krastins2020}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
-  {Krastins}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Bojarevics}},\ }\bibfield  {title} {\bibinfo {title} {Metal pad roll
-  instability threshold with magnetic damping in shallow cylindrical cells},\
-  }\href {https://doi.org/10.22364/mhd.56.4.9} {\bibfield  {journal} {\bibinfo
-  {journal} {Magnetohydrodynamics}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo
-  {pages} {451} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hegde}\ \emph {et~al.}(2026)\citenamefont {Hegde},
   \citenamefont {Herreman}, \citenamefont {{Br\"andle de Motta}}, \citenamefont
   {Canu}, \citenamefont {Renoult},\ and\ \citenamefont
@@ -275,8 +260,8 @@
   }\bibfield  {title} {\bibinfo {title} {Metal-pad-roll instability theory for
   small-scale models of reduction cells},\ }\href
   {https://doi.org/10.1103/5ynm-wdlr} {\bibfield  {journal} {\bibinfo
-  {journal} {Phys. Rev. Fluids}\ } (\bibinfo {year} {2026})}\BibitemShut
-  {NoStop}%
+  {journal} {Phys. Rev. Fluids}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo
+  {pages} {084803} (\bibinfo {year} {2026})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hegde}\ \emph {et~al.}()\citenamefont {Hegde},
   \citenamefont {Herreman}, \citenamefont {Gundrum},\ and\ \citenamefont
   {Horstmann}}]{SMmagdamp_hegde}%
@@ -295,6 +280,14 @@
   homogeneous magnetic field},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
   {journal} {Dan. Vidensk. Selsk. Mat. Fys. Medd.}\ }\textbf {\bibinfo {volume}
   {15}} (\bibinfo {year} {1937})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Shercliff}(1981)}]{shercliff1981}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~A.}\ \bibnamefont
+  {Shercliff}},\ }\bibfield  {title} {\bibinfo {title} {The boundary layer on a
+  wall nearly parallel to a magnetic field},\ }\href
+  {https://doi.org/10.1007/BF00947020} {\bibfield  {journal} {\bibinfo
+  {journal} {Z. angew. Math. Phys.}\ }\textbf {\bibinfo {volume} {32}},\
+  \bibinfo {pages} {546} (\bibinfo {year} {1981})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {M{\"u}ller}\ and\ \citenamefont
   {B{\"u}hler}(2001)}]{Muller2001}%
   \BibitemOpen
