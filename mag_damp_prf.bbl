@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{29}%
+\begin{thebibliography}{30}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -262,6 +262,26 @@
   {https://doi.org/10.1103/5ynm-wdlr} {\bibfield  {journal} {\bibinfo
   {journal} {Phys. Rev. Fluids}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo
   {pages} {084803} (\bibinfo {year} {2026})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bojarevics}\ and\ \citenamefont
+  {Romerio}(1994)}]{Bojarevics1994}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.}~\bibnamefont
+  {Bojarevics}}\ and\ \bibinfo {author} {\bibfnamefont {M.~V.}\ \bibnamefont
+  {Romerio}},\ }\bibfield  {title} {\bibinfo {title} {Long waves instability of
+  liquid metal-electrolyte interface in aluminium electrolysis cells: {{A}}
+  generalization of {{Sele}}'s criterion},\ }\href@noop {} {\bibfield
+  {journal} {\bibinfo  {journal} {Eur. J. Mech. - B/Fluids}\ }\textbf {\bibinfo
+  {volume} {13}} (\bibinfo {year} {1994})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Davidson}\ and\ \citenamefont
+  {Lindsay}(1998)}]{Davidson1998}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
+  {Davidson}}\ and\ \bibinfo {author} {\bibfnamefont {R.~I.}\ \bibnamefont
+  {Lindsay}},\ }\bibfield  {title} {\bibinfo {title} {Stability of interfacial
+  waves in aluminium reduction cells},\ }\href
+  {https://doi.org/10.1017/S0022112098001025} {\bibfield  {journal} {\bibinfo
+  {journal} {J. Fluid. Mech.}\ }\textbf {\bibinfo {volume} {362}},\ \bibinfo
+  {pages} {273} (\bibinfo {year} {1998})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Hegde}\ \emph {et~al.}()\citenamefont {Hegde},
   \citenamefont {Herreman}, \citenamefont {Gundrum},\ and\ \citenamefont
   {Horstmann}}]{SMmagdamp_hegde}%
@@ -320,14 +340,6 @@
   {Lamb}},\ }\href@noop {} {\emph {\bibinfo {title} {Hydrodynamics}}}\
   (\bibinfo  {publisher} {New York,: Dover publications},\ \bibinfo {year}
   {1945})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Faltinsen}\ and\ \citenamefont
-  {Timokha}(2009)}]{Faltinsen2009}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~M.}\ \bibnamefont
-  {Faltinsen}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
-  {Timokha}},\ }\href@noop {} {\emph {\bibinfo {title} {Sloshing}}},\ \bibinfo
-  {edition} {1st}\ ed.\ (\bibinfo  {publisher} {Cambridge University Press},\
-  \bibinfo {year} {2009})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Dom{\'\i}nguez-Lozoya}\ \emph
   {et~al.}(2017)\citenamefont {Dom{\'\i}nguez-Lozoya}, \citenamefont {Cuevas},
   \citenamefont {Rivero},\ and\ \citenamefont {Ramos}}]{Dominguez2017}%

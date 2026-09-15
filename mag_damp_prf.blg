@@ -33,45 +33,45 @@ Control: production of eprint (0) enabled
 Warning--empty year in Davidson1999
 Warning--empty year in Fraenkel1960
 Warning--empty year in SMmagdamp_hegde
-You've used 31 entries,
+You've used 32 entries,
             6079 wiz_defined-function locations,
-            1876 strings with 20425 characters,
-and the built_in function-call counts, 29062 in all, are:
-= -- 2144
-> -- 635
-< -- 170
-+ -- 212
-- -- 156
-* -- 4231
-:= -- 2842
-add.period$ -- 29
-call.type$ -- 31
-change.case$ -- 144
-chr.to.int$ -- 53
-cite$ -- 34
-duplicate$ -- 2782
-empty$ -- 2128
-format.name$ -- 347
-if$ -- 5854
+            1886 strings with 20728 characters,
+and the built_in function-call counts, 30091 in all, are:
+= -- 2246
+> -- 653
+< -- 174
++ -- 218
+- -- 160
+* -- 4376
+:= -- 2935
+add.period$ -- 30
+call.type$ -- 32
+change.case$ -- 148
+chr.to.int$ -- 48
+cite$ -- 35
+duplicate$ -- 2873
+empty$ -- 2191
+format.name$ -- 360
+if$ -- 6070
 int.to.chr$ -- 1
-int.to.str$ -- 38
-missing$ -- 430
-newline$ -- 139
-num.names$ -- 87
-pop$ -- 1131
+int.to.str$ -- 39
+missing$ -- 450
+newline$ -- 142
+num.names$ -- 90
+pop$ -- 1166
 preamble$ -- 1
-purify$ -- 142
+purify$ -- 147
 quote$ -- 0
-skip$ -- 1292
+skip$ -- 1355
 stack$ -- 0
-substring$ -- 624
-swap$ -- 2515
-text.length$ -- 68
+substring$ -- 643
+swap$ -- 2610
+text.length$ -- 70
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 394
+type$ -- 408
 warning$ -- 4
-while$ -- 93
+while$ -- 95
 width$ -- 0
-write$ -- 301
+write$ -- 311
 (There was 1 error message)

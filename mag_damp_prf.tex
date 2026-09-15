@@ -1100,6 +1100,7 @@ as the pair of conducting walls parallel to the $y$-axis do not contribute to th
 	\frac{h\Bigl( (1+2b)\pi\csch{[kh]} + 2kh(-1)^b \Bigr)}
 	{k \Bigl( 4k^2h^2 + (1+2b)^2\pi^2 \Bigr)}
 	\rule{0pt}{1cm} \right],
+	\label{eq:qcorr_bc3}
 \end{align}
 where,
 \begin{equation}
@@ -1176,6 +1177,9 @@ where,
 	\label{eq:qcorr_bc3_consts}
 \end{equation}
 In Eq.\,\eqref{eq:qcorr_bc4}, the coefficients $\ddot{\mathcal A}_0$, $\ddot{\mathcal B}_0$ are given in Eq.\,\eqref{eq:bc4_constants}, and $\ddot{\mathcal{A}}_{ab}$ and $\ddot{\mathcal B}_{ab}$ are given in Eqs.\,(\ref{eq:bc4_Acoeff} and \ref{eq:bc4_Bcoeff}) respectively.   
+\\
+\indent All of the correction terms from Eqs.\,(\ref{eq:qcorr_bc2}, \ref{eq:qcorr_bc3} and \ref{eq:qcorr_bc4}) are quite cumbersome to translate into code or analytical solvers. Therefore, we have outlined all of the formulae in a Python script to make it easier for readers to perform the calculations.  
+
 
 \subsection{Hartmann and Shercliff boundary layers}
 \label{sec:hartmann_and_shercliff}
