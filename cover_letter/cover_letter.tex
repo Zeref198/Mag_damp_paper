@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage{charter}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr,graphicx}
+\usepackage{xspace}
+\usepackage[inline]{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+
+\fancypagestyle{firstpage}{%
+	\fancyhf{} % Clear header/footer
+	\renewcommand{\headrulewidth}{0pt}%
+	\renewcommand{\footrulewidth}{1pt}%
+	% Add more detail here if needed
+}
+\fancypagestyle{otherpages}{%
+	\fancyhf{}% Clear header/footer
+	\renewcommand{\headrulewidth}{1pt}%
+	\renewcommand{\footrulewidth}{1pt}%
+	% Add more detail here if needed
+}
+
+\AtBeginDocument{\thispagestyle{firstpage}}
+\pagestyle{otherpages}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+
+\begin{document}
+	
+	\vspace*{\dimexpr-\headsep-\headheight-1pt}
+	
+	% \includegraphics[width=2.75in]{logo.png}
+	
+	\rule{\linewidth}{1pt}
+	
+	\bigskip
+	
+	
+	%----------------------------------------------------------------------------------------
+	%	YOU ONLY NEED TO FILL IN THE FOLLOWING LATEX MACROS
+	%----------------------------------------------------------------------------------------
+	
+	% Title of the paper
+	\newcommand{\PaperTitle}{Magnetic damping of standing waves in rectangular geometries}
+	
+	% Full name of the authors
+	\newcommand{\AuthorOne}{Pranav Hegde}
+	\newcommand{\AuthorTwo}{Thomas Gundrum}
+	\newcommand{\AuthorThree}{Gerrit Maik Horstmann}
+	
+	% Institution
+	\newcommand{\Institution}{Helmholtz-Zentrum Dresden-Rossendorf\xspace}
+	\newcommand{\InstitutionAddress}{Bautzner Landstr. 400\xspace}
+	\newcommand{\City}{Dresden, 01328\xspace}
+	\newcommand{\Country}{Germany\xspace}
+	
+	% Full name of the Journal's Editor in Chief
+	\newcommand{\EditorInChief}{Prof. Beverley J. McKeon\xspace}
+	
+	% Journal
+	\newcommand{\Journal}{Physical Review Fluids\xspace}
+	
+	
+	
+	% % Body
+	% \newcommand{\Contribution}{X\xspace}
+	% \newcommand{\Problem}{Y\xspace}
+	% \newcommand{\Solution}{Z\xspace}
+	% \newcommand{\Evaluation}{D\xspace}
+	% \newcommand{\NoveltyClaim}{E\xspace}
+	
+	%% List of contributions
+	%\newcommand{\ContributionOne}{Contribution A.\xspace}
+	%\newcommand{\ContributionTwo}{Contribution B.\xspace}
+	%\newcommand{\ContributionThree}{Contribution C.\xspace}
+	%\newcommand{\ContributionFour}{Contribution D.\xspace}
+	
+	% Suggested editors
+	% \newcommand{\EditorOne}{Editor \#1\xspace}
+	% \newcommand{\EditorOneExpertise}{A\xspace}
+	
+	% \newcommand{\EditorTwo}{Editor \#2\xspace}
+	% \newcommand{\EditorTwoExpertise}{B\xspace}
+	
+	% \newcommand{\EditorThree}{Editor \#3\xspace}
+	% \newcommand{\EditorThreeExpertise}{C\xspace}
+	
+	%----------------------------------------------------------------------------------------
+	%	YOUR NAME AND CONTACT INFORMATION
+	%----------------------------------------------------------------------------------------
+	
+	\hfill
+	\begin{tabular}{ l @{} }
+		\today \\[12pt] % Date
+		\Institution\\
+		\InstitutionAddress\\
+		\City, \Country
+	\end{tabular}
+	
+	
+	%----------------------------------------------------------------------------------------
+	%	LETTER CONTENT
+	%----------------------------------------------------------------------------------------
+	
+	\bigskip
+	
+	Dear \EditorInChief,\\Chief Editor of \textit{\Journal}
+	
+	\bigskip
+	
+	We wish to submit an original journal article titled “\PaperTitle” in the \Journal. This study primarily aims to calculate the magnetic damping rate of a free-surface standing wave of a conducting fluid within a rectangular domain.     
+	
+	In summary, our contributions are the following:
+	
+	\begin{itemize}
+		\item We formulate the magnetic damping rate of a surface gravity wave in a rectangular geometry filled with an electrically conducting fluid, which is subjected to a vertical magnetic field. 
+		
+		\item Previous studies only considered \begin{enumerate*}[label={\roman*)}] 
+			\item only one single type of wave mode $(1,0)$, 
+			\item shallow water approximation,
+			\item and uniform electrical boundary conditions (either all insulating or all conducting).
+		\end{enumerate*}
+		The present study considered arbitrary wave modes with mixed electrical boundary conditions, disregarding the shallow water approximation.  
+		
+		\item Furthermore, we have also formulated a new expression for the Hartmann and Shercliff boundary layer in a single-layer system, and the Hartmann boundary layer formed at the interface in a two-layer system with large electrical conductivity difference (quasi one-layer system). 
+	\end{itemize}
+	
+	We have also validated a part of the theory with a simple lab-scale sloshing experiment. Lastly, we provide a supplementary material that details all the analytical derivation along with a Python module to aid the readers in reproducing and applying our theoretical results. 
+	
+	I confirm that this paper, has not been published elsewhere. All the authors have approved the manuscript and agree with its submission to the \Journal.
+	
+	\bigskip
+	Kind regards,
+	
+	\vspace{10pt}
+	\AuthorOne,
+	
+	On behalf of \AuthorTwo \hspace{0.3mm} and\,  \AuthorThree
+	
+\end{document}
