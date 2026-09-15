@@ -121,7 +121,7 @@ def wmn(k, h):
     """
     Gravity-wave frequency. Equation (16).
     """
-    return g * k * tanh(k * h)
+    return sqrt(g * k * tanh(k * h))
 
 # Hartmann number
 def Ha_number(B, L, sig, rho, nu):
@@ -665,10 +665,10 @@ def calculate_magnetic_damping(metal, geometry, elec_bcond, wavemode, magField):
     
     mag_damp = (
         OhmicDamp(sigma, rho, w, Bz, k, Lx, Ly, h, m, n, itr1, itr2, BC)
-        # +
-        # Hartmann_damp(nu, sigma, rho, w, Bz, k, Lx, Ly, h, m, n)
-        # +
-        # Shercliff_damp(nu, sigma, rho, w, Bz, k, Lx, Ly, h, m, n)
+        +
+        Hartmann_damp(nu, sigma, rho, w, Bz, k, Lx, Ly, h, m, n)
+        +
+        Shercliff_damp(nu, sigma, rho, w, Bz, k, Lx, Ly, h, m, n)
         )
     
     return mag_damp

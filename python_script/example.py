@@ -12,7 +12,7 @@ Ly = 0.094
 
 gal = mag.metal(
     name="GaInSn",
-    density=6345,
+    density=6363,
     kinematic_viscosity=3.48e-7,
     electric_conductivity=3.31e6,
 )
