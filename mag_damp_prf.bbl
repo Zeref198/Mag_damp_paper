@@ -60,7 +60,7 @@
   \bibinfo {pages} {981} (\bibinfo {year} {1989})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Garnier}(1990)}]{Garnier1990}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Garnier}},\ }\bibfield  {title} {\bibinfo {title} {Electromagnetic
   processing of liquid materials in europe},\ }\href
   {https://doi.org/10.2355/isijinternational.30.1} {\bibfield  {journal}
@@ -74,14 +74,15 @@
   {https://doi.org/10.1007/s11663-004-0044-2} {\bibfield  {journal} {\bibinfo
   {journal} {Metall. Mater. Trans. B}\ }\textbf {\bibinfo {volume} {35}},\
   \bibinfo {pages} {417} (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Davidson}()}]{Davidson1999}%
+\bibitem [{\citenamefont {Davidson}(1999)}]{Davidson1999}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~A.}\ \bibnamefont
   {Davidson}},\ }\bibfield  {title} {\bibinfo {title} {Magnetohydrodynamics in
   {{Materials Processing}}},\ }\href
   {https://doi.org/10.1146/annurev.fluid.31.1.273} {\bibfield  {journal}
   {\bibinfo  {journal} {Annu. Rev. Fluid Mech.}\ }\textbf {\bibinfo {volume}
-  {31}},\ \bibinfo {pages} {273}}\BibitemShut {NoStop}%
+  {31}},\ \bibinfo {pages} {273} (\bibinfo {year} {1999})}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {L{\"o}fgren}\ and\ \citenamefont
   {{\AA}kerstedt}(2000)}]{Lofgren2000}%
   \BibitemOpen
@@ -92,13 +93,14 @@
   }\href {https://doi.org/10.1016/S0169-5983(99)00011-8} {\bibfield  {journal}
   {\bibinfo  {journal} {Fluid Dyn. Res.}\ }\textbf {\bibinfo {volume} {26}},\
   \bibinfo {pages} {53} (\bibinfo {year} {2000})}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Fraenkel}()}]{Fraenkel1960}%
+\bibitem [{\citenamefont {Fraenkel}(1960)}]{Fraenkel1960}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~E.}\ \bibnamefont
   {Fraenkel}},\ }\bibfield  {title} {\bibinfo {title} {A shallow-liquid theory
   in magnetohydrodynamics},\ }\href {https://doi.org/10.1017/S0022112060000050}
   {\bibfield  {journal} {\bibinfo  {journal} {J. Fluid. Mech.}\ }\textbf
-  {\bibinfo {volume} {7}},\ \bibinfo {pages} {81}}\BibitemShut {NoStop}%
+  {\bibinfo {volume} {7}},\ \bibinfo {pages} {81} (\bibinfo {year}
+  {1960})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Moffatt}(1967)}]{Moffatt1967}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~K.}\ \bibnamefont
@@ -195,8 +197,8 @@
   {Bojarevics}},\ }\bibfield  {title} {\bibinfo {title} {Metal pad roll
   instability threshold with magnetic damping in shallow cylindrical cells},\
   }\href {https://doi.org/10.22364/mhd.56.4.9} {\bibfield  {journal} {\bibinfo
-  {journal} {Magnetohydrodynamics}\ }\textbf {\bibinfo {volume} {4}},\ \bibinfo
-  {pages} {451} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+  {journal} {Magnetohydrodynamics}\ }\textbf {\bibinfo {volume} {56}},\
+  \bibinfo {pages} {451} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Pedchenko}\ \emph {et~al.}(2009)\citenamefont
   {Pedchenko}, \citenamefont {Molokov}, \citenamefont {Priede}, \citenamefont
   {Lukyanov},\ and\ \citenamefont {Thomas}}]{Pedchenko2009}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.24)  16 SEP 2026 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.24)  17 SEP 2026 12:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1195,40 +1195,40 @@ pdfTeX warning: /usr/local/texlive/2026/bin/x86_64-linux/pdflatex (file ./figur
 es/model_destablize.pdf): PDF inclusion: multiple pdfs with page group included
  in a single page
 >]
-<figures/BC_case1.pdf, id=241, 494.84875pt x 242.9075pt>
+<figures/BC_case1.pdf, id=242, 494.84875pt x 242.9075pt>
 File: figures/BC_case1.pdf Graphic file (type pdf)
 <use figures/BC_case1.pdf>
-Package pdftex.def Info: figures/BC_case1.pdf  used on input line 394.
+Package pdftex.def Info: figures/BC_case1.pdf  used on input line 388.
 (pdftex.def)             Requested size: 153.00156pt x 75.1041pt.
 
-Overfull \vbox (31.92015pt too high) detected at line 394
+Overfull \vbox (31.92015pt too high) detected at line 388
  []
 
-<figures/BC_case2.pdf, id=242, 494.84875pt x 242.9075pt>
+<figures/BC_case2.pdf, id=243, 494.84875pt x 242.9075pt>
 File: figures/BC_case2.pdf Graphic file (type pdf)
 <use figures/BC_case2.pdf>
-Package pdftex.def Info: figures/BC_case2.pdf  used on input line 416.
+Package pdftex.def Info: figures/BC_case2.pdf  used on input line 410.
 (pdftex.def)             Requested size: 153.00156pt x 75.1041pt.
 
-Overfull \vbox (31.92015pt too high) detected at line 416
+Overfull \vbox (31.92015pt too high) detected at line 410
  []
 
-<figures/BC_case3.pdf, id=243, 494.84875pt x 242.9075pt>
+<figures/BC_case3.pdf, id=244, 494.84875pt x 242.9075pt>
 File: figures/BC_case3.pdf Graphic file (type pdf)
 <use figures/BC_case3.pdf>
-Package pdftex.def Info: figures/BC_case3.pdf  used on input line 440.
+Package pdftex.def Info: figures/BC_case3.pdf  used on input line 434.
 (pdftex.def)             Requested size: 153.00156pt x 75.1041pt.
 
-Overfull \vbox (31.92015pt too high) detected at line 440
+Overfull \vbox (31.92015pt too high) detected at line 434
  []
 
-<figures/BC_case4.pdf, id=244, 494.84875pt x 242.9075pt>
+<figures/BC_case4.pdf, id=245, 494.84875pt x 242.9075pt>
 File: figures/BC_case4.pdf Graphic file (type pdf)
 <use figures/BC_case4.pdf>
-Package pdftex.def Info: figures/BC_case4.pdf  used on input line 464.
+Package pdftex.def Info: figures/BC_case4.pdf  used on input line 458.
 (pdftex.def)             Requested size: 153.00156pt x 75.1041pt.
 
-Overfull \vbox (31.92015pt too high) detected at line 464
+Overfull \vbox (31.92015pt too high) detected at line 458
  []
 
 [4] [5 <./figures/BC_case1.pdf> <./figures/BC_case2.pdf
@@ -1247,15 +1247,15 @@ pdfTeX warning: /usr/local/texlive/2026/bin/x86_64-linux/pdflatex (file ./figur
 es/BC_case4.pdf): PDF inclusion: multiple pdfs with page group included in a si
 ngle page
 >] [6]
-<figures/3-wave_1.png, id=303, 253.54726pt x 138.5175pt>
+<figures/3-wave_1.png, id=304, 253.54726pt x 138.5175pt>
 File: figures/3-wave_1.png Graphic file (type png)
 <use figures/3-wave_1.png>
-Package pdftex.def Info: figures/3-wave_1.png  used on input line 750.
+Package pdftex.def Info: figures/3-wave_1.png  used on input line 744.
 (pdftex.def)             Requested size: 229.49844pt x 125.38531pt.
-<figures/3-wave_0.png, id=305, 253.54726pt x 138.5175pt>
+<figures/3-wave_0.png, id=306, 253.54726pt x 138.5175pt>
 File: figures/3-wave_0.png Graphic file (type png)
 <use figures/3-wave_0.png>
-Package pdftex.def Info: figures/3-wave_0.png  used on input line 752.
+Package pdftex.def Info: figures/3-wave_0.png  used on input line 746.
 (pdftex.def)             Requested size: 229.49844pt x 125.38531pt.
 Package epstopdf Info: Source file: <figures/C1_streamline_1-1.eps>
 (epstopdf)                    date: 2026-08-11 19:54:16
@@ -1266,14 +1266,14 @@ Package epstopdf Info: Source file: <figures/C1_streamline_1-1.eps>
 (epstopdf)                    size: 47410 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C1_streamline_1-1-e
 ps-converted-to.pdf figures/C1_streamline_1-1.eps>
-(epstopdf)             \includegraphics on input line 767.
+(epstopdf)             \includegraphics on input line 761.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C1_streamline_1-1-eps-converted-to.pdf, id=306, 351.3125pt x 207.77625
+<figures/C1_streamline_1-1-eps-converted-to.pdf, id=307, 351.3125pt x 207.77625
 pt>
 File: figures/C1_streamline_1-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C1_streamline_1-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C1_streamline_1-1-eps-converted-to.pdf  used o
-n input line 767.
+n input line 761.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C1_streamline_2-1.eps>
 (epstopdf)                    date: 2026-08-11 19:54:01
@@ -1284,14 +1284,14 @@ Package epstopdf Info: Source file: <figures/C1_streamline_2-1.eps>
 (epstopdf)                    size: 71637 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C1_streamline_2-1-e
 ps-converted-to.pdf figures/C1_streamline_2-1.eps>
-(epstopdf)             \includegraphics on input line 769.
+(epstopdf)             \includegraphics on input line 763.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C1_streamline_2-1-eps-converted-to.pdf, id=307, 351.3125pt x 207.77625
+<figures/C1_streamline_2-1-eps-converted-to.pdf, id=308, 351.3125pt x 207.77625
 pt>
 File: figures/C1_streamline_2-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C1_streamline_2-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C1_streamline_2-1-eps-converted-to.pdf  used o
-n input line 769.
+n input line 763.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C2_streamline_1-1.eps>
 (epstopdf)                    date: 2026-08-15 11:54:16
@@ -1302,14 +1302,14 @@ Package epstopdf Info: Source file: <figures/C2_streamline_1-1.eps>
 (epstopdf)                    size: 55320 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C2_streamline_1-1-e
 ps-converted-to.pdf figures/C2_streamline_1-1.eps>
-(epstopdf)             \includegraphics on input line 783.
+(epstopdf)             \includegraphics on input line 777.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C2_streamline_1-1-eps-converted-to.pdf, id=308, 351.3125pt x 207.77625
+<figures/C2_streamline_1-1-eps-converted-to.pdf, id=309, 351.3125pt x 207.77625
 pt>
 File: figures/C2_streamline_1-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C2_streamline_1-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C2_streamline_1-1-eps-converted-to.pdf  used o
-n input line 783.
+n input line 777.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C2_streamline_2-1.eps>
 (epstopdf)                    date: 2026-08-15 12:05:25
@@ -1320,14 +1320,14 @@ Package epstopdf Info: Source file: <figures/C2_streamline_2-1.eps>
 (epstopdf)                    size: 64781 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C2_streamline_2-1-e
 ps-converted-to.pdf figures/C2_streamline_2-1.eps>
-(epstopdf)             \includegraphics on input line 785.
+(epstopdf)             \includegraphics on input line 779.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C2_streamline_2-1-eps-converted-to.pdf, id=309, 351.3125pt x 207.77625
+<figures/C2_streamline_2-1-eps-converted-to.pdf, id=310, 351.3125pt x 207.77625
 pt>
 File: figures/C2_streamline_2-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C2_streamline_2-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C2_streamline_2-1-eps-converted-to.pdf  used o
-n input line 785.
+n input line 779.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C3_streamline_1-1.eps>
 (epstopdf)                    date: 2026-08-12 20:01:39
@@ -1338,14 +1338,14 @@ Package epstopdf Info: Source file: <figures/C3_streamline_1-1.eps>
 (epstopdf)                    size: 142293 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C3_streamline_1-1-e
 ps-converted-to.pdf figures/C3_streamline_1-1.eps>
-(epstopdf)             \includegraphics on input line 799.
+(epstopdf)             \includegraphics on input line 793.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C3_streamline_1-1-eps-converted-to.pdf, id=310, 351.3125pt x 207.77625
+<figures/C3_streamline_1-1-eps-converted-to.pdf, id=311, 351.3125pt x 207.77625
 pt>
 File: figures/C3_streamline_1-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C3_streamline_1-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C3_streamline_1-1-eps-converted-to.pdf  used o
-n input line 799.
+n input line 793.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C3_streamline_2-1.eps>
 (epstopdf)                    date: 2026-08-12 20:01:38
@@ -1356,14 +1356,14 @@ Package epstopdf Info: Source file: <figures/C3_streamline_2-1.eps>
 (epstopdf)                    size: 128467 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C3_streamline_2-1-e
 ps-converted-to.pdf figures/C3_streamline_2-1.eps>
-(epstopdf)             \includegraphics on input line 801.
+(epstopdf)             \includegraphics on input line 795.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C3_streamline_2-1-eps-converted-to.pdf, id=311, 351.3125pt x 207.77625
+<figures/C3_streamline_2-1-eps-converted-to.pdf, id=312, 351.3125pt x 207.77625
 pt>
 File: figures/C3_streamline_2-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C3_streamline_2-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C3_streamline_2-1-eps-converted-to.pdf  used o
-n input line 801.
+n input line 795.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C4_streamline_1-1.eps>
 (epstopdf)                    date: 2026-08-12 20:08:17
@@ -1374,14 +1374,14 @@ Package epstopdf Info: Source file: <figures/C4_streamline_1-1.eps>
 (epstopdf)                    size: 105951 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C4_streamline_1-1-e
 ps-converted-to.pdf figures/C4_streamline_1-1.eps>
-(epstopdf)             \includegraphics on input line 815.
+(epstopdf)             \includegraphics on input line 809.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C4_streamline_1-1-eps-converted-to.pdf, id=312, 351.3125pt x 207.77625
+<figures/C4_streamline_1-1-eps-converted-to.pdf, id=313, 351.3125pt x 207.77625
 pt>
 File: figures/C4_streamline_1-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C4_streamline_1-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C4_streamline_1-1-eps-converted-to.pdf  used o
-n input line 815.
+n input line 809.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C4_streamline_2-1.eps>
 (epstopdf)                    date: 2026-08-12 20:07:00
@@ -1392,18 +1392,18 @@ Package epstopdf Info: Source file: <figures/C4_streamline_2-1.eps>
 (epstopdf)                    size: 102331 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C4_streamline_2-1-e
 ps-converted-to.pdf figures/C4_streamline_2-1.eps>
-(epstopdf)             \includegraphics on input line 817.
+(epstopdf)             \includegraphics on input line 811.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C4_streamline_2-1-eps-converted-to.pdf, id=313, 351.3125pt x 207.77625
+<figures/C4_streamline_2-1-eps-converted-to.pdf, id=314, 351.3125pt x 207.77625
 pt>
 File: figures/C4_streamline_2-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C4_streamline_2-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C4_streamline_2-1-eps-converted-to.pdf  used o
-n input line 817.
+n input line 811.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 
 
-LaTeX Warning: Float too large for page by 13.7015pt on input line 848.
+LaTeX Warning: Float too large for page by 23.7015pt on input line 842.
 
 [7 <./figures/3-wave_1.png> <./figures/3-wave_0.png>]
 Package epstopdf Info: Source file: <figures/C3_XZ_1-1.eps>
@@ -1414,13 +1414,13 @@ Package epstopdf Info: Source file: <figures/C3_XZ_1-1.eps>
 (epstopdf)                    size: 38861 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C3_XZ_1-1-eps-conve
 rted-to.pdf figures/C3_XZ_1-1.eps>
-(epstopdf)             \includegraphics on input line 856.
+(epstopdf)             \includegraphics on input line 850.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C3_XZ_1-1-eps-converted-to.pdf, id=332, 351.3125pt x 207.77625pt>
+<figures/C3_XZ_1-1-eps-converted-to.pdf, id=333, 351.3125pt x 207.77625pt>
 File: figures/C3_XZ_1-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C3_XZ_1-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C3_XZ_1-1-eps-converted-to.pdf  used on input 
-line 856.
+line 850.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C3_XZ_2-1.eps>
 (epstopdf)                    date: 2026-08-18 11:31:24
@@ -1430,13 +1430,13 @@ Package epstopdf Info: Source file: <figures/C3_XZ_2-1.eps>
 (epstopdf)                    size: 54020 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C3_XZ_2-1-eps-conve
 rted-to.pdf figures/C3_XZ_2-1.eps>
-(epstopdf)             \includegraphics on input line 858.
+(epstopdf)             \includegraphics on input line 852.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C3_XZ_2-1-eps-converted-to.pdf, id=333, 351.3125pt x 207.77625pt>
+<figures/C3_XZ_2-1-eps-converted-to.pdf, id=334, 351.3125pt x 207.77625pt>
 File: figures/C3_XZ_2-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C3_XZ_2-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C3_XZ_2-1-eps-converted-to.pdf  used on input 
-line 858.
+line 852.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C4_XZ_1-1.eps>
 (epstopdf)                    date: 2026-08-13 11:47:56
@@ -1446,13 +1446,13 @@ Package epstopdf Info: Source file: <figures/C4_XZ_1-1.eps>
 (epstopdf)                    size: 109701 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C4_XZ_1-1-eps-conve
 rted-to.pdf figures/C4_XZ_1-1.eps>
-(epstopdf)             \includegraphics on input line 871.
+(epstopdf)             \includegraphics on input line 865.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C4_XZ_1-1-eps-converted-to.pdf, id=334, 351.3125pt x 207.77625pt>
+<figures/C4_XZ_1-1-eps-converted-to.pdf, id=335, 351.3125pt x 207.77625pt>
 File: figures/C4_XZ_1-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C4_XZ_1-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C4_XZ_1-1-eps-converted-to.pdf  used on input 
-line 871.
+line 865.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/C4_XZ_2-1.eps>
 (epstopdf)                    date: 2026-08-15 12:25:08
@@ -1462,13 +1462,13 @@ Package epstopdf Info: Source file: <figures/C4_XZ_2-1.eps>
 (epstopdf)                    size: 94511 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/C4_XZ_2-1-eps-conve
 rted-to.pdf figures/C4_XZ_2-1.eps>
-(epstopdf)             \includegraphics on input line 873.
+(epstopdf)             \includegraphics on input line 867.
 Package epstopdf Info: Output file is already uptodate.
-<figures/C4_XZ_2-1-eps-converted-to.pdf, id=335, 351.3125pt x 207.77625pt>
+<figures/C4_XZ_2-1-eps-converted-to.pdf, id=336, 351.3125pt x 207.77625pt>
 File: figures/C4_XZ_2-1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/C4_XZ_2-1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/C4_XZ_2-1-eps-converted-to.pdf  used on input 
-line 873.
+line 867.
 (pdftex.def)             Requested size: 229.49844pt x 135.73459pt.
 Package epstopdf Info: Source file: <figures/10.eps>
 (epstopdf)                    date: 2026-08-13 17:28:58
@@ -1478,13 +1478,13 @@ Package epstopdf Info: Source file: <figures/10.eps>
 (epstopdf)                    size: 21101 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/10-eps-converted-to
 .pdf figures/10.eps>
-(epstopdf)             \includegraphics on input line 912.
+(epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
-<figures/10-eps-converted-to.pdf, id=340, 238.8925pt x 237.88875pt>
+<figures/10-eps-converted-to.pdf, id=341, 238.8925pt x 237.88875pt>
 File: figures/10-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/10-eps-converted-to.pdf>
-Package pdftex.def Info: figures/10-eps-converted-to.pdf  used on input line 91
-2.
+Package pdftex.def Info: figures/10-eps-converted-to.pdf  used on input line 90
+6.
 (pdftex.def)             Requested size: 101.99844pt x 101.56781pt.
 Package epstopdf Info: Source file: <figures/20.eps>
 (epstopdf)                    date: 2026-08-13 17:28:11
@@ -1494,13 +1494,13 @@ Package epstopdf Info: Source file: <figures/20.eps>
 (epstopdf)                    size: 45288 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/20-eps-converted-to
 .pdf figures/20.eps>
-(epstopdf)             \includegraphics on input line 914.
+(epstopdf)             \includegraphics on input line 908.
 Package epstopdf Info: Output file is already uptodate.
-<figures/20-eps-converted-to.pdf, id=341, 238.8925pt x 237.88875pt>
+<figures/20-eps-converted-to.pdf, id=342, 238.8925pt x 237.88875pt>
 File: figures/20-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/20-eps-converted-to.pdf>
-Package pdftex.def Info: figures/20-eps-converted-to.pdf  used on input line 91
-4.
+Package pdftex.def Info: figures/20-eps-converted-to.pdf  used on input line 90
+8.
 (pdftex.def)             Requested size: 101.99844pt x 101.56781pt.
 Package epstopdf Info: Source file: <figures/22.eps>
 (epstopdf)                    date: 2026-08-13 17:35:14
@@ -1510,13 +1510,13 @@ Package epstopdf Info: Source file: <figures/22.eps>
 (epstopdf)                    size: 218751 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/22-eps-converted-to
 .pdf figures/22.eps>
-(epstopdf)             \includegraphics on input line 916.
+(epstopdf)             \includegraphics on input line 910.
 Package epstopdf Info: Output file is already uptodate.
-<figures/22-eps-converted-to.pdf, id=342, 238.8925pt x 237.88875pt>
+<figures/22-eps-converted-to.pdf, id=343, 238.8925pt x 237.88875pt>
 File: figures/22-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/22-eps-converted-to.pdf>
 Package pdftex.def Info: figures/22-eps-converted-to.pdf  used on input line 91
-6.
+0.
 (pdftex.def)             Requested size: 101.99844pt x 101.56781pt.
 Package epstopdf Info: Source file: <figures/23.eps>
 (epstopdf)                    date: 2026-08-14 03:13:55
@@ -1526,13 +1526,13 @@ Package epstopdf Info: Source file: <figures/23.eps>
 (epstopdf)                    size: 166433 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/23-eps-converted-to
 .pdf figures/23.eps>
-(epstopdf)             \includegraphics on input line 918.
+(epstopdf)             \includegraphics on input line 912.
 Package epstopdf Info: Output file is already uptodate.
-<figures/23-eps-converted-to.pdf, id=343, 238.8925pt x 237.88875pt>
+<figures/23-eps-converted-to.pdf, id=344, 238.8925pt x 237.88875pt>
 File: figures/23-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/23-eps-converted-to.pdf>
 Package pdftex.def Info: figures/23-eps-converted-to.pdf  used on input line 91
-8.
+2.
 (pdftex.def)             Requested size: 101.99844pt x 101.56781pt.
  [8] [9 <./figures/C1_streamline_1-1-eps-converted-to.pdf> <./figures/C1_stream
 line_2-1-eps-converted-to.pdf> <./figures/C2_streamline_1-1-eps-converted-to.pd
@@ -1554,14 +1554,14 @@ Package epstopdf Info: Source file: <figures/stokes_vel_bottom.eps>
 (epstopdf)                    size: 12110 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/stokes_vel_bottom-e
 ps-converted-to.pdf figures/stokes_vel_bottom.eps>
-(epstopdf)             \includegraphics on input line 1318.
+(epstopdf)             \includegraphics on input line 1314.
 Package epstopdf Info: Output file is already uptodate.
-<figures/stokes_vel_bottom-eps-converted-to.pdf, id=480, 547.04375pt x 278.0387
+<figures/stokes_vel_bottom-eps-converted-to.pdf, id=482, 547.04375pt x 278.0387
 6pt>
 File: figures/stokes_vel_bottom-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/stokes_vel_bottom-eps-converted-to.pdf>
 Package pdftex.def Info: figures/stokes_vel_bottom-eps-converted-to.pdf  used o
-n input line 1318.
+n input line 1314.
 (pdftex.def)             Requested size: 335.89151pt x 170.71652pt.
 Package epstopdf Info: Source file: <figures/stokes_vel_sher_zoom.eps>
 (epstopdf)                    date: 2026-08-15 12:46:26
@@ -1572,15 +1572,15 @@ Package epstopdf Info: Source file: <figures/stokes_vel_sher_zoom.eps>
 (epstopdf)                    size: 11249 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/stokes_vel_sher_zoo
 m-eps-converted-to.pdf figures/stokes_vel_sher_zoom.eps>
-(epstopdf)             \includegraphics on input line 1322.
+(epstopdf)             \includegraphics on input line 1318.
 Package epstopdf Info: Output file is already uptodate.
-<figures/stokes_vel_sher_zoom-eps-converted-to.pdf, id=481, 544.0325pt x 258.96
+<figures/stokes_vel_sher_zoom-eps-converted-to.pdf, id=483, 544.0325pt x 258.96
 75pt>
 File: figures/stokes_vel_sher_zoom-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/stokes_vel_sher_zoom-eps-converted-to.pdf>
 Package pdftex.def Info: figures/stokes_vel_sher_zoom-eps-converted-to.pdf  use
-d on input line 1322.
+d on input line 1318.
 (pdftex.def)             Requested size: 331.15373pt x 157.62807pt.
  [13] [14]
 Package epstopdf Info: Source file: <figures/mag_damp_bc_20.eps>
@@ -1592,13 +1592,13 @@ f>
 (epstopdf)                    size: 10078 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/mag_damp_bc_20-eps-
 converted-to.pdf figures/mag_damp_bc_20.eps>
-(epstopdf)             \includegraphics on input line 1433.
+(epstopdf)             \includegraphics on input line 1429.
 Package epstopdf Info: Output file is already uptodate.
-<figures/mag_damp_bc_20-eps-converted-to.pdf, id=522, 399.4925pt x 277.035pt>
+<figures/mag_damp_bc_20-eps-converted-to.pdf, id=524, 399.4925pt x 277.035pt>
 File: figures/mag_damp_bc_20-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/mag_damp_bc_20-eps-converted-to.pdf>
 Package pdftex.def Info: figures/mag_damp_bc_20-eps-converted-to.pdf  used on i
-nput line 1433.
+nput line 1429.
 (pdftex.def)             Requested size: 244.79782pt x 169.76045pt.
 Package epstopdf Info: Source file: <figures/mag_damp_bc_11.eps>
 (epstopdf)                    date: 2026-08-10 11:26:59
@@ -1609,13 +1609,13 @@ f>
 (epstopdf)                    size: 10112 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/mag_damp_bc_11-eps-
 converted-to.pdf figures/mag_damp_bc_11.eps>
-(epstopdf)             \includegraphics on input line 1435.
+(epstopdf)             \includegraphics on input line 1431.
 Package epstopdf Info: Output file is already uptodate.
-<figures/mag_damp_bc_11-eps-converted-to.pdf, id=523, 399.4925pt x 277.035pt>
+<figures/mag_damp_bc_11-eps-converted-to.pdf, id=525, 399.4925pt x 277.035pt>
 File: figures/mag_damp_bc_11-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/mag_damp_bc_11-eps-converted-to.pdf>
 Package pdftex.def Info: figures/mag_damp_bc_11-eps-converted-to.pdf  used on i
-nput line 1435.
+nput line 1431.
 (pdftex.def)             Requested size: 244.79782pt x 169.76045pt.
 Package epstopdf Info: Source file: <figures/mag_damp_bc_21.eps>
 (epstopdf)                    date: 2026-08-10 11:27:02
@@ -1626,13 +1626,13 @@ f>
 (epstopdf)                    size: 10044 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/mag_damp_bc_21-eps-
 converted-to.pdf figures/mag_damp_bc_21.eps>
-(epstopdf)             \includegraphics on input line 1437.
+(epstopdf)             \includegraphics on input line 1433.
 Package epstopdf Info: Output file is already uptodate.
-<figures/mag_damp_bc_21-eps-converted-to.pdf, id=524, 399.4925pt x 277.035pt>
+<figures/mag_damp_bc_21-eps-converted-to.pdf, id=526, 399.4925pt x 277.035pt>
 File: figures/mag_damp_bc_21-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/mag_damp_bc_21-eps-converted-to.pdf>
 Package pdftex.def Info: figures/mag_damp_bc_21-eps-converted-to.pdf  used on i
-nput line 1437.
+nput line 1433.
 (pdftex.def)             Requested size: 244.79782pt x 169.76045pt.
 Package epstopdf Info: Source file: <figures/mag_damp_bc_12.eps>
 (epstopdf)                    date: 2026-08-10 11:27:06
@@ -1643,196 +1643,197 @@ f>
 (epstopdf)                    size: 10023 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/mag_damp_bc_12-eps-
 converted-to.pdf figures/mag_damp_bc_12.eps>
-(epstopdf)             \includegraphics on input line 1439.
+(epstopdf)             \includegraphics on input line 1435.
 Package epstopdf Info: Output file is already uptodate.
-<figures/mag_damp_bc_12-eps-converted-to.pdf, id=525, 399.4925pt x 277.035pt>
+<figures/mag_damp_bc_12-eps-converted-to.pdf, id=527, 399.4925pt x 277.035pt>
 File: figures/mag_damp_bc_12-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/mag_damp_bc_12-eps-converted-to.pdf>
 Package pdftex.def Info: figures/mag_damp_bc_12-eps-converted-to.pdf  used on i
-nput line 1439.
+nput line 1435.
 (pdftex.def)             Requested size: 244.79782pt x 169.76045pt.
  [15 <./figures/stokes_vel_bottom-eps-converted-to.pdf> <./figures/stokes_vel_s
-her_zoom-eps-converted-to.pdf>] [16 <./figures/mag_damp_bc_20-eps-converted-to.
-pdf> <./figures/mag_damp_bc_11-eps-converted-to.pdf> <./figures/mag_damp_bc_21-
-eps-converted-to.pdf> <./figures/mag_damp_bc_12-eps-converted-to.pdf>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 1482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 1482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 1482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 1482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 1482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 1482.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 1482.
-
+her_zoom-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/sreeni_damp_22mm.eps>
-(epstopdf)                    date: 2026-08-04 16:23:52
+(epstopdf)                    date: 2026-09-16 13:27:16
 (epstopdf)                    size: 202621 bytes
 (epstopdf)             Output file: <figures/sreeni_damp_22mm-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2026-08-04 16:24:11
+(epstopdf)                    date: 2026-09-16 13:28:32
 (epstopdf)                    size: 11514 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/sreeni_damp_22mm-ep
 s-converted-to.pdf figures/sreeni_damp_22mm.eps>
-(epstopdf)             \includegraphics on input line 1534.
+(epstopdf)             \includegraphics on input line 1504.
 Package epstopdf Info: Output file is already uptodate.
-<figures/sreeni_damp_22mm-eps-converted-to.pdf, id=644, 409.53pt x 283.0575pt>
+<figures/sreeni_damp_22mm-eps-converted-to.pdf, id=594, 409.53pt x 283.0575pt>
 File: figures/sreeni_damp_22mm-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/sreeni_damp_22mm-eps-converted-to.pdf>
 Package pdftex.def Info: figures/sreeni_damp_22mm-eps-converted-to.pdf  used on
- input line 1534.
+ input line 1504.
 (pdftex.def)             Requested size: 255.0pt x 176.25398pt.
 Package epstopdf Info: Source file: <figures/sreeni_damp_35mm.eps>
-(epstopdf)                    date: 2026-08-04 16:23:40
-(epstopdf)                    size: 203991 bytes
+(epstopdf)                    date: 2026-09-16 13:27:08
+(epstopdf)                    size: 204303 bytes
 (epstopdf)             Output file: <figures/sreeni_damp_35mm-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2026-08-04 16:24:11
-(epstopdf)                    size: 11844 bytes
+(epstopdf)                    date: 2026-09-16 13:28:32
+(epstopdf)                    size: 11914 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/sreeni_damp_35mm-ep
 s-converted-to.pdf figures/sreeni_damp_35mm.eps>
-(epstopdf)             \includegraphics on input line 1536.
+(epstopdf)             \includegraphics on input line 1506.
 Package epstopdf Info: Output file is already uptodate.
-<figures/sreeni_damp_35mm-eps-converted-to.pdf, id=645, 409.53pt x 283.0575pt>
+<figures/sreeni_damp_35mm-eps-converted-to.pdf, id=595, 409.53pt x 283.0575pt>
 File: figures/sreeni_damp_35mm-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/sreeni_damp_35mm-eps-converted-to.pdf>
 Package pdftex.def Info: figures/sreeni_damp_35mm-eps-converted-to.pdf  used on
- input line 1536.
+ input line 1506.
 (pdftex.def)             Requested size: 255.0pt x 176.25398pt.
 
-Overfull \hbox (1.55017pt too wide) in paragraph at lines 1539--1540
+Overfull \hbox (1.55017pt too wide) in paragraph at lines 1509--1510
  [][] 
  []
 
-<figures/exp_render.pdf, id=654, 142.5325pt x 130.4875pt>
+[16 <./figures/mag_damp_bc_20-eps-converted-to.pdf> <./figures/mag_damp_bc_11-e
+ps-converted-to.pdf> <./figures/mag_damp_bc_21-eps-converted-to.pdf> <./figures
+/mag_damp_bc_12-eps-converted-to.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 1514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 1514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 1514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 1514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 1514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 1514.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 1514.
+
+[17 <./figures/sreeni_damp_22mm-eps-converted-to.pdf> <./figures/sreeni_damp_35
+mm-eps-converted-to.pdf>]
+<figures/exp_render.pdf, id=678, 142.5325pt x 130.4875pt>
 File: figures/exp_render.pdf Graphic file (type pdf)
 <use figures/exp_render.pdf>
-Package pdftex.def Info: figures/exp_render.pdf  used on input line 1591.
+Package pdftex.def Info: figures/exp_render.pdf  used on input line 1587.
 (pdftex.def)             Requested size: 255.0pt x 233.45168pt.
 Package epstopdf Info: Source file: <figures/curr_profile.eps>
-(epstopdf)                    date: 2026-05-04 09:22:30
-(epstopdf)                    size: 188265 bytes
+(epstopdf)                    date: 2026-09-17 09:58:23
+(epstopdf)                    size: 187701 bytes
 (epstopdf)             Output file: <figures/curr_profile-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2026-05-04 09:22:54
-(epstopdf)                    size: 9743 bytes
+(epstopdf)                    date: 2026-09-17 09:58:49
+(epstopdf)                    size: 9643 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/curr_profile-eps-co
 nverted-to.pdf figures/curr_profile.eps>
-(epstopdf)             \includegraphics on input line 1593.
+(epstopdf)             \includegraphics on input line 1589.
 Package epstopdf Info: Output file is already uptodate.
-<figures/curr_profile-eps-converted-to.pdf, id=655, 412.54124pt x 281.05pt>
+<figures/curr_profile-eps-converted-to.pdf, id=679, 412.54124pt x 281.05pt>
 File: figures/curr_profile-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/curr_profile-eps-converted-to.pdf>
 Package pdftex.def Info: figures/curr_profile-eps-converted-to.pdf  used on inp
-ut line 1593.
+ut line 1589.
 (pdftex.def)             Requested size: 229.49844pt x 156.3491pt.
-[17]
+ [18 <./figures/exp_render.pdf> <./figures/curr_profile-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/vlog.eps>
-(epstopdf)                    date: 2026-07-09 18:40:35
-(epstopdf)                    size: 259318 bytes
+(epstopdf)                    date: 2026-09-17 10:04:05
+(epstopdf)                    size: 259317 bytes
 (epstopdf)             Output file: <figures/vlog-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-07-09 18:42:01
-(epstopdf)                    size: 31524 bytes
+(epstopdf)                    date: 2026-09-17 10:04:33
+(epstopdf)                    size: 31517 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/vlog-eps-converted-
 to.pdf figures/vlog.eps>
-(epstopdf)             \includegraphics on input line 1646.
+(epstopdf)             \includegraphics on input line 1642.
 Package epstopdf Info: Output file is already uptodate.
-<figures/vlog-eps-converted-to.pdf, id=669, 417.56pt x 279.0425pt>
+<figures/vlog-eps-converted-to.pdf, id=734, 417.56pt x 279.0425pt>
 File: figures/vlog-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/vlog-eps-converted-to.pdf>
 Package pdftex.def Info: figures/vlog-eps-converted-to.pdf  used on input line 
-1646.
+1642.
 (pdftex.def)             Requested size: 255.0pt x 170.41153pt.
 Package epstopdf Info: Source file: <figures/tlog.eps>
-(epstopdf)                    date: 2026-07-09 18:41:17
-(epstopdf)                    size: 251147 bytes
+(epstopdf)                    date: 2026-09-17 10:03:42
+(epstopdf)                    size: 251146 bytes
 (epstopdf)             Output file: <figures/tlog-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-07-09 18:42:01
-(epstopdf)                    size: 30017 bytes
+(epstopdf)                    date: 2026-09-17 10:04:33
+(epstopdf)                    size: 30006 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/tlog-eps-converted-
 to.pdf figures/tlog.eps>
-(epstopdf)             \includegraphics on input line 1648.
+(epstopdf)             \includegraphics on input line 1644.
 Package epstopdf Info: Output file is already uptodate.
-<figures/tlog-eps-converted-to.pdf, id=670, 417.56pt x 279.0425pt>
+<figures/tlog-eps-converted-to.pdf, id=735, 417.56pt x 279.0425pt>
 File: figures/tlog-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/tlog-eps-converted-to.pdf>
 Package pdftex.def Info: figures/tlog-eps-converted-to.pdf  used on input line 
-1648.
+1644.
 (pdftex.def)             Requested size: 255.0pt x 170.41153pt.
 
-Overfull \hbox (1.55017pt too wide) in paragraph at lines 1656--1657
+Overfull \hbox (1.55017pt too wide) in paragraph at lines 1652--1653
  [][] 
  []
 
 Package epstopdf Info: Source file: <figures/mdamp_h3_cm_copper_time.eps>
-(epstopdf)                    date: 2026-08-04 17:26:04
-(epstopdf)                    size: 198645 bytes
+(epstopdf)                    date: 2026-09-17 10:05:38
+(epstopdf)                    size: 198689 bytes
 (epstopdf)             Output file: <figures/mdamp_h3_cm_copper_time-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2026-08-04 17:33:50
-(epstopdf)                    size: 10399 bytes
+(epstopdf)                    date: 2026-09-17 10:06:07
+(epstopdf)                    size: 10414 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/mdamp_h3_cm_copper_
 time-eps-converted-to.pdf figures/mdamp_h3_cm_copper_time.eps>
-(epstopdf)             \includegraphics on input line 1664.
+(epstopdf)             \includegraphics on input line 1660.
 Package epstopdf Info: Output file is already uptodate.
-<figures/mdamp_h3_cm_copper_time-eps-converted-to.pdf, id=671, 393.47pt x 283.0
+<figures/mdamp_h3_cm_copper_time-eps-converted-to.pdf, id=736, 393.47pt x 283.0
 575pt>
 File: figures/mdamp_h3_cm_copper_time-eps-converted-to.pdf Graphic file (type p
 df)
 <use figures/mdamp_h3_cm_copper_time-eps-converted-to.pdf>
 Package pdftex.def Info: figures/mdamp_h3_cm_copper_time-eps-converted-to.pdf  
-used on input line 1664.
+used on input line 1660.
 (pdftex.def)             Requested size: 255.0pt x 183.44098pt.
 Package epstopdf Info: Source file: <figures/mdamp_h3_cm_steel_time.eps>
-(epstopdf)                    date: 2026-08-04 17:32:49
-(epstopdf)                    size: 200046 bytes
+(epstopdf)                    date: 2026-09-17 10:05:31
+(epstopdf)                    size: 200110 bytes
 (epstopdf)             Output file: <figures/mdamp_h3_cm_steel_time-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2026-08-04 17:33:17
-(epstopdf)                    size: 10807 bytes
+(epstopdf)                    date: 2026-09-17 10:06:07
+(epstopdf)                    size: 10827 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/mdamp_h3_cm_steel_t
 ime-eps-converted-to.pdf figures/mdamp_h3_cm_steel_time.eps>
-(epstopdf)             \includegraphics on input line 1666.
+(epstopdf)             \includegraphics on input line 1662.
 Package epstopdf Info: Output file is already uptodate.
-<figures/mdamp_h3_cm_steel_time-eps-converted-to.pdf, id=672, 401.5pt x 283.057
+<figures/mdamp_h3_cm_steel_time-eps-converted-to.pdf, id=737, 401.5pt x 283.057
 5pt>
 File: figures/mdamp_h3_cm_steel_time-eps-converted-to.pdf Graphic file (type pd
 f)
 <use figures/mdamp_h3_cm_steel_time-eps-converted-to.pdf>
 Package pdftex.def Info: figures/mdamp_h3_cm_steel_time-eps-converted-to.pdf  u
-sed on input line 1666.
+sed on input line 1662.
 (pdftex.def)             Requested size: 255.0pt x 179.77837pt.
 
-Overfull \hbox (1.55017pt too wide) in paragraph at lines 1669--1670
+Overfull \hbox (1.55017pt too wide) in paragraph at lines 1665--1666
  [][] 
  []
 
-[18 <./figures/sreeni_damp_22mm-eps-converted-to.pdf> <./figures/sreeni_damp_35
-mm-eps-converted-to.pdf>] [19 <./figures/exp_render.pdf> <./figures/curr_profil
-e-eps-converted-to.pdf> <./figures/vlog-eps-converted-to.pdf> <./figures/tlog-e
-ps-converted-to.pdf>] [20 <./figures/mdamp_h3_cm_copper_time-eps-converted-to.p
-df> <./figures/mdamp_h3_cm_steel_time-eps-converted-to.pdf>]
+[19 <./figures/vlog-eps-converted-to.pdf> <./figures/tlog-eps-converted-to.pdf>
+] [20 <./figures/mdamp_h3_cm_copper_time-eps-converted-to.pdf> <./figures/mdamp
+_h3_cm_steel_time-eps-converted-to.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 1707.
+(hyperref)                removing `\unskip' on input line 1703.
 
 [21] (./mag_damp_prf.bbl [22]) [23] (./mag_damp_prf.aux)
  ***********
@@ -1840,16 +1841,16 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
 Package rerunfilecheck Info: File `mag_damp_prf.out' has not changed.
-(rerunfilecheck)             Checksum: 929AC871A87C826AEB99B2394947DB03;3782.
+(rerunfilecheck)             Checksum: 1DECCF4C081C6235E9F01AB54A859FEC;3782.
  ) 
 Here is how much of TeX's memory you used:
  43567 strings out of 467168
  1034824 string characters out of 5409468
- 1553353 words of memory out of 5000000
+ 1554353 words of memory out of 5000000
  72036 multiletter control sequences out of 15000+600000
  642996 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,18n,108p,2414b,2922s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,18n,108p,2407b,2922s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
@@ -1873,18 +1874,17 @@ ive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 /2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
 26/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2026/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on mag_damp_prf.pdf (23 pages, 4165393 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on mag_damp_prf.pdf (23 pages, 4158001 bytes).
 PDF statistics:
- 1017 PDF objects out of 1200 (max. 8388607)
- 839 compressed objects within 9 object streams
+ 1010 PDF objects out of 1200 (max. 8388607)
+ 837 compressed objects within 9 object streams
  166 named destinations out of 1000 (max. 500000)
  375 words of extra memory for PDF output out of 10000 (max. 10000000)
 
