@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.24)  15 SEP 2026 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.24)  17 SEP 2026 12:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -363,7 +363,7 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2026/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></u
 sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on cover_letter.pdf (1 page, 48674 bytes).
+Output written on cover_letter.pdf (1 page, 48644 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream

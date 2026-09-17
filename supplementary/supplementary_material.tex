@@ -106,7 +106,7 @@ bookmarksnumbered=true]{hyperref}
 \section{Supplementary material: Derivation of the time independent induced electric potential for a free-surface system in a rectangular domain}
 \label{supplA}
 
-In this section, we derive the induced electric potential for a rectangular domain with four different electrical boundary conditions. The first has a trivial solution i.e. $\Psi|_{\Omega} = 0$. The rest of the case descriptions along with the boundary conditions are provided in Table\,\ref{tab:table_BC_cases}. Considering that the potential is non-zero when the boundary is insulating, we first derive $\Psi$ in a domain with all insulating walls (B.C 4). Cases B.C 2 and 3 are modifications of B.C 4. 
+In this section, we derive the induced electric potential for a rectangular domain with four different electrical boundary conditions. The first case has the trivial solution i.e. $\Psi|_{\Omega} = 0$. The remaining cases and their boundary conditions are summarized in Table\,\ref{tab:table_BC_cases}. Insulating boundaries generally require a nontrivial potential correction. We first derive the potential correction $\Psi$ in a domain with all insulating walls (B.C 4). Cases B.C 2 and 3 are modifications of B.C 4. 
 
 \begin{table}[H] %add [H] placement to break table across pages
 	\caption{The electrical boundary and free-surface conditions of the three cases considered.}
@@ -199,7 +199,7 @@ From Eq.\,\meqref{eq:laplacian_psi} in the main article, the Laplace equation fo
 	\pdv[2]{{\Psi}}{x} + \pdv[2]{{\Psi}}{y}
 	+ \pdv[2]{{\Psi}}{z}= 0 .
 \end{gather}
-We write $\Psi(m,n) = A(x) \: B(y) \: C(z)$, where $A$, $B$ and $C$ are functions with respect to $x$, $y$ and $z$ accordingly
+We write $\Psi(m,n) = A(x) \: B(y) \: C(z)$, where $A$, $B$ and $C$ are functions of $x$, $y$ and $z$ accordingly
 \begin{equation}
 	\dfrac{1}{A} \dpdv[2]{A}{x}  + \dfrac{1}{B} \dpdv[2]{B}{y} 
 	+ \dfrac{1}{C} \dpdv[2]{C}{z} = 0.
@@ -209,7 +209,8 @@ Introducing constants $\xi_x$, $\xi_y$ and $\xi_z$ such that
 \begin{equation}
 	\xi_x^2 + \xi_y^2 + (-\xi_z^2) = 0 .
 \end{equation}
-At first glance from the given boundary conditions for B.C 4 in Table\,\ref{tab:table_BC_cases}, there is no straightforward way to solve the above Laplace equation using separation of variables, mainly due to the presence of non-zero boundary conditions in the $x$- and $y$-normal walls. This causes two of the constants to show exponential behavior in the solution, instead of the traditional system made out of one exponential and two oscillatory functions. Because the total sum of the balance must be zero, two of the constants need to have the opposite sign of the third. As a solution to this problem, the problem is to be divided into two constituent parts:
+From the given boundary conditions for B.C 4 in Table\,\ref{tab:table_BC_cases}, there is no straightforward way to solve the above Laplace equation using separation of variables, mainly due to the presence of non-zero boundary conditions in the $x$- and $y$-normal walls. This causes two of the constants to show exponential behavior in the solution, instead of separated modes with one hyperbolic and two trigonometric factors. Because the total sum of the balance must be zero, two of the constants need to have the opposite sign of the third. As a solution to this problem, we split the
+residual problem into two harmonic components:
 \begin{subequations}
 	\begin{align}
 	\RN{1} : \xi_x^2 + (-\xi_y^2) + (-\xi_z^2) = 0,
@@ -243,12 +244,12 @@ The term $A(x)$ can be written as a sum of hyperbolic functions
 \end{equation}
 and at $x=-0.5L_x$:
 \begin{align}
-	\pdv{A}{y}\biggl|_{x=-0.5L_x} &= A_{1x}\xi_x\sinh{[-\xi_xL_x/2]}
+	\pdv{A}{x}\biggl|_{x=-0.5L_x} &= A_{1x}\xi_x\sinh{[-\xi_xL_x/2]}
 	+ A_{2x}\xi_x\cosh{[-\xi_xL_x/2]},
 	\\
 	& = -\frac{n\pi}{L_y}\sin{\left[\frac{n\pi}{L_y}(y+0.5L_y)\right]} \cos{[0]},
 \intertext{whereas at $x=0.5L_x$:}
-	\pdv{A}{y}\biggl|_{x=0.5L_x} &= A_{1x}\xi_x\sinh{[\xi_xL_x/2]}
+	\pdv{A}{x}\biggl|_{x=0.5L_x} &= A_{1x}\xi_x\sinh{[\xi_xL_x/2]}
 	+ A_{2x}\xi_x\cosh{[\xi_xL_x/2]},
 	\\
 	& = -\frac{n\pi}{L_y}\sin{\left[\frac{n\pi}{L_y}(y+0.5L_y)\right]} \cos{[m\pi]}.
@@ -268,7 +269,7 @@ Therefore,
 \end{equation}
 At the $y$-normal walls,
 \begin{equation}
-	\pdv{B}{x} \: (-0.5L_y,0.5L_y) = 0,
+	\pdv{B}{y} \: (-0.5L_y,0.5L_y) = 0,
 \end{equation}
 and therefore,
 \begin{equation}
@@ -283,7 +284,7 @@ and at the free-surface $(z\approx0)$ is
 \begin{equation}
 	\pdv{C}{z}\bigl(z\approx 0) = 0.
 \end{equation}
-This leads to,
+This gives the vertical cosine basis
 \begin{equation}
 	C(z) = \sum_{b=0}^{\infty}
 	 C_{z} \cos{\biggl[ \frac{b\pi}{h}\bigl(z + h\bigr)\biggr]}.
@@ -357,7 +358,7 @@ We now need to determine the coefficients $\ddot{\mathcal{A}}_{ab}$ and $\ddot{\
 	\end{array}
 	\right. ,
 \end{equation}
-which yields a non-zero solution only for the condition $a=a'$ and thus, removing the double summations from the coefficients. This final expansions as given in Eqs.\,(\mref{eq:bc4_Acoeff} and \mref{eq:bc4_Bcoeff}) in the main article. The double sum in Eq.\,\eqref{eq:potential_initial} consists of real elements for all elements of the series except when $a=0$ and $b=0$ which raises an undefined value, both in the expression, and in the coefficients $\ddot{\mathcal{A}}_{ab}$ and $\ddot{\mathcal{B}}_{ab}$. This gives rise to constant terms unique to the case B.C 4, which arise from the boundary conditions in the $x$- and $y$-normal walls
+which yields a non-zero solution only for the condition $a=a'$ and thus, removing the double summations from the coefficients. The resulting coefficients as given in Eqs.\,(\mref{eq:bc4_Acoeff} and \mref{eq:bc4_Bcoeff}) in the main article. The double sum in Eq.\,\eqref{eq:potential_initial} consists of real elements for all elements of the series except when $a=0$ and $b=0$ which raises an undefined value, both in the expression, and in the coefficients $\ddot{\mathcal{A}}_{ab}$ and $\ddot{\mathcal{B}}_{ab}$. This non-zero mode representation requires separate treatment, giving rise to coupled polynomial contributions that are unique to case B.C 4. These originate from the boundary conditions in the $x$- and $y$-normal walls
 \begin{equation}
 	\ddot{\mathcal{A}}_{0} = \int \partial_y\phi_y B_z, \quad \& \quad
 	\ddot{\mathcal{B}}_{0} = \int -\partial_x \phi_x B_z .
@@ -374,19 +375,25 @@ The expressions of $\ddot{\mathcal{A}}_{0}$ and $\ddot{\mathcal{B}}_{0}$ are ela
 	\\
 	\nn
 	&+
-	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
-	\ddot{\mathcal{A}}_{ab} 
+	\sum_{\substack{a, b \geq 0 \\ (a,b) 
+			\neq (0,0) \\
+			a\neq n	
+	}}^{\infty}
+	\ddot{\mathcal A}_{ab} 
 	\left(
-	\frac{1-(-1)^m}{2\sech{[\xi_x x]}} + \frac{1+(-1)^m}{2\csch{[\xi_x x]}}
+	\frac{1-(-1)^m}{2\sech{\bigl[ \ddot\xi_x x \bigr]}} + \frac{1+(-1)^m}{2\csch{\bigl[ \ddot\xi_x x \bigr]}}
 	\right)
 	\cos{\biggl[ \frac{a\pi}{L_y}\biggl(y + \frac{L_y}{2}\biggr)\biggr]}
 	\cos{\biggl[ \frac{b\pi}{h}\bigl(z +  h\bigr)\biggr]} 
 	\\
 	&+
-	\sum_{a=0}^{\infty} \sum_{b=0}^{\infty}
-	\ddot{\mathcal{B}}_{ab} 
+	\sum_{\substack{a, b \geq 0 \\ (a,b) 
+			\neq (0,0) \\
+			a\neq m	
+	}}^{\infty}
+	\ddot{\mathcal B}_{ab} 
 	\left(
-	\frac{1-(-1)^n}{2\sech{[\xi_y y]}} + \frac{1+(-1)^n}{2\csch{[\xi_y y]}}
+	\frac{1-(-1)^n}{2\sech{\bigl[ \ddot\xi_y y \bigr]}} + \frac{1+(-1)^n}{2\csch{\bigl[ \ddot\xi_y y \bigr]}}
 	\right)
 	\cos{\biggl[ \frac{a\pi}{L_x}\biggl(x + \frac{L_x}{2}\biggr)\biggr]}
 	\cos{\biggl[ \frac{b\pi}{h}\bigl(z +  h\bigr)\biggr]}
@@ -503,7 +510,7 @@ where the coefficients $\tilde{\mathcal{A}}_{ab}$ and $\tilde{\mathcal{B}}_{ab}$
 
 
 
-\clearpage
+
 \section{Supplementary material: The mechanical energy balance in the bulk} 
 \label{supplB}
 
@@ -539,7 +546,7 @@ where each integral term $\rm E_{kin}$ is the time rate of change kinetic energy
 	& = -\pmb{\mathcal{J}}\cdot \bm\nabla\Psi - \frac{\pmb{\mathcal{J}}^2}{\sigma} .
 	\label{eq:ohmic_expansion_nabla}
 \end{align}
-Substituting Eq.\,\eqref{eq:ohmic_expansion_nabla} in \eqref{eq:balance_ohmic_complete}, the term $\pmb{\mathcal{J}}\cdot \bm\nabla\Psi$ on the right hand integral expands to
+Substituting Eq.\,\eqref{eq:ohmic_expansion_nabla} in \eqref{eq:balance_ohmic_complete}, the term $\pmb{\mathcal{J}}\cdot \bm\nabla\Psi$ on the integral on the right-hand side expands to
 \begin{align}
 \int_{V} \pmb{\mathcal{J}}\cdot \bm\nabla\Psi
 	&=
@@ -568,7 +575,7 @@ In Eq.\,\eqref{eq:integral_J_nablaPsi}, $\bm\nabla \cdot \pmb{\mathcal J} = 0$, 
 	&=  \int_{V}  \bm\nabla\phi \cdot \bigl(
 	-\sigma\bm\nabla\Psi \times B_z\h e_z \bigr) \mathrm dV
 	- 
-	 \int_{V} \norm{\bm\nabla\phi \times B_z\h e_z}^2 \: \mathrm dV,
+	 \sigma\int_{V} \norm{\bm\nabla\phi \times B_z\h e_z}^2 \: \mathrm dV,
 	\\
 	& = \mathcal{Q}_{\rm corr} - \mathcal{Q}_{\rm ind}. 
 	\qquad \{ \ii{see Eqs.\,(\mref{eq:qind} and \mref{eq:Qcorr_integral})} \}
@@ -580,7 +587,7 @@ The total dissipation averaged over a single oscillation cycle is
 	\label{eq:Dbulk_avg}
 \end{equation}
 \\
-\indent The flow velocity $\h u$ and free-surface elevation $\eta$ decay proportional to $\ii e^{-\lambda_{\rm o}t}$ with respect to time $t$. For a standing wave, the total energy considering wave decay is the sum of the kinetic and potential energy with a phase difference, given by:
+\indent The flow velocity $\h u$ and free-surface elevation $\eta$ decay in proportion to $\ii e^{-\lambda_{\rm o}t}$ with respect to time $t$. For a standing wave, the total energy considering wave decay is the sum of the kinetic and potential energy with a phase difference, given by:
 \begin{equation}
 	\ii E_{\rm kin} + \ii E_{\rm pot} = 
 	-\lambda_{\rm o} \frac{1}{2} \int_{V} \rho |\h u|^2 \mathrm dV
@@ -594,7 +601,7 @@ In the above equation, the integral
 \begin{equation}
 	\int_{\mathcal{S}}
 	\rho g\eta^2 \mathrm dS =
-	 p|_{z=0} \eta \: \mathrm dS,
+	 p|_{z=0} \eta \: \mathrm dS = K,
 	\label{eq:young_laplace_integral}
 \end{equation}
 which is hydrostatic pressure condition that is obtained from the kinematic-dynamic coupling of an inviscid, irrotational flow of a lightly deformed free-surface. On expanding $\eta$ using Eq.\,\meqref{eq:eta}, we obtain the expression for $K$ as per Eq.\,\meqref{eq:K_eq} in the article. Similarly, using the vector identity  $\bm\nabla\phi \cdot \bm\nabla\phi = \bm\nabla\cdot(\phi \bm\nabla\phi) - \phi\bm\nabla\cdot \bm\nabla\phi$, we write
@@ -613,12 +620,12 @@ The above integral vanishes at the rigid walls $\Sigma$ due to the impermeabilit
  \begin{align}
  	\nn
  	\int_{V}\rho |\bm\nabla \phi|^2 \mathrm dV &= \int_{\mathcal{S}} \left(
- 	\rho(\ii i\omega)\phi
+ 	-\rho(\ii i\omega)\phi
  	\right)|_{z=0} \: \eta \:\mathrm dS,
  	\\
  	&= \int_{\mathcal{S}}
  	 p|_{z=0} \: \eta \: \mathrm dS = K, 
- 	\qquad \{ \because p = \ii i\omega\phi \}.
+ 	\qquad \{ \because p = -\rho(\ii i\omega)\phi \}.
  	\label{eq:rho_u2_K}
  \end{align}
 From Eqs.\,(\ref{eq:Dbulk_avg}, \ref{eq:kin+pot_integrals}, \ref{eq:young_laplace_integral} and \ref{eq:rho_u2_K}), we obtain the following relation for $\lambda_{\rm o}$:
@@ -633,7 +640,7 @@ From Eqs.\,(\ref{eq:Dbulk_avg}, \ref{eq:kin+pot_integrals}, \ref{eq:young_laplac
 \section{Supplementary material: The mechanical energy balance at the boundary} 
 \label{supplC}
 
-Like in Sec.\,\ref{supplB}, we apply the mechanical energy balance but for the dissipation at the boundary due to viscous and magnetic effects. We calculate the damping rate due to boundary effects $\lambda_{\rm b}$, which comprises of the damping rate due to the Hartmann layer at the top and bottom, and the Shercliff layer at the sidewalls. To summarize, the mechanical energy balance of a standing wave, considering dissipation at the boundaries is given by
+As in Sec.\,\ref{supplB}, we apply the mechanical energy balance but for the dissipation at the boundary due to viscous and magnetic effects. We calculate the damping rate due to boundary effects $\lambda_{\rm b}$, which comprises of the damping rate due to the Hartmann layer at the bottom, and the Shercliff layer at the sidewalls. To summarize, the mechanical energy balance of a standing wave, considering dissipation at the boundaries is given by
 \begin{equation}
 	\underbrace{
 	\dv{}{t}\left(  \frac{1}{2} 
@@ -684,22 +691,22 @@ The dissipation term $\ii D_{\rm b}$ now takes the form of the Lamb's dissipatio
 	\int_{\partial V} 
 	(\h u \cdot \bm\nabla )\h u \cdot \h n \:\mathrm dS,
 \end{align}
-which consists of the dissipation due to rotational stresses at the boundary and the higher order irrotational stresses in the bulk. We calculate only calculate the rotational stresses at the boundary, where only the corrections contribute. The boundary dissipation is therefore:
+which consists of the dissipation due to rotational stresses at the boundary and the higher order irrotational stresses in the bulk. We calculate only the rotational stresses at the boundary, where only the corrections contribute. The boundary dissipation is therefore:
 \begin{equation}
 	\ii D_{\rm b} = - \rho\nu
 	\int_{V} \norm{\bm\nabla \times \overbar{\h u}_{\perp}}^2  \: \mathrm dV,
 	\label{eq:dissipation_rotational_stress}
 \end{equation}
-where tangential velocity corrections in the Hartmann nd Shercliff layers are
+where tangential velocity corrections in the Hartmann and Shercliff layers are
 \begin{equation}
-	{\overbar{\h u}}_{\perp} (\ii{Ha})=
+	\ii{Re}[{\overbar{\h u}}_{\perp}] (\ii{Ha})=
 	-\bm\nabla \phi 
 	\ii e^{-
 		\dfrac{\sqrt{1 + \sqrt{1 + \tau^2\omega^2}}}{\sqrt{2\tau\nu}}
 		\zeta
 	},
 	\qquad
-	{\overbar{\h u}}_{\perp} (\ii{Sh})=
+	\ii{Re}[{\overbar{\h u}}_{\perp}] (\ii{Sh})=
 	-\bm\nabla \phi
 	\ii e^{-
 		\dfrac{\sqrt{1 + \sqrt{1 + \tau h^2\omega^2/\nu}}}
@@ -708,7 +715,7 @@ where tangential velocity corrections in the Hartmann nd Shercliff layers are
 	}.
 	\label{eq:boundary_velocities}
 \end{equation}
-Here, the wall normal coordinate $\zeta$ is the spatial coordinate normal to the wall that reduces the boundary layer corrections to zero away from the wall. It is given by
+Here, the wall-normal coordinate $\zeta$ is the spatial coordinate normal to the wall that reduces the boundary layer corrections to zero away from the wall. It is given by
 \begin{equation}
 	\zeta = \begin{cases}
 		z + h, \quad &\text{near } z=-h, \\
@@ -720,8 +727,8 @@ Here, the wall normal coordinate $\zeta$ is the spatial coordinate normal to the
 \end{equation}
 Substituting the velocity corrections at the walls given in Eq.\,\eqref{eq:boundary_velocities} into Eq.\,\eqref{eq:dissipation_rotational_stress}, we get
 \begin{equation}
-	\ii D_{\rm Ha} = 
-	-\frac{\rho\nu\omega^2}{4\sqrt{2}}
+	\ii D_{\rm Ha} = A_{mn}^2
+	\frac{\rho\nu\omega^2}{4\sqrt{2}}
 	\sqrt{
 		\dfrac{1}{\tau\nu} + 
 		\sqrt{ \dfrac{1}{\tau^2\nu^2} + \dfrac{\omega^2}{\nu^2} } 
@@ -733,8 +740,8 @@ Substituting the velocity corrections at the walls given in Eq.\,\eqref{eq:bound
 which is the dissipation due to the Hartmann layer at the top and bottom wall, and
 \begin{align}
 	\nn
-	\ii D_{\rm Sh}  = 
-	-\frac{\rho\nu\omega^2}{\sqrt{2} \; k^2}
+	\ii D_{\rm Sh}  = A_{mn}^2
+	\frac{\rho\nu\omega^2}{\sqrt{2} \; k^2}
 	\sqrt{ \frac{1}{h\sqrt{\tau\nu}} + 
 		\sqrt{ \frac{1}{h^2\tau\nu} + \frac{\omega^2}{\nu^2}}}
 	\Biggl(
@@ -758,7 +765,8 @@ which is the dissipation due to the Shercliff layer at all four sidewalls. For m
 	\nn
 	\ii D_{\rm Sh} 
 	\approx 
-	-\frac{\rho\nu\omega^2}{\sqrt{2} \; k^2}
+	A_{mn}^2
+	\frac{\rho\nu\omega^2}{\sqrt{2} \; k^2}
 	\sqrt{\frac{\omega}{\nu}}
 	\Biggl(
 	&\epsilon_n 
@@ -778,7 +786,7 @@ which is the dissipation due to the Shercliff layer at all four sidewalls. For m
 \end{align}
 which is the dissipation due rotational stresses solely due to the viscous boundary layer.
 \\
-\indent From Eqs.\,(\ref{eq:ekin_epot_k} and \ref{eq:dissipation_rotational_stress}), we get the expression for $\lambda_{\rm b}$, in its complete form as follows:
+\indent From Eqs.\,(\ref{eq:ekin_epot_k} and \ref{eq:dissipation_rotational_stress}), we get the expression for $\lambda_{\rm b}$, in its complete form is as follows:
 \begin{equation}
 	\lambda_{\rm b} = \lambda_{\rm Ha} + \lambda_{\rm Sh} 
 	=
